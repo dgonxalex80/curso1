@@ -1,0 +1,23 @@
+---
+title: "Conceptos Básicos"
+subtitle: "Indicadores de centro"
+author: "Pontificia Universidad Javeriana Cali"
+date: "2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Indicadores
+
+Indicadores de tendencia central
+
+* Media aritmetica
+* Mediana
+* Media truncada
+* Rango medio
+* Media ponderada
+* Media armónica
+* Media geométrica

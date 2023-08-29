@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+
+/* Estilos para la sección de la barra lateral */
+.section.sidebar { 
+  /* Desplaza la sección 61 píxeles desde la parte superior del contenedor padre */
+  top: 61px;
+  
+  /* Agrega un borde inferior de 10 píxeles de ancho con color azul oscuro */
+  border-bottom: 10px solid #063971;
+  
+  /* Agrega un borde izquierdo de 10 píxeles de ancho con color gris */
+  border-left: 10px solid gray;
+  
+  /* Establece el fondo de la sección en color gris */
+  background-color: gray;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  /* Establece el fondo de la barra de navegación en color blanco */
+  background-color: #ffffff;
+  
+  /* Establece el color del borde de la barra de navegación en blanco */
+  border-color: #ffffff;
+}
+
+/* Estilos para la barra lateral */
+.sidebar { 
+  /* Establece el fondo de la barra lateral en un tono azul claro */
+  background-color: #8acfe6;
+}
+
+/* Estilos generales para el cuerpo del sitio */
+body {
+  /* Establece la fuente del texto en 'Barlow SemiCondensed', una fuente sans-serif */
+  font-family: 'Barlow SemiCondensed', sans-serif;
+  
+  /* Establece el tamaño de la fuente en 19 píxeles */
+  font-size: 19px;
+}
+
+
+/* Content Boxes
+------------------------------------------------------------ */
+/* Estilos compartidos para todas las cajas de contenido */
+.content-box-blue,
+.content-box-gray,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  /* Margen inferior de 25 píxeles, sin margen en los lados */
+  margin: 0 0 25px;
+  
+  /* Controla cómo se maneja el contenido que se desborda */
+  overflow: hidden;
+  
+  /* Espaciado interno de 20 píxeles en todas las direcciones */
+  padding: 20px;
+}
+
+/* Estilos específicos para la caja de contenido azul */
+.content-box-blue {
+  /* Fondo azul claro */
+  background-color: #d8ecf7;
+  
+  /* Borde de 1 píxel sólido en color azul claro */
+  border: 1px solid #afcde3;
+}
+
+ 
+.content-box-gray {
+    background-color: #e2e2e2;
+    border: 1px solid #bdbdbd;
+}
+ 
+.content-box-green {
+    background-color: #d9edc2;
+    border: 1px solid #b2ce96;
+}
+ 
+.content-box-purple {
+    background-color: #e2e2f9;
+    border: 1px solid #bebde9;
+}
+ 
+.content-box-red {
+    background-color: #f9dbdb;
+    border: 1px solid #e9b3b3;
+}
+ 
+.content-box-yellow {
+    background-color: #fef5c4;
+    border: 1px solid #fadf98;
+    margin: 1;
+}
+
+/* Estilos para elementos con la clase .my-pre */
+.my-pre {
+  /* Espaciado entre líneas de 1.2 veces el tamaño de la fuente */
+  line-height: 1.2em;
+  
+  /* Fondo con un degradado lineal */
+  background: linear-gradient(180deg, #ccc 0, #ccc 1.2em, #eee 0);
+  
+  /* Tamaño del fondo con celdas de 2.4em x 2.4em */
+  background-size: 2.4em 2.4em;
+  
+  /* Origen del fondo desde el borde exterior */
+  background-origin: content-box;
+  
+  /* Estilos adicionales */
+  padding: 0 20px; /* Espaciado interno izquierdo y derecho de 20 píxeles */
+  text-align: justify; /* Alineación justificada del texto */
+  font-family: calibri, arial, sans-serif; /* Familia de fuentes preferidas */
+}
+
+
+@import url("estilos_contenidos_servidor.css")
+
+:root {
+    --primer-color: #F7B733;   /* Color amarillo */
+    --segundo-color: #E4660E;  /* Color naranja */
+    --tercer-color: #EFC3A5;   /* Color beige */
+}
+

@@ -1,0 +1,51 @@
+---
+title: "Conceptos Básicos"
+subtitle: "Estadística Básica"
+author: "Pontificia Universidad Javeriana Cali"
+date: "2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Estadistica descriptiva
+
+Probabilidad
+
+Variable aleatoria
+
+Cualitativas
+
+Cuantitativas
+   Discretas
+   Continuas
+   
+Escalas de medición
+  Nominal
+  Ordinal
+  De intevalo 
+  De razón
+   
+Respuesta o dependientes
+Explicativas o regresoras
+
+
+Dependientes
+Independientes
+
+
+
+Inferencia cestadística
+
+
+Población
+Parámetro
+
+Muestra
+Estimador
+
+
+Pensamiento estadístico
+

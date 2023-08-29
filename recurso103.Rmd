@@ -1,0 +1,18 @@
+---
+title: "Tablas de frecuenciia"
+subtitle: "Estadística Básica"
+author: "Pontificia Universidad Javeriana Cali"
+date: "2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Tablas variables nominales
+Tablas variables ordinales
+
+Tablas de doble entrada o cruzadas
+
+Recodificación de variables cuantitavas

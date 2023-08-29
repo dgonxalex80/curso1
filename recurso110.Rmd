@@ -1,0 +1,30 @@
+---
+title: "Visualización de Datos"
+subtitle: "Estadística Básica"
+author: "Pontificia Universidad Javeriana Cali"
+date: "2023"
+output: html_document
+---
+
+
+Variables cualitativas nominales
+  diagrama de tortas
+  
+Variables cualitativas ordinales
+  diagrama de barras
+  diagrama de likert
+  
+Variables cuantitavas de intervalo
+  Diagrama de radar
+  
+Variables cualitativas de razón
+  Diagrama de tallos y hojas
+  Diagrama de puntos
+  Histograma
+  Diagrama de cajas y bigores
+  Diagrama de densidad
+  Ddiagrama de lineas
+
+  
+  
+     

@@ -1,0 +1,50 @@
+---
+title: "**Contenido**"
+author: "Pntificia Universidad Javeriana Cali "
+date: " "
+output: html_document
+---
+
+<br/><br/>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Estadística Básica**
+
+<br/><br/>
+  
+### **Tema 1 Estadística Descriptiva** (Análisis de datos)
+
+* Definiciones: estadística descriptiva, inferencial, pensamiento estadístico, población y muestra (recurso101)
+* Los datos: variables cuantitativas (discretas, continuas) y cualitativas. Escalas de medición. (recurso102)
+* Tablas de frecuencia, intervalos de clase, representación gráfica con histograma de frecuencias. (recurso104)
+* Variables (recurso103)
+* Medidas de tendencia central (recurso105)
+* Medidas de Dispersión o variabilidad (recurso106)
+* La curva normal (recurso109)
+* Medidas de forma (recurso107)
+* Medidas de localización o posición. (recurso108)
+
+<br/><br/>
+  
+### **Tema 2 Las herramientas básicas** (Énfasis en el seguimiento de productos) 
+
+* Ciclo de mejoramiento y de control PHVA (recurso201)
+* Problemas y proyectos (recurso202)
+* Cómo lograr la participación: Tormenta de ideas (recurso203)
+* Cómo registrar la información: Hojas de chequeo y de Registro de datos (recurso204)
+* Gráficos de barras, columnas, de línea, de áreas y pictóricos (recurso205)
+* Cómo identificar causas de problemas: Diagramas causa – efecto, Diagrama Por qué – Porqué (recurso206)
+* Cómo organizar prioridades: Diagrama de Pareto (recurso207)
+* Análisis de regresión lineal simple y múltiple, correlaciones (recurso208)
+
+<br/><br/>
+  
+### **Tema 3: Herramientas estadísticas** (se incorporan con machine learning)
+
+* Introducción a las técnicas multivariadas descriptivas: análisis de componentes principales, análisis de conglomerados y análisis de correspondencia. (recurso301 -recurso302 - recurso303 - recurso304)
+* Introducción al lenguaje estadístico R (recurso305)
+* Ejemplos de caso aplicado (con base de datos) (recurso306)
+
