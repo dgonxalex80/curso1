@@ -8,8 +8,26 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
+# Colores - paleta de azules
+c1="#001A33"
+c2="#003366"
+c3="#004080"
+c4="#1A8CFF"
+c5="#4DA6FF"
+c6="#80BFFF"
+c7="#B3D9FF"
 
+# <span style="color:#001A33"> 
+
+## <span style="color:#003366">  
+
+### <span style="color:#004080">
+### <span style="color:#1A8CFF">
+### <span style="color:#4DA6FF">
+### <span style="color:#80BFFF">
+### <span style="color:#B3D9FF">
+
+```
 
 * Curtosis
 * Sesgo o asimetria

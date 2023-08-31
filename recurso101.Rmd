@@ -8,44 +8,157 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+# Colores - paleta de azules
+c1="#001A33"
+c2="#003366"
+c3="#004080"
+c4="#1A8CFF"
+c5="#4DA6FF"
+c6="#80BFFF"
+c7="#B3D9FF"
+
+# <span style="color:#001A33"> 
+
+## <span style="color:#003366">  
+
+### <span style="color:#004080">
+### <span style="color:#1A8CFF">
+### <span style="color:#4DA6FF">
+### <span style="color:#80BFFF">
+### <span style="color:#B3D9FF">
+
 ```
 
-Estadistica descriptiva
+<br/><br/>
 
-Probabilidad
-
-Variable aleatoria
-
-Cualitativas
-
-Cuantitativas
-   Discretas
-   Continuas
-   
-Escalas de medición
-  Nominal
-  Ordinal
-  De intevalo 
-  De razón
-   
-Respuesta o dependientes
-Explicativas o regresoras
+Las siguientes definiciones estan relacionadas con métodologia empleadas en el proceso de la información para la toma de decisiones como son CRISP-DM  (Cross-Industry Standard Process for Data Mining) o tambienTDSP (Team Data Science Process).
 
 
-Dependientes
-Independientes
+##  **Estadistica descriptiva**
+
+Es una rama de la estadística que se centra en recopilar, organizar, resumir y presentar datos de manera informativa. Su objetivo principal es describir las características esenciales de un conjunto de datos, como tendencias, patrones, distribuciones y medidas de resumen, para ayudar a comprender y comunicar de manera efectiva la información contenida en esos datos.
+
+<br/><br/>
+
+## **Probabilidad**
+
+Es una medida numérica que cuantifica la posibilidad de que un evento ocurra. 
+Se expresa como un número entre 0 y 1, donde 0 significa que el evento no ocurrirá  y 1 significa que el evento es seguro que ocurra. Los valores intermedios representan diferentes niveles de posibilidad. Conformando una herramienta esencial en la estadística y en muchas áreas de la ciencia para la toma de decisiones informadas.
+
+<br/><br/>
+
+Enfoques:
+
+### **Probabilidad clásica** 
+
+$$P(A) = \dfrac{n(A)}{n(S)}$$  
+
+donde: 
+
+* $A$ es un evento, por ejemplo sacar dos al lanzar un dado. 
+* $S$ es el conjunto de todos los valores que puede tomar el experimento aleatoro, en este caso el lanzamiento de un dado. 
+* $n(A)$, el número de formas como puede ocurrir el evento $A$, en este caso : 1. y 
+* $n(S)$: el número de elementos del espacio muestral, es decir el número de formas diferentes como puede resultar el lanzamiento de un dado (6).
+  
+  $$P(A) = \dfrac{1}{6}$$
+<br/><br/>
+
+### **Probabilidad frecuentista** :  
+
+$$P(A) = \lim_{n  \to \infty}\dfrac{\text{número de veces que ocurre A}}{\text{tamaño de la muestra}}$$
+
+En este caso la probabilidad se estima tomando una muestra de tamaño $n$ y calculando la razón entre el número de veces en que se cumple el evento y el tamaño de la muestra. Este valor constituye un limite que converge a un valor que constituye la probabilidad.
+
+Por ejemplo : la probabilidad que un cliente termine de pagar cumplidamente un crédito. Para ello se pueden obtener de la información disponible el número de clientes que han terminado el pago de sus creditos de manera cumplida sobre el total de clientes del banco.
+
+<br/><br/>
+
+### **Probabilidad subjetiva** : 
+
+$$P(A) \gets \text{Experto}$$
+En este caso la probabilidad es valorada y asignada por un experto. 
+
+
+<br/><br/>
+
+## **Variable aleatoria**
+
+Una variable aleatoria es el resultado de una observación, medición o de un conteo que es asignado a una caracteristica de un objeto o persona. 
 
 
 
-Inferencia cestadística
+<br/><br/>
+
+### Cualitativas
+
+<br/><br/>
+
+### Cuantitativas
+
+#### Discretas
+
+#### Continuas
+
+<br/><br/>
+
+### Escalas de medición
+
+####  Nominal
+
+####  Ordinal
+
+####  De intevalo 
+
+####  De razón
+
+<br/><br/>
+
+### Respuesta o dependientes
+### Explicativas o regresoras
+
+<br/><br/>
+
+### Dependientes
+### Independientes
 
 
-Población
-Parámetro
+<br/><br/>
 
-Muestra
-Estimador
+## **Inferencia Estadística**
+
+<br/><br/>
+
+##  **Población**
+<br/><br/>
 
 
-Pensamiento estadístico
+<br/><br/>
+
+## **Censo**
+
+<br/><br/>
+
+##  **Parámetro**
+
+<br/><br/>
+
+## **Muestra**
+
+
+<br/><br/>
+
+## **Estimador**
+
+
+<br/><br/>
+
+
+<br/><br/>
+
+### **Muestreo**
+
+
+<br/><br/>
+
+###  **Pensamiento estadístico**
 

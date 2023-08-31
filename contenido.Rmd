@@ -1,6 +1,6 @@
 ---
 title: "**Contenido**"
-author: "Pntificia Universidad Javeriana Cali "
+author: "Pontificia Universidad Javeriana Cali "
 date: " "
 output: html_document
 ---
@@ -23,10 +23,9 @@ knitr::opts_chunk$set(echo = TRUE)
 * Variables (recurso103)
 * Medidas de tendencia central (recurso105)
 * Medidas de Dispersión o variabilidad (recurso106)
-* La curva normal (recurso109)
 * Medidas de forma (recurso107)
 * Medidas de localización o posición. (recurso108)
-
+* La curva normal (recurso109)
 <br/><br/>
   
 ### **Tema 2 Las herramientas básicas** (Énfasis en el seguimiento de productos) 
