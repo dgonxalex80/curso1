@@ -1,5 +1,5 @@
 ---
-title: "Análisis de Cluster o Conglomerados"
+title: <span style="color:#004080">**Análisis de Cluster o Conglomerados**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

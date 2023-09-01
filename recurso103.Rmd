@@ -1,5 +1,5 @@
 ---
-title: "Tablas de frecuenciia"
+title: <span style="color:#004080">**Tablas de frecuencia**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -28,9 +28,43 @@ c7="#B3D9FF"
 ### <span style="color:#B3D9FF">
 
 ```
-Tablas variables nominales
-Tablas variables ordinales
 
-Tablas de doble entrada o cruzadas
+<br><br><br><br>
 
-Recodificación de variables cuantitavas
+Una tabla de frecuencias es una forma de resumir datos estadísticos cualitativos o categóricos. Proporciona una descripción resumida de la distribución de frecuencias de diferentes categorías en un conjunto de datos. Las tablas de frecuencias son útiles para visualizar patrones, identificar tendencias y resaltar características importantes de los datos.
+
+<br><br>
+
+## **Tablas variables nominales**
+
+Presentan tres columnas
+* Categorías : opciones o valores distintos que se resumen en la tabla
+* Frecuencia absoluta : Número de veces que aparece una categoría o valor específico en los datos
+* Frecuencia relativa : Proporción de la frecuencia absoluta de una categoría en relación con el total de datos
+
+<br><br>
+
+### **Ejemplo**
+
+| Tipo de Queja             | Frecuencia  Absoluta  | Frecuencia Relativa  |
+|:--------------------------|----------------------:|---------------------:|
+| Demora en transacciones   |              	120     |	0.2608696	           |	
+| Cobros incorrectos        |	               80	    |  0.1739130	      	 |
+| Mala atención al cliente  |	              150	    |  0.3260870	         |
+| Problemas en el sitio web |                50	    |  0.1086957		       |
+| Otros	                    |                60	    |  0.1304348	         |
+|                           |                       |                      |
+
+<br><br>
+
+## **Tablas variables ordinales**
+
+<br><br>
+
+## **Tablas de doble entrada o cruzadas**
+
+<br><br>
+
+## **Recodificación de variables cuantitavas**
+
+<br><br>

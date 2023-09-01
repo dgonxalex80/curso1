@@ -1,5 +1,5 @@
 ---
-title: "Conceptos Básicos"
+title: <span style="color:#004080">**Conceptos Básicos**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -18,11 +18,11 @@ c6="#80BFFF"
 c7="#B3D9FF"
 
 # <span style="color:#001A33"> 
-
 ## <span style="color:#003366">  
 
 ### <span style="color:#004080">
 ### <span style="color:#1A8CFF">
+
 ### <span style="color:#4DA6FF">
 ### <span style="color:#80BFFF">
 ### <span style="color:#B3D9FF">
@@ -33,14 +33,15 @@ c7="#B3D9FF"
 
 Las siguientes definiciones estan relacionadas con métodologia empleadas en el proceso de la información para la toma de decisiones como son CRISP-DM  (Cross-Industry Standard Process for Data Mining) o tambienTDSP (Team Data Science Process).
 
+<br/><br/>
 
-##  **Estadistica descriptiva**
+##  <span style="color:#004080">**Estadistica descriptiva**</span>
 
 Es una rama de la estadística que se centra en recopilar, organizar, resumir y presentar datos de manera informativa. Su objetivo principal es describir las características esenciales de un conjunto de datos, como tendencias, patrones, distribuciones y medidas de resumen, para ayudar a comprender y comunicar de manera efectiva la información contenida en esos datos.
 
 <br/><br/>
 
-## **Probabilidad**
+## <span style="color:#004080">**Probabilidad**</span>
 
 Es una medida numérica que cuantifica la posibilidad de que un evento ocurra. 
 Se expresa como un número entre 0 y 1, donde 0 significa que el evento no ocurrirá  y 1 significa que el evento es seguro que ocurra. Los valores intermedios representan diferentes niveles de posibilidad. Conformando una herramienta esencial en la estadística y en muchas áreas de la ciencia para la toma de decisiones informadas.
@@ -49,7 +50,7 @@ Se expresa como un número entre 0 y 1, donde 0 significa que el evento no ocurr
 
 Enfoques:
 
-### **Probabilidad clásica** 
+### <span style="color:#1A8CFF">**Probabilidad clásica**</span> 
 
 $$P(A) = \dfrac{n(A)}{n(S)}$$  
 
@@ -63,7 +64,7 @@ donde:
   $$P(A) = \dfrac{1}{6}$$
 <br/><br/>
 
-### **Probabilidad frecuentista** :  
+### <span style="color:#1A8CFF">**Probabilidad frecuentista**</span> :  
 
 $$P(A) = \lim_{n  \to \infty}\dfrac{\text{número de veces que ocurre A}}{\text{tamaño de la muestra}}$$
 
@@ -73,7 +74,7 @@ Por ejemplo : la probabilidad que un cliente termine de pagar cumplidamente un c
 
 <br/><br/>
 
-### **Probabilidad subjetiva** : 
+### <span style="color:#1A8CFF">**Probabilidad subjetiva**</span> : 
 
 $$P(A) \gets \text{Experto}$$
 En este caso la probabilidad es valorada y asignada por un experto. 
@@ -81,13 +82,9 @@ En este caso la probabilidad es valorada y asignada por un experto.
 
 <br/><br/>
 
-## **Variable aleatoria**
+## <span style="color:#004080">**Variable aleatoria**</span>
 
-Una variable aleatoria es una caracteristica o atributo que puede tomar diferentes valores, distinta naturaleza 
-
-
-el resultado de experimento aleatorio del cual auque se conosca los posibles resultados no se tiene certeza de cual de ellos finalmente se produzca. Por lo general estan asociadas a la medición o el conteo asignado a una caracteristica de un objeto o persona.
-
+Una variable aleatoria es una caracteristica o atributo que puede tomar diferentes valores, distinta naturaleza. El resultado de experimento aleatorio del cual auque se conosca los posibles resultados no se tiene certeza de cual de ellos finalmente se produzca. Por lo general estan asociadas a la medición o el conteo asignado a una caracteristica de un objeto o persona.
 
 <br/><br/>
 
@@ -103,12 +100,13 @@ knitr::include_graphics("img/clasificacion.png")
 ```
 <br/><br/>
 
-### **Por su origen** 
+### <span style="color:#1A8CFF">**Por su origen**</span> 
 
 Una variable es **aleatoria** cuando los valores resultantes de una medición no son predecibles. Podría decirse que sus resultados se desconoce por completo. Si antes de medir, puede predecirse el valor que tendrá la variable, entonces se dice que ésta tiene carácter **determinístico**.
 
+<br/><br/>
 
-### **Por su naturaleza**
+### <span style="color:#1A8CFF">**Por su naturaleza**</span>
 
 Una variable es **cuantitativa** si denota características cuyos valores pertenecen al conjunto de los reales, tales como edad, peso y el sueldo de los empleados o el tiempo de vida de un equipo electrónico. Estas variables cuantitativas, a la vez se pueden clasificar en **discretas** o **continuas**.
 
@@ -118,37 +116,41 @@ numerable y por lo general proceden del conteo como por ejemplo: número de hijo
 Una variable es **continua** cuando el conjunto de valores que puede tomar la variable
 corresponde a un intervalo o a la unión de intervalos. Por lo general este tipo de variables estan relacionadas con la medición, como por ejemplo el peso de una persona, el interes generado por un CDT.  Estas  variagbles puede tomar cualquier valor en un intervalo de pesos determinado.
 
-### **Por su relación con otras variables** 
+<br/><br/>
+
+### <span style="color:#1A8CFF">**Por su relación con otras variables**</span> 
 
 Es frecuente que un estudio tenga por objetivo describir el comportamiento de una variable específica a partir de otras variables. Por ejemplo, El kilometraje de un auto puede informar sobre el tiempo de vida de dicho auto. En este caso, se habla de variables **dependientes** e **independientes**.
 
 <br/><br/>
 
-### **Escalas de medición**
+### <span style="color:#004080">**Escalas de medición**</span>
 
 De acuerdo a su naturaleza las variables se pueden medir de acuerdo a las siguientes escalas: 
 
 ```{r, echo=FALSE, out.width="80%", fig.align = "left"}
 knitr::include_graphics("img/escalas.png")
 ```
-<br/><br/>
 
+<br/>
 
-####  **Nominal**
+### <span style="color:#1A8CFF">**Nominal**</span>
 
 Corresponde a valores* **no numéricos** sin presencia de orden entre ellos. Solo es posibles  la comparación de dos valores mediante la igualda o desegualdad :
 
 * Dos empleados tienen el mismo cargo  o sus cargos son diferentes. Por tal razón la variable **cargo** es una variable cualitativa en escala **nominal**.
 
+<br/>
 
-####  Ordinal
+### <span style="color:#1A8CFF">**Ordinal**</span>
 
 Corresponde a valores **no numéricos** con presencia de orden entre ellos. Es posible realizar las comparaciones de dos valores y afirmar que  son iguales, diferentes, que un representa un nivel menor o mayor que el otro.
 
 * La **evaluación del dempeño** de un empleado puede ser valorada como : Excelente, Muy buena, Buena, Regular, Muy Regular
 
+<br/>
 
-####  De intevalo 
+### <span style="color:#1A8CFF">**De intevalo**</span> 
 
 Corresponde a valores **numéricos**, dentro de los cuales solo tiene sentido la diferencia entre dos de sus valores. Podemos afirmar al comparar dos resultados que son iguales, diferentes, menor, mayor, tiene sentido la diferencia y el valor de cero no implica ausencia de la variable.
 
@@ -162,8 +164,9 @@ En conclusión la variable temperatura se puede medir en varias escalas
 En ocasiones variables de tipo cualitativo no observables de manera directa como : Clima laboral,
 Estrés, Inteligencia, Nivel de desempeño, Calidad, llamadas tambien **variables anteriores** debido a que su medición no es directa, sino que se realiza a través de preguntas que se recogen en un instrumento en muchos casos agrupados por factores. Cada respuesta en las preguntas tiene un valor o puntaje que es sumado y determina los niveles de la variable.  Los valores dados  a  las respuestas pueden cambiar de instrumento a instrumento, pues existen escalas con 3 valores, otras con 5, 7 que que pueden representar una escala ordinal. A esta transformación numérica (suma de los puntajes obtenidos al totalizar los puntajes obtenidos) se conoce como **operacionalización** a escala de intervalo de una variable cualitativa, facilitando su interpretación.  
 
+<br/>
 
-####  **De razón**
+### <span style="color:#1A8CFF">**De razón**</span>
 
 Corresponde a valores  **numéricos**, para los cuales además de la disigualdades ($=$, $\neq$, $<$,$>$), tiene sentido la razón de dos de sus valores.  Al comparar dos resultados de una variable cuantitativa de razón. 
 
@@ -171,7 +174,7 @@ De este tipo de escala son por ejemplo : edad, sueldo, tiempo de atención, tiem
 
 <br/><br/>
 
-### **Respuesta o dependientes y explicativas o regresoras**
+### <span style="color:#1A8CFF">**Respuesta o dependientes y explicativas o regresoras**</span>
 
 La variable **respuesta** o **dependiente** corresponde a la variable que se estás tratando de predecir o pronosticar a partir de un modelo estadístico. Los valores de esta variable dependen o son influenciados por otras variables en el análisis. 
 
@@ -182,44 +185,90 @@ Existe una relación entre la demanda de un bien y su precio, en este caso se pu
 
 <br/><br/>
 
-## **Inferencia Estadística**
+## <span style="color:#004080">**Inferencia Estadística**</span>
 
 Es el proceso mediante el cual se hacen generalizaciones sobre una población basándose en la información recopilada de una muestra de esa población. Este proceso implica el uso de metodos y tecnicas estadísticas relacionadas con la selección de una muestra representativa, la estimación de una caracteristica de la población o la evaluación de una afirmación sobre una caracteristica de la población que realiza a través de una prueba de hipótesis.
 
+<br/><br/>
+
+##  <span style="color:#004080">**Población**</span>
+
+Población estadística es el total de individuos que presentan o podrían presentar el rasgo característico que se desea estudiar. Se distingue la población finita y la población infinita.
 
 <br/><br/>
 
-##  **Población**
-<br/><br/>
+## <span style="color:#004080">**Censo**</span>
 
-
-<br/><br/>
-
-## **Censo**
+Investigación estadística que recopila información de todas las unidades que conforman la población de interés.  Ejemplo: Censo de población que se realiza en nuestro pais por parte del DANE.
 
 <br/><br/>
 
-##  **Parámetro**
+##  <span style="color:#004080">**Parámetro**</span>
+
+El valor de una caracteristica de interes obtenida del censo. Por ejemplo la proporción de hombre en nuestro pais es del 48.8%
 
 <br/><br/>
 
-## **Muestra**
+## <span style="color:#004080">**Muestra**</span>
 
+Subconjunto extraido de los elementos de la población. Ejemplo Gran Encuesta de Hogares con la que el DANE mide la tasa de desempleo en nuestro pais. 
 
-<br/><br/>
-
-## **Estimador**
-
-
-<br/><br/>
-
-
-<br/><br/>
-
-### **Muestreo**
 
 
 <br/><br/>
 
-###  **Pensamiento estadístico**
+## <span style="color:#004080">**Estimador**</span>
+
+Es una función de los valores obtenidos en una muestra que proporciona un valor cercano al valor del parametro o caracteristica de la población. Ejemplo : media muestral
+
+$$\bar{x} = \dfrac{1}{n} \sum_{i=1}^{2} x_{i} = \dfrac{x_1  x_2 + x_3 \dots + x_n}{n}$$
+Donde : $x_1  x_2 + x_3 \dots + x_n$ representa la información de la muestra de tamaño $n$
+
+<br/><br/>
+
+
+### <span style="color:#004080">**Muestreo**</span>
+
+El método utilizado para la selección de la muestra se denomina muestreo y puede hacerse de manera 
+
+### <span style="color:#1A8CFF">**Muestreo probabilistico**</span> : 
+
+Cuando se utiliza un sistema externo aleatorio 
+
+### <span style="color:#1A8CFF">**Muestreo no probabilistica**</span> : 
+
+Cuando la selección de los elementos de la muestra se realiza a juicio del investigador o por convenicia del mismo
+
+
+<br/><br/>
+
+###  <span style="color:#004080">**Pensamiento estadístico**</span>
+
+El pensamiento estadístico es la habilidad y el enfoque mental para comprender, interpretar y tomar decisiones basadas en datos y probabilidades. 
+
+Implica el uso de herramientas y técnicas estadísticas para analizar patrones, identificar tendencias y hacer inferencias a partir de la información disponible. El pensamiento estadístico no se limita a los expertos en estadísticas; es una habilidad importante para cualquier persona que tome decisiones informadas en diversos campos.
+
+Las características clave del pensamiento estadístico incluyen:
+
+### <span style="color:#1A8CFF">**Recopilación y Análisis de Datos**</span> : 
+
+Implica la capacidad de recopilar, organizar y analizar datos relevantes de manera sistemática y efectiva. Incluye la selección de la mejor forma de representar los datos, la identificación de valores atípicos y la generación de conclusiones a partir de los datos.
+
+###  <span style="color:#1A8CFF">**Inferencia y Generalización**</span>: 
+
+Corresponde a la capacidad de hacer inferencias sobre una población más amplia en función de la información de una muestra. Esto incluye la comprensión de los conceptos de intervalos de confianza y la interpretación de resultados de pruebas de hipótesis.
+
+###  <span style="color:#1A8CFF">**Probabilidad y Riesgo**</span>: 
+
+Implica evaluar la probabilidad de eventos futuros y comprender cómo se relacionan con la toma de decisiones. Incluye  la evaluación del riesgo en diversas situaciones.
+
+### <span style="color:#1A8CFF">**Variabilidad y Tendencias**</span>: 
+
+Incluye la comprensión de la variabilidad natural en los datos y cómo se pueden identificar tendencias o patrones a pesar de esta variabilidad.
+
+### <span style="color:#1A8CFF">**Comunicación Efectiva**</span>: 
+
+Por último involucra la habilidad de comunicar los resultados y las conclusiones de manera clara y comprensible para personas no especializadas en estadísticas.
+
+
 

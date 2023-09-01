@@ -1,5 +1,5 @@
 ---
-title: "Identificación de causas"
+title: <span style="color:#004080">**Identificación de causas**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

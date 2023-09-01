@@ -1,5 +1,5 @@
 ---
-title: "Introducción al lenguaje R"
+title: <span style="color:#004080">**Introducción al lenguaje R**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

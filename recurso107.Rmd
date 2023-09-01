@@ -1,5 +1,5 @@
 ---
-title: "Indicadores de forma"
+title: <span style="color:#004080">**Indicadores de forma**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -29,5 +29,10 @@ c7="#B3D9FF"
 
 ```
 
-* Curtosis
-* Sesgo o asimetria
+<br><br>
+
+## **Curtosis**
+
+<br><br>
+
+## **Sesgo o asimetria**

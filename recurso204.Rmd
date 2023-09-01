@@ -1,5 +1,5 @@
 ---
-title: "Herramientas básicas"
+title: <span style="color:#004080">**Herramientas básicas**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

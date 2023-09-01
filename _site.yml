@@ -11,8 +11,6 @@ navbar:
           href: recurso102.html           
         - text: "Tablas de frecuencia"
           href: recurso103.html 
-        - text: "Variables "
-          href: recurso104.html    
         - text: "Medidas de tendencia central"
           href: recurso105.html    
         - text: "Medidas de dispersión "

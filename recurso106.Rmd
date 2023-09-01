@@ -1,5 +1,5 @@
 ---
-title: "Indicadores de dispersión"
+title: <span style="color:#004080">**Indicadores de dispersión**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -29,8 +29,20 @@ c7="#B3D9FF"
 
 ```
 
+<br><br>
 
-* Rango
-* Varianza
-* Desviación estandar
-* Coeficiente de varianción
+## **Rango**
+
+<br><br>
+
+## **Varianza**
+
+<br><br>
+
+## **Desviación estandar**
+
+<br><br>
+
+## **Coeficiente de varianción**
+
+<br><br>

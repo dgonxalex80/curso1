@@ -33,19 +33,31 @@ c7="#B3D9FF"
 
 Bienvenidos al curso de **Estadística Descriptiva**. En un mundo impulsado por información y datos, la capacidad de comprender y utilizar eficazmente estos recursos se ha convertido en una habilidad esencial en diversos campos. Ya sea que estén buscando tomar decisiones informadas en los negocios, la investigación científica o cualquier otro ámbito, la capacidad de analizar y extraer información significativa de los datos es fundamental.
 
+<br/>
+
 En el **primer módulo**, explora los conceptos fundamentales del análisis de datos. Comenzaremos estableciendo las bases con la estadística descriptiva e inferencial, lo que nos permitirá comprender cómo resumir y analizar conjuntos de datos. Aprenderemos sobre el pensamiento estadístico y cómo aplicarlo a situaciones del mundo real. Además, abordaremos conceptos como población y muestra, así como las diferentes formas de clasificar variables cuantitativas y cualitativas. También exploraremos las escalas de medición y cómo influyen en nuestro enfoque analítico.
+
+<br/>
 
 Dentro del análisis de datos, nos sumergiremos en los indicadores de tendencia central, posición, dispersión y la curva normal, lo que nos permitirá comprender cómo están distribuidos los datos y qué información clave podemos extraer de ellos.
 
+<br/>
+
 La visualización de datos es una parte esencial de cualquier análisis. Exploraremos una variedad de gráficos, desde gráficos de barras y tortas hasta histogramas, gráficos de líneas, diagramas de cajas y gráficos de dispersión. Estas herramientas visuales nos ayudarán a comprender patrones, relaciones y tendencias en los datos de manera efectiva.
 
-
+<br/>
 
 En el **segundo módulo**, se presentan en las herramientas prácticas para tomar decisiones informadas utilizando datos. Exploraremos el ciclo de mejoramiento y control PHVA (Planificar, Hacer, Verificar, Actuar), una metodología esencial para garantizar la calidad y eficiencia en diversos procesos. Aprenderemos cómo abordar problemas y proyectos de manera estructurada y efectiva.
 
+<br/>
+
 La participación es crucial en cualquier proceso de toma de decisiones. Veremos cómo generar ideas de manera colaborativa a través de la tormenta de ideas y cómo registrar la información de manera organizada utilizando hojas de chequeo y registros de datos. Además, exploraremos una variedad de gráficos, desde los clásicos gráficos de barras y columnas hasta gráficos más creativos y efectivos.
 
+<br/>
+
 Identificar las causas fundamentales de los problemas es esencial para la mejora continua. Aprenderemos cómo utilizar herramientas como los diagramas causa-efecto y los diagramas "Por qué-Por qué" para explorar las raíces de los desafíos que enfrentamos. Además, descubriremos cómo organizar prioridades mediante el Diagrama de Pareto, lo que nos permitirá enfocarnos en los problemas más críticos.
+
+<br/>
 
 Por último en el **tercer módulo**, introducen herramientas estadísticas más avanzadas, incluida la introducción a técnicas multivariadas descriptivas como el análisis de componentes principales, análisis de conglomerados y análisis de correspondencia. También exploraremos la potencia del lenguaje estadístico R para el análisis de datos.
 
@@ -71,14 +83,13 @@ Análisis de datos
 
 * Tablas de frecuencia, intervalos de clase, representación gráfica con histograma de frecuencias.
 
-* Variables cuantitativas.
-
 * Medidas de tendencia central. media, mediana, moda, rango medio, media truncada, media geométrica, media armónica
 
 * Medidas de Dispersión o variabilidad. rango, varianza, desviación estantar, coeficiente de variación
  
-Medidas de posición. percentiles, deciles, cuartiles
-Medidas de forma. curtosis, sesgo
+* Medidas de posición. percentiles, deciles, cuartiles
+
+* Medidas de forma. curtosis, sesgo
 
 * La curva normal
 
@@ -120,9 +131,12 @@ Se incorporan con machine learning
 <br/>
 
 * Introducción a las técnicas multivariadas descriptivas: 
-    * análisis de componentes principales, 
-    * análisis de conglomerados y 
-    * análisis de correspondencia.
+
+* Análisis de Componentes Principales, 
+
+* Análisis de Conglomerados y 
+
+* Análisis de Correspondencia.
 
 * Introducción al lenguaje estadístico R 
 

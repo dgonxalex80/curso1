@@ -23,30 +23,73 @@ c7="#B3D9FF"
 
 ### <span style="color:#004080">
 ### <span style="color:#1A8CFF">
+
 ### <span style="color:#4DA6FF">
 ### <span style="color:#80BFFF">
 ### <span style="color:#B3D9FF">
 
 ```
 
-Variables cualitativas nominales
-  diagrama de tortas
-  
-Variables cualitativas ordinales
-  diagrama de barras
-  diagrama de likert
-  
-Variables cuantitavas de intervalo
-  Diagrama de radar
-  
-Variables cualitativas de razón
-  Diagrama de tallos y hojas
-  Diagrama de puntos
-  Histograma
-  Diagrama de cajas y bigores
-  Diagrama de densidad
-  Ddiagrama de lineas
+<br><br>
 
+## <span style="color:#004080">**Variables cualitativas nominales**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de tortas**</span>
+
+<br><br>
+
+## <span style="color:#004080">**Variables cualitativas ordinales</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de barras**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de likert**</span>
+
+<br><br>
+
+## <span style="color:#004080">**Variables cuantitavas de intervalo**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de radar**</span>
+
+<br><br>
+
+
+## <span style="color:#004080">**Variables cualitativas de razón**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de tallos y hojas**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de puntos**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Histograma**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">**Diagrama de cajas y bigores**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">Diagrama de densidad**</span>
+
+<br><br>
+
+### <span style="color:#1A8CFF">Diagrama de lineas**</span>
+
+<br><br>
   
+### <span style="color:#1A8CFF">Gráficos multivariados**</span>
+
   
      

@@ -1,5 +1,5 @@
 ---
-title: "Caso 1"
+title: <span style="color:#004080">**Caso 1**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
