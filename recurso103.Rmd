@@ -37,27 +37,92 @@ Una tabla de frecuencias es una forma de resumir datos estadísticos cualitativo
 
 ## **Tablas variables nominales**
 
-Presentan tres columnas
-* Categorías : opciones o valores distintos que se resumen en la tabla
-* Frecuencia absoluta : Número de veces que aparece una categoría o valor específico en los datos
-* Frecuencia relativa : Proporción de la frecuencia absoluta de una categoría en relación con el total de datos
+Presentan tres columnas:
+
+* **Categorías** : opciones o valores distintos que se resumen en la tabla
+
+* **Frecuencia absoluta** : Número de veces que aparece una categoría o valor específico en los datos
+
+* **Frecuencia relativa** : Proporción de la frecuencia absoluta de una categoría en relación con el total de datos
 
 <br><br>
 
 ### **Ejemplo**
 
-| Tipo de Queja             | Frecuencia  Absoluta  | Frecuencia Relativa  |
-|:--------------------------|----------------------:|---------------------:|
-| Demora en transacciones   |              	120     |	0.2608696	           |	
-| Cobros incorrectos        |	               80	    |  0.1739130	      	 |
-| Mala atención al cliente  |	              150	    |  0.3260870	         |
-| Problemas en el sitio web |                50	    |  0.1086957		       |
-| Otros	                    |                60	    |  0.1304348	         |
-|                           |                       |                      |
+
+```{r, echo=FALSE}
+# Creamos un vector con los niveles de la variable
+tipos_de_queja <- c("Demora en transacciones", "Cobros incorrectos", "Mala atención al cliente", "Problemas en el sitio web", "Otros")
+
+# Creamos un vector con las frecuencias absolutas
+frecuencias_absolutas <- c(120, 80, 150, 50, 60)
+
+# Calculamos las frecuencias relativas
+frecuencias_relativas <- frecuencias_absolutas / sum(frecuencias_absolutas)
+
+# Imprimimos la tabla de frecuencias
+knitr::kable(
+  data.frame(
+    tipo_de_queja = tipos_de_queja,
+    frecuencia_absoluta = frecuencias_absolutas,
+    frecuencia_relativa = frecuencias_relativas
+  ),
+  col.names = c("Tipo de queja", "Frecuencia absoluta", "Frecuencia relativa")
+)
+
+```
 
 <br><br>
 
 ## **Tablas variables ordinales**
+
+Para el caso de las variables cualitativas ordinales, la tabla de frecuencias además de las columas de las frecuencias absolutas y relativass adiciona las frecuencias acumuladas :
+
+
+* **Nivel** : opciones o valores distintos que se resumen en la tabla
+
+* **Frecuencia absoluta** : Número de veces que aparece una categoría o valor específico en los datos
+
+* **Frecuencia relativa** : Proporción de la frecuencia absoluta de una categoría en relación con el total de datos
+
+* **Frecuencia absoluta acumulada** : Acumula el número de casos presentados que son menores o iguales al nivel. El últrimo valor debe ser igual al tamaño de la muestra.
+
+* **Frecuencia relativa acumulada** : Acumula las frecuencias relativas que son menores o iguales al nivel. El último valor debe se igual a 1.
+
+
+<br><br>
+
+### **Ejempolo**
+
+```{r, echo=FALSE}
+# Creamos un vector con los niveles de la variable
+niveles <- c("Excelente", "Muy bueno", "Bueno", "Regular", "Muy regular")
+
+# Creamos un vector con las frecuencias absolutas
+frecuencias_absolutas <- c(105, 52, 30, 10, 8)
+
+# Calculamos las frecuencias relativas
+frecuencias_relativas <- frecuencias_absolutas / sum(frecuencias_absolutas)
+
+# Calculamos las frecuencias absolutas acumuladas
+frecuencias_absolutas_acumuladas <- cumsum(frecuencias_absolutas)
+
+# Calculamos las frecuencias relativas acumuladas
+frecuencias_relativas_acumuladas <- cumsum(frecuencias_relativas)
+
+# Imprimimos la tabla de frecuencias
+knitr::kable(
+  data.frame(
+    nivel = niveles,
+    frecuencia_absoluta = frecuencias_absolutas,
+    frecuencia_relativa = frecuencias_relativas,
+    frecuencia_absoluta_acumulada = frecuencias_absolutas_acumuladas,
+    frecuencia_relativa_acumulada = frecuencias_relativas_acumuladas
+  ),
+  col.names = c("Nivel", "Frecuencia absoluta", "Frecuencia relativa", "Frecuencia absoluta acumulada", "Frecuencia relativa acumulada")
+)
+```
+
 
 <br><br>
 
@@ -65,6 +130,32 @@ Presentan tres columnas
 
 <br><br>
 
+### **Ejemplo**
+
+```{r, echo=FALSE}
+# Creamos un vector con los niveles de la variable tipo cliente
+tipo_cliente <- c("Persona natural", "Persona jurídica")
+
+# Creamos un vector con los niveles de la variable tipo de servicio
+tipo_servicio <- c("Ahorro", "Corriente", "Tarjeta de crédito")
+
+# Creamos una matriz con las frecuencias absolutas
+frecuencias_absolutas <- matrix(c(100, 50, 20,
+                                  150, 100, 50), ncol = 2, byrow = TRUE)
+colnames(frecuencias_absolutas) <- tipo_cliente
+rownames(frecuencias_absolutas) <- tipo_servicio 
+
+# Imprimimos la tabla cruzada
+knitr::kable(frecuencias_absolutas)
+```
+
+
+<br><br>
+
 ## **Recodificación de variables cuantitavas**
+
+<br><br>
+
+### **Ejemplo**
 
 <br><br>

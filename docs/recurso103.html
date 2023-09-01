@@ -375,25 +375,25 @@ datos.</p>
 <p><br><br></p>
 <div id="tablas-variables-nominales" class="section level2">
 <h2><strong>Tablas variables nominales</strong></h2>
-<p>Presentan tres columnas * Categorías : opciones o valores distintos
-que se resumen en la tabla * Frecuencia absoluta : Número de veces que
-aparece una categoría o valor específico en los datos * Frecuencia
-relativa : Proporción de la frecuencia absoluta de una categoría en
-relación con el total de datos</p>
+<p>Presentan tres columnas:</p>
+<ul>
+<li><p><strong>Categorías</strong> : opciones o valores distintos que se
+resumen en la tabla</p></li>
+<li><p><strong>Frecuencia absoluta</strong> : Número de veces que
+aparece una categoría o valor específico en los datos</p></li>
+<li><p><strong>Frecuencia relativa</strong> : Proporción de la
+frecuencia absoluta de una categoría en relación con el total de
+datos</p></li>
+</ul>
 <p><br><br></p>
 <div id="ejemplo" class="section level3">
 <h3><strong>Ejemplo</strong></h3>
 <table>
-<colgroup>
-<col width="37%" />
-<col width="31%" />
-<col width="30%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th align="left">Tipo de Queja</th>
-<th align="right">Frecuencia Absoluta</th>
-<th align="right">Frecuencia Relativa</th>
+<th align="left">Tipo de queja</th>
+<th align="right">Frecuencia absoluta</th>
+<th align="right">Frecuencia relativa</th>
 </tr>
 </thead>
 <tbody>
@@ -422,11 +422,6 @@ relación con el total de datos</p>
 <td align="right">60</td>
 <td align="right">0.1304348</td>
 </tr>
-<tr class="even">
-<td align="left"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
 </tbody>
 </table>
 <p><br><br></p>
@@ -434,16 +429,127 @@ relación con el total de datos</p>
 </div>
 <div id="tablas-variables-ordinales" class="section level2">
 <h2><strong>Tablas variables ordinales</strong></h2>
+<p>Para el caso de las variables cualitativas ordinales, la tabla de
+frecuencias además de las columas de las frecuencias absolutas y
+relativass adiciona las frecuencias acumuladas :</p>
+<ul>
+<li><p><strong>Nivel</strong> : opciones o valores distintos que se
+resumen en la tabla</p></li>
+<li><p><strong>Frecuencia absoluta</strong> : Número de veces que
+aparece una categoría o valor específico en los datos</p></li>
+<li><p><strong>Frecuencia relativa</strong> : Proporción de la
+frecuencia absoluta de una categoría en relación con el total de
+datos</p></li>
+<li><p><strong>Frecuencia absoluta acumulada</strong> : Acumula el
+número de casos presentados que son menores o iguales al nivel. El
+últrimo valor debe ser igual al tamaño de la muestra.</p></li>
+<li><p><strong>Frecuencia relativa acumulada</strong> : Acumula las
+frecuencias relativas que son menores o iguales al nivel. El último
+valor debe se igual a 1.</p></li>
+</ul>
 <p><br><br></p>
+<div id="ejempolo" class="section level3">
+<h3><strong>Ejempolo</strong></h3>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="17%" />
+<col width="17%" />
+<col width="26%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Nivel</th>
+<th align="right">Frecuencia absoluta</th>
+<th align="right">Frecuencia relativa</th>
+<th align="right">Frecuencia absoluta acumulada</th>
+<th align="right">Frecuencia relativa acumulada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Excelente</td>
+<td align="right">105</td>
+<td align="right">0.5121951</td>
+<td align="right">105</td>
+<td align="right">0.5121951</td>
+</tr>
+<tr class="even">
+<td align="left">Muy bueno</td>
+<td align="right">52</td>
+<td align="right">0.2536585</td>
+<td align="right">157</td>
+<td align="right">0.7658537</td>
+</tr>
+<tr class="odd">
+<td align="left">Bueno</td>
+<td align="right">30</td>
+<td align="right">0.1463415</td>
+<td align="right">187</td>
+<td align="right">0.9121951</td>
+</tr>
+<tr class="even">
+<td align="left">Regular</td>
+<td align="right">10</td>
+<td align="right">0.0487805</td>
+<td align="right">197</td>
+<td align="right">0.9609756</td>
+</tr>
+<tr class="odd">
+<td align="left">Muy regular</td>
+<td align="right">8</td>
+<td align="right">0.0390244</td>
+<td align="right">205</td>
+<td align="right">1.0000000</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+</div>
 </div>
 <div id="tablas-de-doble-entrada-o-cruzadas" class="section level2">
 <h2><strong>Tablas de doble entrada o cruzadas</strong></h2>
 <p><br><br></p>
+<div id="ejemplo-1" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Persona natural</th>
+<th align="right">Persona jurídica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ahorro</td>
+<td align="right">100</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="left">Corriente</td>
+<td align="right">20</td>
+<td align="right">150</td>
+</tr>
+<tr class="odd">
+<td align="left">Tarjeta de crédito</td>
+<td align="right">100</td>
+<td align="right">50</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+</div>
 </div>
 <div id="recodificación-de-variables-cuantitavas"
 class="section level2">
 <h2><strong>Recodificación de variables cuantitavas</strong></h2>
 <p><br><br></p>
+<div id="ejemplo-2" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<p><br><br></p>
+</div>
 </div>
 
 
