@@ -83,48 +83,109 @@ En este caso la probabilidad es valorada y asignada por un experto.
 
 ## **Variable aleatoria**
 
-Una variable aleatoria es el resultado de una observación, medición o de un conteo que es asignado a una caracteristica de un objeto o persona. 
+Una variable aleatoria es una caracteristica o atributo que puede tomar diferentes valores, distinta naturaleza 
 
+
+el resultado de experimento aleatorio del cual auque se conosca los posibles resultados no se tiene certeza de cual de ellos finalmente se produzca. Por lo general estan asociadas a la medición o el conteo asignado a una caracteristica de un objeto o persona.
 
 
 <br/><br/>
 
-### Cualitativas
+## <span style="color:#004080">**Tipos de variables**</span>
+
+<br>
+
+Las variables se puede clasificar de acuerdo a su origen, su naturaleza o su relación con otras variables
+
+
+```{r, echo=FALSE, out.width="80%", fig.align = "left"}
+knitr::include_graphics("img/clasificacion.png")
+```
+<br/><br/>
+
+### **Por su origen** 
+
+Una variable es **aleatoria** cuando los valores resultantes de una medición no son predecibles. Podría decirse que sus resultados se desconoce por completo. Si antes de medir, puede predecirse el valor que tendrá la variable, entonces se dice que ésta tiene carácter **determinístico**.
+
+
+### **Por su naturaleza**
+
+Una variable es **cuantitativa** si denota características cuyos valores pertenecen al conjunto de los reales, tales como edad, peso y el sueldo de los empleados o el tiempo de vida de un equipo electrónico. Estas variables cuantitativas, a la vez se pueden clasificar en **discretas** o **continuas**.
+
+La variable es **discreta** cuando el conjunto de valores que toma la variable es finito o infinito
+numerable y por lo general proceden del conteo como por ejemplo: número de hijos por familia, el número de transaciones registradas en un dia, número de clientes atendidos en una hora, presentando como expresión inicial "número de".
+
+Una variable es **continua** cuando el conjunto de valores que puede tomar la variable
+corresponde a un intervalo o a la unión de intervalos. Por lo general este tipo de variables estan relacionadas con la medición, como por ejemplo el peso de una persona, el interes generado por un CDT.  Estas  variagbles puede tomar cualquier valor en un intervalo de pesos determinado.
+
+### **Por su relación con otras variables** 
+
+Es frecuente que un estudio tenga por objetivo describir el comportamiento de una variable específica a partir de otras variables. Por ejemplo, El kilometraje de un auto puede informar sobre el tiempo de vida de dicho auto. En este caso, se habla de variables **dependientes** e **independientes**.
 
 <br/><br/>
 
-### Cuantitativas
+### **Escalas de medición**
 
-#### Discretas
+De acuerdo a su naturaleza las variables se pueden medir de acuerdo a las siguientes escalas: 
 
-#### Continuas
-
+```{r, echo=FALSE, out.width="80%", fig.align = "left"}
+knitr::include_graphics("img/escalas.png")
+```
 <br/><br/>
 
-### Escalas de medición
 
-####  Nominal
+####  **Nominal**
+
+Corresponde a valores* **no numéricos** sin presencia de orden entre ellos. Solo es posibles  la comparación de dos valores mediante la igualda o desegualdad :
+
+* Dos empleados tienen el mismo cargo  o sus cargos son diferentes. Por tal razón la variable **cargo** es una variable cualitativa en escala **nominal**.
+
 
 ####  Ordinal
 
+Corresponde a valores **no numéricos** con presencia de orden entre ellos. Es posible realizar las comparaciones de dos valores y afirmar que  son iguales, diferentes, que un representa un nivel menor o mayor que el otro.
+
+* La **evaluación del dempeño** de un empleado puede ser valorada como : Excelente, Muy buena, Buena, Regular, Muy Regular
+
+
 ####  De intevalo 
 
-####  De razón
+Corresponde a valores **numéricos**, dentro de los cuales solo tiene sentido la diferencia entre dos de sus valores. Podemos afirmar al comparar dos resultados que son iguales, diferentes, menor, mayor, tiene sentido la diferencia y el valor de cero no implica ausencia de la variable.
+
+Como ejemplo de este tipo de escala tenemos la **temperatura** se pueden medir con varias escalas como: 
+
+* Celsius $^{\circ} C$, (La escala Celsius fue creada  Andrés Celsius (1742) . Esta escala  tiene como referencia los puntos de congelación y ebullición del agua, límites que divide en 100 partes iguales 
+*  Kelvin $K$, Creada por William Thompson Kelvin (1848), en la que propone una transformación de la escala Celsius hasta un valor  hipotético en el que hay ausencia de calor. 
+* Fahrenheit $^{\circ}F$  Escala propuesta Gabriel Daniel Fahrenheit (1724), proponiendo una modificación a la escala Celsius
+En conclusión la variable temperatura se puede medir en varias escalas
+
+En ocasiones variables de tipo cualitativo no observables de manera directa como : Clima laboral,
+Estrés, Inteligencia, Nivel de desempeño, Calidad, llamadas tambien **variables anteriores** debido a que su medición no es directa, sino que se realiza a través de preguntas que se recogen en un instrumento en muchos casos agrupados por factores. Cada respuesta en las preguntas tiene un valor o puntaje que es sumado y determina los niveles de la variable.  Los valores dados  a  las respuestas pueden cambiar de instrumento a instrumento, pues existen escalas con 3 valores, otras con 5, 7 que que pueden representar una escala ordinal. A esta transformación numérica (suma de los puntajes obtenidos al totalizar los puntajes obtenidos) se conoce como **operacionalización** a escala de intervalo de una variable cualitativa, facilitando su interpretación.  
+
+
+####  **De razón**
+
+Corresponde a valores  **numéricos**, para los cuales además de la disigualdades ($=$, $\neq$, $<$,$>$), tiene sentido la razón de dos de sus valores.  Al comparar dos resultados de una variable cuantitativa de razón. 
+
+De este tipo de escala son por ejemplo : edad, sueldo, tiempo de atención, tiempo de respuesta, peso de un equipo portatil.
 
 <br/><br/>
 
-### Respuesta o dependientes
-### Explicativas o regresoras
+### **Respuesta o dependientes y explicativas o regresoras**
 
-<br/><br/>
+La variable **respuesta** o **dependiente** corresponde a la variable que se estás tratando de predecir o pronosticar a partir de un modelo estadístico. Los valores de esta variable dependen o son influenciados por otras variables en el análisis. 
 
-### Dependientes
-### Independientes
+Las variables **explicativas**, también llamadas variables **independientes**o **regresoras**, son aquellas que se utilizan para explicar o predecir las variaciones en la variable respuesta. Son las variables que se consideran como posibles factores que pueden influir en la variable respuesta.
+
+Existe una relación entre la demanda de un bien y su precio, en este caso se puede construir un modelo que permita estimar la demanda de un bien (variable dependiente) a partir de su precio (variable independiente)
 
 
 <br/><br/>
 
 ## **Inferencia Estadística**
+
+Es el proceso mediante el cual se hacen generalizaciones sobre una población basándose en la información recopilada de una muestra de esa población. Este proceso implica el uso de metodos y tecnicas estadísticas relacionadas con la selección de una muestra representativa, la estimación de una caracteristica de la población o la evaluación de una afirmación sobre una caracteristica de la población que realiza a través de una prueba de hipótesis.
+
 
 <br/><br/>
 
