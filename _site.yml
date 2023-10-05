@@ -11,7 +11,7 @@ navbar:
         - text: "Definiciones"
           href: recurso101.html 
         - text: "Los datos"
-          href: recurso000.html           
+          href: recurso102.html           
         - text: "Indicadores de centro"
           href: recurso000.html    
         - text: "Medidas de dispersión"
