@@ -54,6 +54,12 @@ Una base de datos es una colección organizada de datos que se utilizan para rea
 
 Puede proceder de información recogida en una encuestas, registros gubernamentales, datos económicos, de salud, de clientes, entre otros. Estos datos se recopilan, organizan y almacenan de manera que sean accesibles y útiles para investigadores, analistas y otros profesionales que necesitan realizar análisis estadísticos.
 
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center"}
+knitr::include_graphics("img/base_datos.png")
+```
+
+
 Algunas características comunes de las bases de datos estadísticos incluyen:
 
 <br/><br/>

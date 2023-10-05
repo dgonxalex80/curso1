@@ -1,64 +1,63 @@
-name: " "
+name: "Nombre del Sitio"
 output_dir: "docs"
 navbar:
   title: "Estadística básica"
   left:
-    - text: "Estadística descriptiva"
+    - text: "Inicio"
+      icon: fa-home
+      href: index.html
+    - text: "Estadística básica"
       menu:
         - text: "Definiciones"
           href: recurso101.html 
         - text: "Los datos"
-          href: recurso102.html           
-        - text: "Tablas de frecuencia"
-          href: recurso103.html 
-        - text: "Medidas de tendencia central"
-          href: recurso105.html    
-        - text: "Medidas de dispersión "
-          href: recurso106.html    
+          href: recurso000.html           
+        - text: "Indicadores de centro"
+          href: recurso000.html    
+        - text: "Medidas de dispersión"
+          href: recurso000.html    
         - text: "Medidas de forma"
-          href: recurso107.html    
-        - text: "Medidas de posición "
-          href: recurso108.html    
+          href: recurso000.html    
+        - text: "Medidas de posición"
+          href: recurso000.html    
+        - text: "Medidas de forma"
+          href: recurso000.html           
         - text: "Curva normal"
-          href: recurso109.html           
+          href: recurso000.html           
         - text: "Visualización de datos"
-          href: recurso109.html               
-          
-    - text: "Herramientas Básicas"
+          href: recurso000.html               
+        - text: "Correlación entre variables"
+          href: recurso000.html   
+        - text: "Informe estadístico"
+          href: recurso000.html   
+    - text: "Estadística avanzada"
       menu:
         - text: "Ciclo de mejoramiento y de control"
-          href: recurso201.html
+          href: recurso000.html
         - text: "Problemas y proyectos"
-          href: recurso202.html
+          href: recurso000.html
         - text: "Cómo lograr la participación"
-          href: recurso203.html    
+          href: recurso000.html    
         - text: "Como registrar la información"
-          href: recurso204.html    
-        - text: "Tipos de gráficos "
-          href: recurso205.html    
+          href: recurso000.html    
         - text: "Cómo identificar causas de problemas"
-          href: recurso206.html    
+          href: recurso000.html    
         - text: "Cómo organizar prioridades "
-          href: recurso207.html    
+          href: recurso000.html    
         - text: "Análisis de regresión"
-          href: recurso208.html           
-    - text: "Herramientas Estadísticas"
-      menu:
+          href: recurso000.html           
+    - text: "Técnicas de análisis descriptivas"
+      menu: 
         - text: "Introducción"
-          href: recurso301.html
+          href: recurso000.html        
         - text: "Análisis de componentes principales"
-          href: recurso302.html  
+          href: recurso000.html  
         - text: "Análisis de conglomerados"
-          href: recurso303.html    
+          href: recurso000.html    
         - text: "Análisis de correspondencia"
-          href: recurso304.html    
-        - text: "Introducción al leguaje R"
-          href: recurso305.html    
-        - text: "Caso 1"
-          href: recurso306.html    
-        - text: "Caso 2"
-          href: recurso307.html    
-   
+          href: recurso000.html    
+        - text: "Ejemplo"
+          href: recurso000.html    
 output:
   html_document:
     css: style.css

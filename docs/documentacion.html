@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Daniel Gonzalez" />
+
+<meta name="date" content="2023-09-02" />
+
+<title>Documentacion</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Estadística básica</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Inicio
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Estadística básica
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso101.html">Definiciones</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Los datos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Indicadores de centro</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Medidas de dispersión</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Medidas de forma</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Medidas de posición</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Medidas de forma</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Curva normal</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Visualización de datos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Correlación entre variables</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Informe estadístico</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Estadística avanzada
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso000.html">Ciclo de mejoramiento y de control</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Problemas y proyectos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Cómo lograr la participación</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Como registrar la información</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Cómo identificar causas de problemas</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Cómo organizar prioridades </a>
+    </li>
+    <li>
+      <a href="recurso000.html">Análisis de regresión</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Técnicas de análisis descriptivas
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso000.html">Introducción</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Análisis de componentes principales</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Análisis de conglomerados</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Análisis de correspondencia</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Ejemplo</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Documentacion</h1>
+<h4 class="author">Daniel Gonzalez</h4>
+<h4 class="date">2023-09-02</h4>
+
+</div>
+
+
+<p><br/><br/></p>
+<div id="valida-tus-datos" class="section level4">
+<h4>1. Valida tus datos</h4>
+<ul>
+<li>Introducción a la calidad de la información</li>
+<li>Fuentes de información</li>
+<li>Variables cualitativas y cuantitativas Identificación de errores y
+sesgos en la información</li>
+</ul>
+<p><br/><br/></p>
+</div>
+<div id="control-interno" class="section level4">
+<h4>2.Control interno</h4>
+<ul>
+<li>Conceptos básicos.</li>
+<li>Indicadores de posición, dispersión y forma</li>
+<li>La media muestral, la proporción muestral y la varianza
+muestral</li>
+<li>Modelos binimial, Poisson y normal</li>
+<li>Introducción al control de calidad</li>
+<li>Gráficos e indicadores de control de calidad</li>
+<li>Control interno, cartas de control, reglas de control</li>
+<li>Análisis de ensayos de aptitud y z-score</li>
+<li>Control interno y seguimiento de tendencias</li>
+<li>Análisis de control binario y T2 de Hotelling</li>
+</ul>
+<p><br/><br/></p>
+</div>
+<div id="generaliza-los-resultados" class="section level4">
+<h4>3. Generaliza los resultados</h4>
+<ul>
+<li>Estimación puntual y por intervalos de confianza</li>
+<li>Pruebas de hipótesis. conceptos, error tipo I, tipo II y potencia de
+las pruebas de hipótesis.</li>
+<li>Pruebas de hipótesis paramétricas y no paramétricas.</li>
+<li>Evaluación de la significancia estadística</li>
+</ul>
+<p><br/><br/></p>
+</div>
+<div id="interpreta-y-presenta-tus-resultados" class="section level4">
+<h4>4. Interpreta y presenta tus resultados</h4>
+<ul>
+<li>Analisis y discusión de resultados cientificos</li>
+<li>Aplicación de los conceptos a casos prácticos</li>
+</ul>
+<hr />
+</div>
+<div id="valida-tus-datos-1" class="section level4">
+<h4>1. Valida tus datos</h4>
+<ul>
+<li><strong>Introducción a la calidad de la información</strong></li>
+</ul>
+<p>La calidad de la información es un concepto complejo que se refiere
+al grado en que la información cumple con los requisitos de los
+usuarios. Estos requisitos pueden ser explícitos, como en el caso de una
+especificación técnica, o implícitos, como en el caso de una expectativa
+del usuario.</p>
+<p>La calidad de la información es importante porque afecta a la toma de
+decisiones. Cuando la información es de alta calidad, los usuarios
+pueden tomar decisiones más informadas y precisas. Esto puede conducir a
+beneficios en una variedad de áreas, como la eficiencia, la
+productividad y la seguridad.</p>
+<p>Hay una serie de factores que pueden afectar a la calidad de la
+información, incluyendo:</p>
+<p><strong>Exactitud</strong>: La información debe ser precisa y libre
+de errores.</p>
+<p><strong>Completitud</strong>: La información debe ser completa y
+proporcionar todos los detalles necesarios para tomar una decisión.</p>
+<p><strong>Oportunidad</strong>: La información debe estar disponible
+cuando se necesita.</p>
+<p><strong>Integridad</strong>: La información debe ser consistente y
+coherente.</p>
+<p>Accesibilidad: La información debe ser fácil de encontrar y usar. La
+gestión de la calidad de la información es un proceso continuo que
+implica la identificación, evaluación y mejora de la calidad de la
+información. Este proceso debe estar integrado en el desarrollo y la
+operación de los sistemas de información.</p>
+<p><strong>Beneficios de la calidad de la información</strong></p>
+<p>La calidad de la información tiene una serie de beneficios para las
+organizaciones, incluyendo:</p>
+<p>Mejora la toma de decisiones: Cuando los usuarios tienen acceso a
+información de alta calidad, pueden tomar decisiones más informadas y
+precisas. Esto puede conducir a mejoras en la eficiencia, la
+productividad y la seguridad. Reduce los costes: La calidad de la
+información puede ayudar a reducir los costes de las organizaciones de
+varias maneras. Por ejemplo, puede ayudar a evitar errores, que pueden
+ser costosos de corregir. También puede ayudar a mejorar la eficiencia,
+lo que puede reducir los costes operativos. Mejora la satisfacción del
+cliente: Los clientes esperan que las organizaciones proporcionen
+información de alta calidad. Cuando las organizaciones cumplen con estas
+expectativas, pueden mejorar la satisfacción del cliente. Reduce el
+riesgo: La calidad de la información puede ayudar a reducir el riesgo
+para las organizaciones. Por ejemplo, puede ayudar a evitar errores que
+pueden dar lugar a multas, sanciones o pérdidas financieras.</p>
+<p>Conclusión</p>
+<p>La calidad de la información es un factor importante para el éxito de
+las organizaciones. Las organizaciones que se comprometen a la gestión
+de la calidad de la información pueden obtener una serie de beneficios,
+incluyendo la mejora de la toma de decisiones, la reducción de costes,
+la mejora de la satisfacción del cliente y la reducción del riesgo.</p>
+<hr />
+<p>La exactitud es un factor fundamental de la calidad de la
+información. La información debe ser precisa y libre de errores. Los
+errores pueden conducir a decisiones erróneas, pérdidas de dinero y
+daños a la reputación.</p>
+<p>Hay una serie de cosas que se pueden hacer para garantizar la
+exactitud de la información, incluyendo:</p>
+<p>Utilizar fuentes fiables: La información debe provenir de fuentes
+fiables, como fuentes oficiales, expertos en la materia o
+investigaciones científicas. Realizar comprobaciones: La información
+debe ser verificada antes de su uso. Esto puede hacerse mediante
+procesos de control de calidad o mediante la consulta de otras fuentes.
+Mantener la información actualizada: La información debe mantenerse
+actualizada para reflejar los cambios más recientes. Completitud</p>
+<p>La información debe ser completa y proporcionar todos los detalles
+necesarios para tomar una decisión. La información incompleta puede
+conducir a decisiones erróneas o a la pérdida de oportunidades.</p>
+<p>Hay una serie de cosas que se pueden hacer para garantizar la
+integridad de la información, incluyendo:</p>
+<p>Identificar los requisitos de información: Los usuarios deben
+identificar los requisitos de información que necesitan para tomar
+decisiones. Reunir toda la información necesaria: La información debe
+ser recopilada de todas las fuentes relevantes. Comprobar la integridad
+de la información: La información debe ser verificada para asegurarse de
+que es completa. Oportunidad</p>
+<p>La información debe estar disponible cuando se necesita. La
+información tardía o no disponible puede conducir a decisiones erróneas
+o a la pérdida de oportunidades.</p>
+<p>Hay una serie de cosas que se pueden hacer para garantizar la
+oportunidad de la información, incluyendo:</p>
+<p>Identificar las necesidades de información: Los usuarios deben
+identificar cuándo necesitan la información. Planificar el flujo de
+información: La información debe planificarse para que esté disponible
+cuando se necesita. Utilizar sistemas de información eficientes: Los
+sistemas de información deben diseñarse para facilitar el acceso a la
+información. Integridad</p>
+<p>La información debe ser consistente y coherente. La información
+inconsistente o incoherente puede conducir a confusión y errores.</p>
+<p>Hay una serie de cosas que se pueden hacer para garantizar la
+integridad de la información, incluyendo:</p>
+<p>Utilizar estándares de calidad: Los datos deben ser capturados,
+almacenados y procesados de acuerdo con estándares de calidad. Realizar
+validaciones: La información debe ser validada para asegurarse de que es
+consistente y coherente. Mantener la consistencia de la información: La
+información debe ser actualizada para reflejar los cambios más
+recientes. Accesibilidad</p>
+<p>La información debe ser fácil de encontrar y usar. La información
+difícil de encontrar o usar puede conducir a la pérdida de tiempo y
+recursos.</p>
+<p>Hay una serie de cosas que se pueden hacer para garantizar la
+accesibilidad de la información, incluyendo:</p>
+<p>Organizar la información de forma estructurada: La información debe
+organizarse de forma estructurada para que sea fácil de encontrar.
+Utilizar lenguaje claro y conciso: La información debe ser escrita en un
+lenguaje claro y conciso para que sea fácil de entender. Proporcionar
+herramientas de búsqueda y recuperación: Las herramientas de búsqueda y
+recuperación deben proporcionarse para facilitar el acceso a la
+información. Estos son algunos de los factores más importantes que
+afectan a la calidad de la información. La gestión de la calidad de la
+información es un proceso continuo que implica la identificación,
+evaluación y mejora de la calidad de la información</p>
+<hr />
+<p>Ejemplo claboratorios clinicos:</p>
+<p>En el caso de un laboratorio clínico, los factores de calidad de la
+información son especialmente importantes, ya que la información que
+producen estos laboratorios se utiliza para tomar decisiones sobre la
+salud de los pacientes.</p>
+<p>Exactitud</p>
+<p>En un laboratorio clínico, la exactitud de la información es
+fundamental. Los resultados de las pruebas deben ser precisos y libres
+de errores. Para garantizar la exactitud de la información, los
+laboratorios clínicos deben utilizar equipos y métodos de prueba de alta
+calidad, y deben realizar controles de calidad rigurosos.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un equipo de
+calibración para asegurarse de que sus instrumentos de medición están
+funcionando correctamente. También puede utilizar un programa de control
+de calidad interno para evaluar la precisión de sus resultados.</p>
+<p>Completitud</p>
+<p>Los resultados de las pruebas de un laboratorio clínico deben ser
+completos y proporcionar todos los detalles necesarios para tomar
+decisiones sobre el paciente. Para garantizar la integridad de la
+información, los laboratorios clínicos deben asegurarse de que recopilan
+todos los datos necesarios para realizar las pruebas.</p>
+<p>Por ejemplo, un laboratorio clínico puede solicitar al paciente que
+proporcione información sobre su historial médico, sus medicamentos y
+sus alergias. También puede solicitar al paciente que proporcione una
+muestra de sangre o de orina.</p>
+<p>Oportunidad</p>
+<p>Los resultados de las pruebas de un laboratorio clínico deben estar
+disponibles cuando se necesitan. Para garantizar la oportunidad de la
+información, los laboratorios clínicos deben tener procesos eficientes
+para procesar y reportar los resultados.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un sistema de
+información automatizado para procesar los resultados de las pruebas.
+También puede utilizar un sistema de notificación para informar a los
+médicos de los resultados de las pruebas de sus pacientes.</p>
+<p>Integridad</p>
+<p>Los resultados de las pruebas de un laboratorio clínico deben ser
+consistentes y coherentes. Para garantizar la integridad de la
+información, los laboratorios clínicos deben utilizar estándares y
+procedimientos de calidad estandarizados.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar normas
+internacionales para realizar sus pruebas. También puede utilizar
+procedimientos de documentación estandarizados para registrar los
+resultados de las pruebas.</p>
+<p>Accesibilidad</p>
+<p>Los resultados de las pruebas de un laboratorio clínico deben ser
+fáciles de encontrar y usar. Para garantizar la accesibilidad de la
+información, los laboratorios clínicos deben utilizar sistemas de
+información que sean fáciles de navegar.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un sistema de
+información que permita a los médicos buscar los resultados de las
+pruebas de sus pacientes por nombre, fecha de nacimiento o número de
+identificación.</p>
+<p>Estos son solo algunos ejemplos de cómo los factores de calidad de la
+información se aplican a los laboratorios clínicos. Al garantizar la
+calidad de la información que producen, los laboratorios clínicos pueden
+ayudar a garantizar la seguridad y la salud de los pacientes.</p>
+<hr />
+<p>Ejemplo pacientes clinica</p>
+<p>Exactitud</p>
+<p>La información sobre los pacientes debe ser precisa y libre de
+errores. Esto incluye información como los datos personales del
+paciente, su historial médico, sus medicamentos y sus alergias. Para
+garantizar la exactitud de la información, las clínicas deben utilizar
+procesos y procedimientos de registro de datos precisos.</p>
+<p>Por ejemplo, una clínica puede utilizar un sistema de información
+automatizado para registrar los datos de los pacientes. También puede
+utilizar un procedimiento de doble verificación para asegurarse de que
+los datos se registran correctamente.</p>
+<p>Completitud</p>
+<p>La información sobre los pacientes debe ser completa y proporcionar
+todos los detalles necesarios para brindar atención médica adecuada.
+Esto incluye información sobre la salud actual del paciente, así como su
+historial médico. Para garantizar la integridad de la información, las
+clínicas deben asegurarse de que recopilan toda la información relevante
+sobre el paciente.</p>
+<p>Por ejemplo, una clínica puede solicitar al paciente que proporcione
+información sobre sus síntomas, su historial médico y sus medicamentos.
+También puede realizar un examen físico del paciente para recopilar
+información adicional.</p>
+<p>Oportunidad</p>
+<p>La información sobre los pacientes debe estar disponible cuando se
+necesita. Esto es especialmente importante para la atención de
+emergencia. Para garantizar la oportunidad de la información, las
+clínicas deben tener procesos eficientes para acceder a la información
+del paciente.</p>
+<p>Por ejemplo, una clínica puede utilizar un sistema de información que
+permita a los médicos acceder a la información del paciente desde
+cualquier lugar. También puede utilizar un sistema de notificación para
+alertar a los médicos sobre cambios en la condición del paciente.</p>
+<p>Integridad</p>
+<p>La información sobre los pacientes debe ser consistente y coherente.
+Esto ayuda a garantizar que los médicos tomen decisiones de atención
+médica precisas. Para garantizar la integridad de la información, las
+clínicas deben utilizar estándares y procedimientos de calidad
+estandarizados.</p>
+<p>Por ejemplo, una clínica puede utilizar normas internacionales para
+documentar la información del paciente. También puede utilizar
+procedimientos de documentación estandarizados para garantizar que la
+información se registre de forma consistente.</p>
+<p>Accesibilidad</p>
+<p>La información sobre los pacientes debe ser fácil de encontrar y
+usar. Esto ayuda a garantizar que los médicos tengan la información que
+necesitan para brindar atención médica adecuada. Para garantizar la
+accesibilidad de la información, las clínicas deben utilizar sistemas de
+información que sean fáciles de navegar.</p>
+<p>Por ejemplo, una clínica puede utilizar un sistema de información que
+permita a los médicos buscar la información del paciente por nombre,
+fecha de nacimiento o número de identificación.</p>
+<p>Estos son solo algunos ejemplos de cómo los factores de calidad de la
+información se aplican a los pacientes de una clínica. Al garantizar la
+calidad de la información que tienen sobre sus pacientes, las clínicas
+pueden ayudar a garantizar la seguridad y la calidad de la atención
+médica que brindan.</p>
+<hr />
+<p>Ejemplo de examenes de sangra para toxicologia</p>
+<p>La información sobre los exámenes de sangre para toxicología es
+especialmente importante, ya que se utiliza para diagnosticar y tratar
+la intoxicación. Los factores de calidad de la información son aún más
+críticos en este caso, ya que pueden tener un impacto significativo en
+la salud del paciente.</p>
+<p>Exactitud</p>
+<p>En el caso de los exámenes de sangre para toxicología, la exactitud
+es fundamental. Los resultados de las pruebas deben ser precisos y
+libres de errores para que los médicos puedan diagnosticar y tratar
+correctamente la intoxicación. Para garantizar la exactitud de la
+información, los laboratorios clínicos deben utilizar equipos y métodos
+de prueba de alta calidad, y deben realizar controles de calidad
+rigurosos.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un equipo de
+calibración para asegurarse de que sus instrumentos de medición están
+funcionando correctamente. También puede utilizar un programa de control
+de calidad interno para evaluar la precisión de sus resultados.</p>
+<p>Completitud</p>
+<p>Los resultados de las pruebas de sangre para toxicología deben ser
+completos y proporcionar todos los detalles necesarios para diagnosticar
+y tratar la intoxicación. Para garantizar la integridad de la
+información, los laboratorios clínicos deben asegurarse de que recopilan
+todos los datos necesarios para realizar las pruebas.</p>
+<p>Por ejemplo, un laboratorio clínico puede solicitar al paciente que
+proporcione información sobre sus síntomas, su historial médico y sus
+medicamentos. También puede solicitar al paciente que proporcione una
+muestra de sangre.</p>
+<p>Oportunidad</p>
+<p>Los resultados de las pruebas de sangre para toxicología deben estar
+disponibles cuando se necesitan. Esto es especialmente importante para
+los casos de intoxicación aguda, donde el tratamiento debe iniciarse lo
+antes posible. Para garantizar la oportunidad de la información, los
+laboratorios clínicos deben tener procesos eficientes para procesar y
+reportar los resultados.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un sistema de
+información automatizado para procesar los resultados de las pruebas.
+También puede utilizar un sistema de notificación para informar a los
+médicos de los resultados de las pruebas de sus pacientes.</p>
+<p>Integridad</p>
+<p>Los resultados de las pruebas de sangre para toxicología deben ser
+consistentes y coherentes. Esto ayuda a garantizar que los médicos tomen
+decisiones de tratamiento precisas. Para garantizar la integridad de la
+información, los laboratorios clínicos deben utilizar estándares y
+procedimientos de calidad estandarizados.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar normas
+internacionales para realizar sus pruebas. También puede utilizar
+procedimientos de documentación estandarizados para registrar los
+resultados de las pruebas.</p>
+<p>Accesibilidad</p>
+<p>Los resultados de las pruebas de sangre para toxicología deben ser
+fáciles de encontrar y usar. Esto ayuda a garantizar que los médicos
+tengan la información que necesitan para brindar tratamiento adecuado.
+Para garantizar la accesibilidad de la información, los laboratorios
+clínicos deben utilizar sistemas de información que sean fáciles de
+navegar.</p>
+<p>Por ejemplo, un laboratorio clínico puede utilizar un sistema de
+información que permita a los médicos buscar los resultados de las
+pruebas de sus pacientes por nombre, fecha de nacimiento o número de
+identificación.</p>
+<p>Estos son solo algunos ejemplos de cómo los factores de calidad de la
+información se aplican a los exámenes de sangre para toxicología. Al
+garantizar la calidad de la información que producen, los laboratorios
+clínicos pueden ayudar a garantizar la seguridad y la salud de los
+pacientes.</p>
+<p>Aquí hay algunos consejos específicos para garantizar la calidad de
+la información sobre los exámenes de sangre para toxicología:</p>
+<p>Utilice equipos y métodos de prueba de alta calidad. Realice
+controles de calidad rigurosos. Recopile todos los datos necesarios para
+realizar las pruebas. Procese y reporte los resultados de manera
+eficiente. Utilice estándares y procedimientos de calidad
+estandarizados. Registre los resultados de manera consistente. Utilice
+sistemas de información que sean fáciles de navegar. Al seguir estos
+consejos, los laboratorios clínicos pueden ayudar a garantizar que los
+resultados de los exámenes de sangre para toxicología sean precisos,
+completos, oportunos, íntegros y accesibles.</p>
+<hr />
+<p>Fuentes de información</p>
+<p>Las fuentes de información son los documentos, registros, medios u
+otros recursos que proporcionan datos o conocimientos sobre un tema.
+Pueden ser de todo tipo, desde libros y artículos hasta sitios web y
+redes sociales.</p>
+<p>Las fuentes de información se pueden clasificar de diferentes
+maneras, según su origen, su propósito o su formato.</p>
+<p>Según su origen, las fuentes de información pueden ser primarias,
+secundarias o terciarias.</p>
+<p>Fuentes primarias son aquellas que contienen información original,
+recopilada por el autor o investigador. Por ejemplo, libros, artículos
+científicos, tesis, informes, entrevistas, encuestas, etc. Fuentes
+secundarias son aquellas que resumen o interpretan información de
+fuentes primarias. Por ejemplo, enciclopedias, diccionarios, resúmenes,
+reseñas, etc. Fuentes terciarias son aquellas que proporcionan acceso a
+un conjunto de fuentes primarias y secundarias. Por ejemplo, catálogos,
+bases de datos, directorios, etc. Según su propósito, las fuentes de
+información pueden ser de carácter fáctico, analítico o
+interpretativo.</p>
+<p>Fuentes fácticas proporcionan información objetiva y verificable. Por
+ejemplo, libros de texto, artículos científicos, informes
+gubernamentales, etc. Fuentes analíticas proporcionan información que
+interpreta o analiza hechos. Por ejemplo, artículos de opinión, ensayos,
+estudios de caso, etc. Fuentes interpretativas proporcionan información
+que ofrece una interpretación subjetiva de los hechos. Por ejemplo,
+novelas, poemas, obras de teatro, etc. Según su formato, las fuentes de
+información pueden ser impresas, electrónicas o mixtas.</p>
+<p>Fuentes impresas son aquellas que se distribuyen en formato físico,
+como libros, revistas, periódicos, etc. Fuentes electrónicas son
+aquellas que se distribuyen en formato digital, como sitios web, blogs,
+redes sociales, etc. Fuentes mixtas son aquellas que combinan formatos
+impresos y electrónicos, como libros electrónicos, revistas digitales,
+etc. Las fuentes de información son una herramienta esencial para la
+investigación. Al seleccionar las fuentes adecuadas, los investigadores
+pueden asegurarse de que están trabajando con información confiable y
+relevante.</p>
+<p>Aquí hay algunos consejos para seleccionar fuentes de
+información:</p>
+<p>Considere el propósito de su investigación. ¿Qué tipo de información
+necesita? ¿Está buscando información fáctica, analítica o
+interpretativa? Evalúe la confiabilidad de la fuente. ¿Es la fuente de
+alta calidad? ¿Es la información precisa y actualizada? Considere la
+relevancia de la fuente. ¿Es la información relevante para su
+investigación? Use una variedad de fuentes. Esto le ayudará a obtener
+una perspectiva más completa del tema que está investigando. Al seguir
+estos consejos, los investigadores pueden mejorar la calidad de su
+trabajo y garantizar que sus resultados sean confiables.</p>
+<hr />
+<p>Ejemplo de fuentes de informacion para laboratorios clinicos</p>
+<p>Claro, aquí hay un ejemplo de cómo las fuentes de información se
+utilizan en un laboratorio clínico:</p>
+<p>Un laboratorio clínico necesita información de una variedad de
+fuentes para realizar sus pruebas. Por ejemplo, necesita información
+sobre los estándares de calidad para las pruebas que realiza,
+información sobre los métodos de prueba que utiliza y información sobre
+los equipos y materiales que utiliza.</p>
+<p>Una fuente importante de información para los laboratorios clínicos
+son los organismos reguladores. Estos organismos establecen estándares
+de calidad para las pruebas que se realizan en los laboratorios
+clínicos. Los laboratorios clínicos deben cumplir con estos estándares
+para garantizar que sus pruebas sean precisas y confiables.</p>
+<p>Otra fuente importante de información para los laboratorios clínicos
+son las asociaciones profesionales. Estas asociaciones desarrollan y
+mantienen estándares de calidad para las pruebas que se realizan en los
+laboratorios clínicos. También proporcionan capacitación y educación a
+los profesionales de los laboratorios clínicos.</p>
+<p>Los laboratorios clínicos también utilizan una variedad de fuentes de
+información para mantenerse al día con los últimos avances en el campo
+de la medicina. Estas fuentes incluyen revistas científicas, sitios web
+y conferencias.</p>
+<p>Al utilizar una variedad de fuentes de información, los laboratorios
+clínicos pueden asegurarse de que están utilizando los mejores métodos y
+equipos para realizar sus pruebas. Esto ayuda a garantizar que las
+pruebas sean precisas y confiables, lo que es esencial para la atención
+médica de calidad.</p>
+<p>Aquí hay algunos ejemplos específicos de fuentes de información que
+se utilizan en los laboratorios clínicos:</p>
+<p>Fuentes primarias: Artículos científicos Informes de ensayos clínicos
+Manuales de procedimientos Fuentes secundarias: Libros de texto
+Enciclopedias Diccionarios Fuentes terciarias: Bases de datos
+Directorios Los laboratorios clínicos deben tener una estrategia para la
+gestión de la información que les permita identificar, evaluar y
+seleccionar fuentes de información de alta calidad. Esto ayudará a
+garantizar que los laboratorios clínicos estén utilizando la información
+más actualizada y precisa para realizar sus pruebas.</p>
+<hr />
+<p>Las redes sociales</p>
+<p>Las redes sociales son una fuente de información cada vez más
+importante en el ámbito de la salud. Los usuarios de las redes sociales
+comparten información sobre su salud, buscan información sobre
+tratamientos y medicamentos, y se conectan con otros pacientes y
+profesionales de la salud.</p>
+<p>Las redes sociales pueden ser una fuente valiosa de información para
+los pacientes. Pueden ayudar a los pacientes a aprender sobre su
+condición, a encontrar tratamientos y medicamentos adecuados, y a
+apoyarse mutuamente.</p>
+<p>Las redes sociales también pueden ser una fuente valiosa de
+información para los profesionales de la salud. Pueden ayudar a los
+profesionales de la salud a mantenerse al día con los últimos avances en
+la medicina, a conectarse con otros profesionales de la salud, y a
+aprender sobre las experiencias de los pacientes.</p>
+<p>Sin embargo, es importante ser consciente de los riesgos de utilizar
+las redes sociales como fuente de información. La información que se
+comparte en las redes sociales puede ser inexacta, incompleta o sesgada.
+También es importante tener en cuenta que la información que se comparte
+en las redes sociales puede no ser adecuada para todos los
+pacientes.</p>
+<p>Aquí hay algunos consejos para utilizar las redes sociales como
+fuente de información en el ámbito de la salud:</p>
+<p>Sea crítico con la información que encuentra. No asuma que toda la
+información que encuentra en las redes sociales es precisa. Verifique la
+información con fuentes confiables. Si encuentra información que le
+interesa, verifiquela con otras fuentes, como artículos científicos o
+sitios web de organizaciones de salud. Sea consciente de los sesgos. La
+información que se comparte en las redes sociales puede estar sesgada
+por las opiniones o creencias personales de la persona que la comparte.
+No tome decisiones médicas importantes en base a la información que
+encuentra en las redes sociales. Siempre consulte con un profesional de
+la salud antes de tomar decisiones médicas importantes. Las redes
+sociales pueden ser una herramienta valiosa para acceder a información
+de salud, pero es importante utilizarlas de manera responsable.</p>
+<hr />
+<p>Las historias clinicas</p>
+<p>Las historias clínicas de los pacientes son una fuente de información
+esencial para los profesionales de la salud. Estas historias contienen
+información sobre la salud del paciente, incluyendo su historial médico,
+sus medicamentos, sus alergias y sus resultados de pruebas.</p>
+<p>Las historias clínicas se utilizan para proporcionar atención médica
+adecuada y segura. Los profesionales de la salud utilizan las historias
+clínicas para diagnosticar enfermedades, planificar tratamientos y
+prevenir complicaciones.</p>
+<p>Las historias clínicas también se utilizan para investigar la
+atención médica. Los investigadores utilizan las historias clínicas para
+identificar tendencias en la atención médica y para evaluar la
+efectividad de nuevos tratamientos.</p>
+<p>Las historias clínicas deben ser precisas, completas y accesibles.
+Los profesionales de la salud deben asegurarse de que las historias
+clínicas de sus pacientes estén actualizadas y que contengan toda la
+información relevante.</p>
+<p>Los pacientes también tienen el derecho de acceder a sus historias
+clínicas. Los pacientes pueden solicitar sus historias clínicas en
+cualquier momento.</p>
+<p>Aquí hay algunos beneficios de utilizar las historias clínicas de los
+pacientes:</p>
+<p>Mejora la calidad de la atención médica. Las historias clínicas
+permiten a los profesionales de la salud brindar atención médica más
+adecuada y segura. Reduce los errores médicos. Las historias clínicas
+ayudan a los profesionales de la salud a evitar errores médicos, como la
+administración de medicamentos incorrectos o la omisión de pruebas
+importantes. Mejora la investigación médica. Las historias clínicas se
+utilizan para investigar la atención médica y para desarrollar nuevos
+tratamientos. Mejora la comunicación entre los profesionales de la
+salud. Las historias clínicas ayudan a los profesionales de la salud a
+compartir información sobre los pacientes, lo que puede mejorar la
+comunicación y la coordinación del cuidado. Mejora la atención al
+paciente. Las historias clínicas ayudan a los profesionales de la salud
+a comprender mejor a los pacientes y a brindar una atención más
+personalizada. Las historias clínicas son una herramienta esencial para
+la atención médica. Al utilizar las historias clínicas de manera
+adecuada, los profesionales de la salud pueden brindar atención médica
+más segura y efectiva.</p>
+<hr />
+<p>Referencias bibliograficas</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

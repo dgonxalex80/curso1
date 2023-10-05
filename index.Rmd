@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#004080">**Estadística básica**</span>
+title: <span style="color:#004080">**Seminario Analítica de Datos**</span>
 output:
   word_document: default
   pdf_document: default
@@ -29,118 +29,73 @@ c7="#B3D9FF"
 
 <br/><br/>
 
-# <span style="color:#004080">**Introducción**</span>
+# <span style="color:#004080">**Curso Estadística básica**</span>
 
-Bienvenidos al curso de **Estadística Descriptiva**. En un mundo impulsado por información y datos, la capacidad de comprender y utilizar eficazmente estos recursos se ha convertido en una habilidad esencial en diversos campos. Ya sea que estén buscando tomar decisiones informadas en los negocios, la investigación científica o cualquier otro ámbito, la capacidad de analizar y extraer información significativa de los datos es fundamental.
-
-<br/>
-
-En el **primer módulo**, explora los conceptos fundamentales del análisis de datos. Comenzaremos estableciendo las bases con la estadística descriptiva e inferencial, lo que nos permitirá comprender cómo resumir y analizar conjuntos de datos. Aprenderemos sobre el pensamiento estadístico y cómo aplicarlo a situaciones del mundo real. Además, abordaremos conceptos como población y muestra, así como las diferentes formas de clasificar variables cuantitativas y cualitativas. También exploraremos las escalas de medición y cómo influyen en nuestro enfoque analítico.
-
-<br/>
-
-Dentro del análisis de datos, nos sumergiremos en los indicadores de tendencia central, posición, dispersión y la curva normal, lo que nos permitirá comprender cómo están distribuidos los datos y qué información clave podemos extraer de ellos.
-
-<br/>
-
-La visualización de datos es una parte esencial de cualquier análisis. Exploraremos una variedad de gráficos, desde gráficos de barras y tortas hasta histogramas, gráficos de líneas, diagramas de cajas y gráficos de dispersión. Estas herramientas visuales nos ayudarán a comprender patrones, relaciones y tendencias en los datos de manera efectiva.
-
-<br/>
-
-En el **segundo módulo**, se presentan en las herramientas prácticas para tomar decisiones informadas utilizando datos. Exploraremos el ciclo de mejoramiento y control PHVA (Planificar, Hacer, Verificar, Actuar), una metodología esencial para garantizar la calidad y eficiencia en diversos procesos. Aprenderemos cómo abordar problemas y proyectos de manera estructurada y efectiva.
-
-<br/>
-
-La participación es crucial en cualquier proceso de toma de decisiones. Veremos cómo generar ideas de manera colaborativa a través de la tormenta de ideas y cómo registrar la información de manera organizada utilizando hojas de chequeo y registros de datos. Además, exploraremos una variedad de gráficos, desde los clásicos gráficos de barras y columnas hasta gráficos más creativos y efectivos.
-
-<br/>
-
-Identificar las causas fundamentales de los problemas es esencial para la mejora continua. Aprenderemos cómo utilizar herramientas como los diagramas causa-efecto y los diagramas "Por qué-Por qué" para explorar las raíces de los desafíos que enfrentamos. Además, descubriremos cómo organizar prioridades mediante el Diagrama de Pareto, lo que nos permitirá enfocarnos en los problemas más críticos.
-
-<br/>
-
-Por último en el **tercer módulo**, introducen herramientas estadísticas más avanzadas, incluida la introducción a técnicas multivariadas descriptivas como el análisis de componentes principales, análisis de conglomerados y análisis de correspondencia. También exploraremos la potencia del lenguaje estadístico R para el análisis de datos.
-
-<br/><br/>
-
-
-# <span style="color:#004080">**Metodología estadística**</span>
-
-<br/><br/>
-
-# <span style="color:#004080">**Contenido**</span>
-
-<br/>
-
-## <span style="color:#1A8CFF"> **Tema 1 Estadística Descriptiva**</span>
-
-Análisis de datos
-
-
-* Definiciones: estadística descriptiva, inferencial, pensamiento estadístico, población y muestra
-
+* Definiciones: estadística descriptiva, inferencial, pensamiento estadístico, población y muestra.
 * Los datos: variables cuantitativas (discretas, continuas) y cualitativas. Escalas de medición.
-
-* Tablas de frecuencia, intervalos de clase, representación gráfica con histograma de frecuencias.
-
-* Medidas de tendencia central. media, mediana, moda, rango medio, media truncada, media geométrica, media armónica
-
-* Medidas de Dispersión o variabilidad. rango, varianza, desviación estantar, coeficiente de variación
- 
-* Medidas de posición. percentiles, deciles, cuartiles
-
-* Medidas de forma. curtosis, sesgo
-
-* La curva normal
-
-* Visualización de datos
-
-* Informe estadístico
-
+* Medidas de tendencia central. media, mediana, moda, rango medio, media truncada, media geométrica, media armónica.
+* Medidas de Dispersión o variabilidad. rango, varianza, desviación estándar, coeficiente de variación.
+* Medidas de posición. percentiles, deciles, cuartiles.
+* Medidas de forma. curtosis, sesgo.
+* La curva normal.
+* Visualización de datos.
+* Correlación entre variables.
+* Informe estadístico.
+    
+  
 <br/><br/>
 
-
-## <span style="color:#1A8CFF">**Tema 2 Las herramientas básicas**</span> 
-
-Énfasis en el seguimiento de productos
-
-<br/>
+# <span style="color:#004080">**Curso Estadística Avanzada**</span>
 
 * Ciclo de mejoramiento y de control PHVA
-
 * Problemas y proyectos
-
 * Cómo lograr la participación: Tormenta de ideas
-
 * Cómo registrar la información: Hojas de chequeo y de Registro de datos
-
-* Gráficos de barras, columnas, de línea, de áreas y pictóricos
-
 * Cómo identificar causas de problemas: Diagramas causa – efecto, Diagrama Por qué – Porqué
-
 * Cómo organizar prioridades: Diagrama de Pareto
-
-* Análisis de regresión lineal simple y múltiple, correlaciones
+* Análisis de regresión lineal simple y múltiple
+* Introducción a las técnicas de análisis descriptivas:
+* Análisis de Componentes Principales
+* Análisis de Conglomerados
+* Análisis de Correspondencia.
+* Ejemplos de caso aplicado (con base de datos)
 
 <br/><br/>
 
-## <span style="color:#1A8CFF">**Tema 3: Herramientas estadísticas**</span> 
+# <span style="color:#004080">**Curso Introducción al análisis de datos**</span>
 
-Se incorporan con machine learning
+###  <span style="color:#004080">**Modulo 1: Introducción a la Analítica de Datos.**</span>
 
-<br/>
+* Qué es la Analítica de Datos.
+* Datos, Información y Conocimiento: el concepto de la minería de datos en el análisis de datos.
+* En qué se aplica la Analítica de Datos.
+* Campos de acción de la Analítica de Datos: BIBA (visualización o analítica avanzada).
+* Herramientas de uso de la Analítica de Datos, dependiendo de los campos de acción.
+* Ética para la Analítica de Datos.
+* El futuro de la Analítica de Datos.
 
-* Introducción a las técnicas multivariadas descriptivas: 
+### <span style="color:#004080">**Modulo 2: La inspección, depuración y transformación de datos.**</span>
 
-* Análisis de Componentes Principales, 
+* Exploración de datos, para reconocer: manejo de datos faltantes, tipos de datos, entre otros. 
+* Usabilidad y curaduría (validación/verificación) de datos.
+* Datos, variables y unidad de análisis, para la operacionalización de variables.
+* Depuración de datos.
+* Escalas de medida y categorización de variables.
+* Estandarización y transformación de datos.
 
-* Análisis de Conglomerados y 
+### <span style="color:#004080">**Modulo 3: Principios de visualización de Datos para Business Intelligence.**</span>
 
-* Análisis de Correspondencia.
+* ¿Qué es la visualización de datos?
+* Historia e importancia de la visualización de datos.
+* Herramientas comunes para BI: Excel, Power BI, Tableau, R, etc. 
+* Tipos de gráficas: cómo y cuándo usarlas. (construcción de tableros)
+* Aplicación de buenas prácticas para reducir carga visual.
+* Storytelling.
+* Análisis descriptivo vs Analítica avanzada (mostrar alcance del avanzado, Modelos, Machine learning, etc.)
 
-* Introducción al lenguaje estadístico R 
 
-* Ejemplos de caso aplicado (con base de datos)
+
+
 
 
 <br/><br/>

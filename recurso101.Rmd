@@ -46,11 +46,17 @@ Es una rama de la estadística que se centra en recopilar, organizar, resumir y 
 Es una medida numérica que cuantifica la posibilidad de que un evento ocurra. 
 Se expresa como un número entre 0 y 1, donde 0 significa que el evento no ocurrirá  y 1 significa que el evento es seguro que ocurra. Los valores intermedios representan diferentes niveles de posibilidad. Conformando una herramienta esencial en la estadística y en muchas áreas de la ciencia para la toma de decisiones informadas.
 
+El calculo de la probabilidad se puede obtener bajo diferentes enfoques.
+
 <br/><br/>
 
 Enfoques:
 
 ### <span style="color:#1A8CFF">**Probabilidad clásica**</span> 
+
+Enfoque original de la probabilidad creado por *Blaise Pascal* y *Pierre Fermat*, dos grandes matemáticos  al tratar de resolver un problema de juegos de azar propuesto por Antoine de Gombard, *Chavalier* de Meré.
+
+Supone un conjunto de resultados finitos, con igual probabilidad de ocurrencia y del se requiere establecer la probabilidad de que ocurra un evento en particular.
 
 $$P(A) = \dfrac{n(A)}{n(S)}$$  
 
@@ -66,6 +72,9 @@ donde:
 
 ### <span style="color:#1A8CFF">**Probabilidad frecuentista**</span> :  
 
+Este enfoque toma como base una frecuencia relativa de un evento, bajo el supuesto de que lo ocurrido -pasado - continuará de la misma forma en el futuro.
+
+
 $$P(A) = \lim_{n  \to \infty}\dfrac{\text{número de veces que ocurre A}}{\text{tamaño de la muestra}}$$
 
 En este caso la probabilidad se estima tomando una muestra de tamaño $n$ y calculando la razón entre el número de veces en que se cumple el evento y el tamaño de la muestra. Este valor constituye un limite que converge a un valor que constituye la probabilidad.
@@ -76,8 +85,12 @@ Por ejemplo : la probabilidad que un cliente termine de pagar cumplidamente un c
 
 ### <span style="color:#1A8CFF">**Probabilidad subjetiva**</span> : 
 
+En el caso de no contar con información o requerir una estimación de la probabilidad de ocurrencia de un evento de manera rápida se recurre a la experiencia de un experto.
+
+
 $$P(A) \gets \text{Experto}$$
-En este caso la probabilidad es valorada y asignada por un experto. 
+En este caso la probabilidad es valorada y asignada por un experto, como puede ser un médico, al estimar la probabilidad de exito de una operación,  un mecánico al valorar la probabilidad de funcionamiento correcto de un auto despues de haber reparado una de sus puezas, o un financiero al estimar la probabilidad de exito de una inversión.
+
 
 
 <br/><br/>
@@ -242,7 +255,7 @@ Cuando la selección de los elementos de la muestra se realiza a juicio del inve
 
 <br/><br/>
 
-###  <span style="color:#004080">**Pensamiento estadístico**</span>
+##  <span style="color:#004080">**Pensamiento estadístico**</span>
 
 El pensamiento estadístico es la habilidad y el enfoque mental para comprender, interpretar y tomar decisiones basadas en datos y probabilidades. 
 
