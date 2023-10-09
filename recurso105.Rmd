@@ -33,35 +33,208 @@ c7="#B3D9FF"
 
 ## **Indicadores**
 
+Un indicador en contexto estadístico,  es una medida numérica que se utiliza para resumir, describir o representar información sobre un conjunto de datos. Los indicadores proporcionan información cuantitativa que ayuda a comprender las características, tendencias, distribuciones y patrones de los datos. Los indicadores estadísticos son herramientas fundamentales en la estadística y la investigación científica, ya que permiten analizar y tomar decisiones basadas en datos de manera objetiva.
+
 <br><br>
 
 ## **Indicadores de tendencia central**
+
+Los indicadores de tendencia central son medidas estadísticas que se utilizan para describir la ubicación o el valor central de un conjunto de datos. Estos indicadores proporcionan información sobre dónde se concentran los datos en una distribución.
 
 <br><br>
 
 ## **Media aritmetica**
 
+
+$$\bar{x}= \frac{1}{n} \sum_{i=1}^{n} x_{i}$$
+
+Es una de los indicadores estadísticos mas conocidos
+
+Propiedades de la media :
+
++ La suma de las desviaciones de los datos con respecto a la media es cero. $\sum (x_{i}-\bar{x})=0$.
+
++ La suma de los cuadrados de las desviaciones de los datos con respecto a un valor $a$ es mínimo cuando $a=\bar{x}$.
+
++ Si $x_{i}=k$ para todo $i$, entonces, $\bar{x}=k$.
+
++ Si a todos los datos de una variable se le suma una constante $k$, es decir  $y_{i}=x_{i} + k$, entonces $\bar{y}=\bar{x} +k$
+
++ Si todos los datos de una variable se multiplican por una constante $k$, es decir $y_{i}=kx_{i}$, entonces $\bar{y}=k\bar{x}$
+
++ Si $z_{i}=a x_{i}+b y_{i}$, donde: *a*, *b* constantes y $x_{i}$, $y_{i}$ variables, entonces: $\bar{z}=a\bar{x}+b\bar{y}$
+
+
+### **Ejemplo**
+
+Un cliente ha presentado los siguiente valores en saldo de cuenta de ahorro durante los úntimos seis meses
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
+saldos
+```
+```{r}
+cat("promedio de seis meses en cuenta de ahorro : $", round(mean(saldos),1))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Instala y carga la librería ggplot2 si no lo has hecho antes
+if (!require(ggplot2)) {
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+# Vector de saldos
+saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
+
+# Nombres de los meses
+meses <- c("mes1", "mes2", "mes3", "mes4", "mes5", "mes6")
+
+# Calcular la media
+media <- mean(saldos)
+
+# Crear un dataframe con los datos
+datos <- data.frame(Mes = meses, Saldos = saldos)
+
+# Crear el gráfico de línea de puntos con ggplot2 y línea horizontal
+ggplot(datos, aes(x = Mes, y = Saldos)) +
+  geom_point(shape = 16, size = 3, color = "blue") +
+  geom_line(color = "blue") +
+  geom_text(aes(label = Saldos), vjust = -0.5, hjust = 0.5, size = 4) +
+  geom_hline(yintercept = media, color = "#686868", linetype = "dashed") +
+  geom_text(aes(x = "mes1", y = media, label = paste("Media:", round(media, 2))), 
+            vjust = -0.5, hjust = -1.5, size = 4, color = "#686868") +
+  labs(x = "Meses", y = "Saldos", title = "Gráfico de Saldos")
+
+
+```
+
 <br><br>
 
 ## **Mediana**
+
+**Me** : Es el número que divide la muestra en dos partes de igual proporción (50% : 50%). Es decir que por debajo de él se encuentra el 50% de los datos y por encima el otro 50%.
+
+Para su calculo se ordenan los datos y se determinan la posición correspondiente: 
+
+$$
+Me= \left\{\begin{array}{lcc} x_{(n+1)/2}  & si & \text{n es impar} \\ \\ 
+                              \dfrac{x_{n/2} + x_{(n/2+1)}}{2}  & si & \text{n es par}
+           \end{array} \right.
+$$
+
+
+### **Ejemplo**
+
+Para el caso de los saldos en cuenta de ahorros tenemos los valores ordenados para determinar el centro
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
+saldos
+```
+
+En este caso como $n=6$ es un número **par**, la mediana corresponde al dato que se encuentra en la posición: 
+
+$$
+Me = \dfrac{x_{n/2} + x_{(n/2+1)}}{2} = \dfrac{x_{6/2} + x_{(6/2+1)}}{2} = \dfrac{1586+ 2321}{2} = 1953.5  
+$$
+A diferencia de la media, la mediana es un indicador mas fuerte a cambios que se pueden presentar en los extremos.
+
+<br><br>
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Instala y carga la librería ggplot2 si no lo has hecho antes
+if (!require(ggplot2)) {
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+# Vector de saldos
+saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
+
+# Nombres de los meses
+meses <- c("mes1", "mes2", "mes3", "mes4", "mes5", "mes6")
+
+# Calcular la mediana
+mediana <- median(saldos)
+
+# Crear un dataframe con los datos
+datos <- data.frame(Mes = meses, Saldos = saldos)
+
+# Crear el gráfico de línea de puntos con ggplot2 y línea horizontal
+ggplot(datos, aes(x = Mes, y = Saldos)) +
+  geom_point(shape = 16, size = 3, color = "blue") +
+  geom_line(color = "blue") +
+  geom_text(aes(label = Saldos), vjust = -0.5, hjust = 0.5, size = 4) +
+  geom_hline(yintercept = mediana, color = "#686868", linetype = "dashed") +
+  geom_text(aes(x = "mes1", y = mediana, label = paste("Mediana:", round(mediana, 2))), 
+            vjust = -0.5, hjust = -1.5, size = 4, color = "#686868") +
+  labs(x = "Meses", y = "Saldos", title = "Gráfico de Saldos")
+
+```
+
+## **Moda**  
+
+**Mo** : Dato o valor que más se repite. Es utilizada como medida de tendencia central en variables **cualitativas**. En una tabla o  gráfico se puede distinguir fácilmente la moda. 
+
+### **Ejemplo**
+
 
 <br><br>
 
 ## **Media truncada**
 
+La media truncada es similar a la media aritmética, pero excluye un cierto porcentaje de valores atípicos (generalmente un cierto porcentaje de valores extremos) en cada extremo del conjunto de datos antes de calcular la media. Esto lo hace menos sensible a valores atípicos que la media aritmética. Es posible separar el 90% de los datos, quitando un 5% de los datos mas pequeños y un  5% de los datos mayores. En este caso el indicador se llama media truncada al 10%  ($\bar{x}_{_{0.10}}$)
+
+
+### **Ejemplo**
+
 <br><br>
 
 ## **Rango medio**
+
+El rango medio es la media de los valores más pequeños y más grandes en un conjunto de datos. Se calcula sumando el valor mínimo y el valor máximo y luego dividiéndolo por 2. Proporciona una medida de la tendencia central que tiene en cuenta los valores extremos.
+
+$$\frac{1}{2}\big(max(x)+min(x)\big)$$
+
+### **Ejemplo**
 
 <br><br>
 
 ## **Media ponderada**
 
+La media ponderada  se calcula asignando un peso específico a cada valor en un conjunto de datos antes de calcular la media. En una media ponderada, algunos valores tienen más influencia que otros en el cálculo de la media, dependiendo de sus respectivos pesos.
+
+$$\bar{x} = \dfrac{\sum_{i=1}^{n} (w_{i} \hspace{.1cm}x_{i})}{\sum_{i=1}^{n} w_{i}} $$
+donde :
+
+* $x_{i}$ : valor individual en el conjunto de datos
+* $w_{i}$ : el peso asociado a cada valor de $x_{i}$
+
+
+### **Nota**:
+
+En al gunos casos el valor individual $x_{i}$ puede representar la media de un subgrupo $i$ de la muestra. En este caso la media ponderada se convierte en una media de medias, poderada por el tamaño de cada subgrupo
+
+### **Ejemplo**
+
 <br><br>
 
 ## **Media armónica**
+
+La media armónica se calcula dividiendo el número de valores en el conjunto por la suma de los inversos de los valores individuales. Es especialmente útil cuando se trata de datos relacionados con tasas o proporciones, como velocidades promedio o tasas de retorno.
+
+$$H = \dfrac{n}{\frac{1}{x_{1}}+\frac{1}{x_{2}}+ ... + \frac{1}{x_{n}}}  $$
+
+Este indicador corresponde al inverso de la media aritmética 
+
+### **Ejemplo**
 
 <br><br>
 
 ## **Media geométrica**
 
+La media geométrica se calcula multiplicando todos los valores en el conjunto de datos y luego tomando la raíz enésima del producto, donde $n$ es el número de valores en el conjunto. Es útil cuando se analizan datos que tienen un crecimiento exponencial, como tasas de interés o tasas de crecimiento.
+
+Para encontrar su valor se multiplican los valores de $n$ tasas incrementadas en uno ($1+r$) y su a producto se le extrae la raíz $n$-esima.
+
+
+$$MG = \Bigg(\displaystyle\prod_{i=1}^n (r_{i}+1)\Bigg)^{1/n}$$
+### **Ejemplo**

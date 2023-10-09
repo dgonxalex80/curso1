@@ -13,19 +13,19 @@ navbar:
         - text: "Los datos"
           href: recurso102.html           
         - text: "Indicadores de centro"
-          href: recurso000.html    
+          href: recurso105.html    
         - text: "Medidas de dispersión"
-          href: recurso000.html    
+          href: recurso106.html    
         - text: "Medidas de forma"
-          href: recurso000.html    
+          href: recurso107.html    
         - text: "Medidas de posición"
           href: recurso000.html    
         - text: "Medidas de forma"
-          href: recurso000.html           
+          href: recurso108.html           
         - text: "Curva normal"
-          href: recurso000.html           
+          href: recurso109.html           
         - text: "Visualización de datos"
-          href: recurso000.html               
+          href: recurso110.html               
         - text: "Correlación entre variables"
           href: recurso000.html   
         - text: "Informe estadístico"

@@ -68,6 +68,12 @@ Algunas características comunes de las bases de datos estadísticos incluyen:
 
 Los datos se organizan en tablas o archivos, con filas que representan observaciones individuales y columnas que representan variables.
 
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/base.png")
+```
+
+
 <br/><br/>
 
 ###  <span style="color:#1A8CFF">**Metadatos detallados**</span>: 
