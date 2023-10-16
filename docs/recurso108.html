@@ -373,34 +373,11 @@ Posición</strong></span></h1>
 
 
 <p><br><br></p>
-<p>Los indicadores de posición se centra en los
-<strong>percentiles</strong> que corresponden a indicadores estadísticos
-que dividen el conjunto de datos en 100 partes iguales, cada una
-equivalente al <span class="math inline">\(1\)</span>%, y cada percentil
-representa el valor por debajo del cual cae una determinada proporción
-de los datos.</p>
-<p>Por ejemplo, el percentil <span class="math inline">\(50\)</span>
-corresponde a la mediana, que divide los datos en dos partes iguales,
-con el <span class="math inline">\(50\)</span>% de los valores por
-encima y el <span class="math inline">\(50\)</span>% por debajo. Los
-percentiles son herramientas fundamentales para comprender la
-distribución y la posición de los datos en un conjunto de
-observaciones.</p>
-<p>Son utilizados en la evaluación de desempeño en pruebas
-estandarizadas, el análisis de distribuciones de ingresos, la
-identificación de valores atípicos y la toma de decisiones en campos
-como la atención médica y la gestión empresarial. También se utilizan en
-la creación de gráficos de caja (<code>boxplot</code>) para visualizar
-la dispersión y la posición de los datos en una distribución.</p>
-<p>Los percentiles más comúnmente utilizados incluyen el percentil 25
-(<span class="math inline">\(Q_1\)</span>, primer cuartil), el percentil
-50 (<span class="math inline">\(Q_2\)</span>, mediana o segundo cuartil)
-y el percentil 75 (<span class="math inline">\(Q_3\)</span>, tercer
-cuartil). Estos indicadores proporcionan información sobre la dispersión
-y la posición de los datos en el contexto de un rango intercuartil
-(<span class="math inline">\(QIR = Q_3 - Q_1\)</span>), que es
-especialmente útil para identificar valores atípicos y comprender la
-variabilidad en los datos.</p>
+<p>Los indicadores de posición ayuda entender la ubicación de un dato
+con respecto al conjunto de ellos. Es necesario por tanto ordenar los
+datos de menor a mayor con el fin de poder indicar la posición de un
+dato en terminos relativos.</p>
+<p>Son ellos :</p>
 <p><br/><br/></p>
 <div id="mínimo" class="section level2">
 <h2><strong>mínimo</strong></h2>
@@ -411,9 +388,20 @@ extraño.</p>
 <p><br/><br/></p>
 <div id="ejemplo" class="section level3">
 <h3><strong>Ejemplo</strong></h3>
-<pre><code>##  [1] 30 32 34 35 36 36 38 38 38 39 39 39 39 41 41 42 43 43 43 44 44 45 45 46 47
-## [26] 49 50 51 52 53</code></pre>
-<pre><code>## valor mínimo :  30</code></pre>
+<p>Los siguentes valores corresponde a una muestra de edades de una base
+de clientes de una entidad financiera, ordenados de menor a mayor</p>
+<pre>
+30, 32, 32, 33, 33, 33, 33, 34, 34, 34, 35, 35, 35, 36, 36, 37, 37, 38, 38, 38, 38, 39, 39, 39, 39, 39, 40, 41, 
+41, 41, 42, 42, 42, 42, 42, 42, 42, 43, 44, 45, 45, 45, 45, 45, 46, 46, 47, 47, 48, 48, 49, 49, 49, 50, 50, 50, 
+51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 
+56, 56, 56, 56, 56, 57, 57, 57, 57, 57, 57, 57, 57, 57, 58, 58, 58, 59, 59, 59, 59, 59, 59, 60, 60, 60, 60, 60, 
+60, 60, 60, 61, 61, 61, 61, 61 ,61, 61, 61, 61, 61, 62, 62, 62, 62, 63, 63, 63, 63, 64, 64, 64, 64, 65, 65, 65, 
+65, 65, 65, 65, 65, 66, 66, 66, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 68, 68, 68, 68, 68, 69, 69, 69, 69, 70, 
+70, 71, 71, 71, 71, 71, 72, 72, 72, 72, 72, 72, 72, 73, 73, 74, 74, 74, 74, 74, 74, 76, 77, 78, 79, 82, 83, 84, 
+85, 88, 88, 18
+</pre>
+<pre><code>valor mínimo :  30</code></pre>
+<p><img src="recurso108_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br><br></p>
 </div>
 </div>
@@ -427,25 +415,105 @@ magnitud más alta de un conjunto de observaciones.</p>
 datos y para determinar si hay valores atípicos o excepciones que
 superan ciertos umbrales.</p>
 <p><br/><br/></p>
+<p><img src="recurso108_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p><br><br></p>
 </div>
 <div id="percentiles" class="section level2">
 <h2><strong>Percentiles</strong></h2>
+<p>Corresponden a indicadores estadísticos que dividen el conjunto de
+datos en 100 partes iguales, cada una equivalente al <span
+class="math inline">\(1\)</span>%, y cada percentil representa el valor
+por debajo del cual cae una determinada proporción de los datos. Los
+percentiles son herramientas fundamentales para comprender la
+distribución y la posición de los datos en un conjunto de
+observaciones.</p>
+<p>Son utilizados en la evaluación de desempeño en pruebas
+estandarizadas, el análisis de distribuciones de ingresos, la
+identificación de valores atípicos y la toma de decisiones en campos
+como la atención médica y la gestión empresarial. También se utilizan en
+la creación de gráficos de caja (<code>boxplot</code>) para visualizar
+la dispersión y la posición de los datos en una distribución.</p>
+<p>Son entonces 99 números que dividen los datos en 100 partes de igual
+porcentaje : <span class="math inline">\(P_1\)</span>, <span
+class="math inline">\(P_2\)</span>, ……..<span
+class="math inline">\(P_99\)</span></p>
+<p>En este caso el percentil <span class="math inline">\(50\)</span>
+corresponde a la mediana, que divide los datos en dos partes iguales,
+con el <span class="math inline">\(50\)</span>% de los valores por
+encima y el <span class="math inline">\(50\)</span>% por debajo.</p>
+<p>Los percentiles más comúnmente utilizados incluyen : <span
+class="math inline">\(P_5\)</span>, <span
+class="math inline">\(P_{25}\)</span>, <span
+class="math inline">\(P_{50}\)</span>, <span
+class="math inline">\(P_{75}\)</span>, <span
+class="math inline">\(P_{95}\)</span></p>
 <p><br><br></p>
+<p><img src="img/percentiles.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 <div id="deciles" class="section level2">
 <h2><strong>Deciles</strong></h2>
-<p><br><br></p>
+<p>Son 9 número que dividen los datos en 10 partes de igual porcentaje
+(10% cada uno)</p>
+<p><span class="math inline">\(D_1\)</span>, <span
+class="math inline">\(D_2\)</span>, <span
+class="math inline">\(D_3\)</span>,<span
+class="math inline">\(D_4\)</span>, <span
+class="math inline">\(D_5\)</span>, <span
+class="math inline">\(D_6\)</span>, <span
+class="math inline">\(D_7\)</span>, <span
+class="math inline">\(D_8\)</span>, <span
+class="math inline">\(D_9\)</span></p>
+<p>El decil 3 divide en dos partes los datos: por debajo de el está un
+30% de los datos, mientras el restante 70% se encuentra ubicado por
+encima.</p>
+<p><img src="img/deciles.png" width="100%" style="display: block; margin: auto;" />
+<br><br></p>
 <p><br/><br/></p>
 </div>
 <div id="quintiles" class="section level2">
 <h2><strong>Quintiles</strong></h2>
+<p>Son 4 números que dividen los datos en cinco parte de igual
+porcentaje, cada una de ellas con el 20% de los datos</p>
+<p><span class="math inline">\(Q_1\)</span>, <span
+class="math inline">\(Q_2\)</span>, <span
+class="math inline">\(Q_3\)</span>, <span
+class="math inline">\(Q_4\)</span></p>
+<p>Este indicador es muy utilizado en economía para representar los
+ingresos familiares, permitiendo evaluar la distribución de la riqueza.
+Tambien es empleado en educación para la evaluación de desempeño de
+estudiantes y en la segmentación de mercados entre las principales
+aplicaciones.</p>
+<p><img src="img/quintiles.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><br><br></p>
 </div>
 <div id="cuartiles" class="section level2">
 <h2><strong>Cuartiles</strong></h2>
-<p><br><br></p>
+<p>Son 3 números que dividen los datos en cinco parte de igual
+porcentaje, cada una de ellas con el 25% de los datos</p>
+<p><span class="math inline">\(q_1\)</span>, <span
+class="math inline">\(q_2\)</span>, <span
+class="math inline">\(q_3\)</span> <br><br></p>
+<p><img src="recurso108_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
+<p>El diagrama de cajas o boxplot, se contruye con los cuartiles que se
+ubican en las lineas de la caja, siendo <span
+class="math inline">\(q_1\)</span> en inicio de la caja, <span
+class="math inline">\(q_2\)</span>, la linea central de la caja y <span
+class="math inline">\(q_3\)</span> la linea que finaliza la caja.</p>
+<p>En el área represenada por la caja se encuentra el 50% de los datos
+en el restante 50% dividido en dos partes. Un 25% en la parte inferior y
+un 25% con los datos mayores.</p>
+<p>Note que la linea inferior llega hasta el dato menor y la linea
+siperior hasta el dato mayor. Esto no ocurre siempre, pues cuando se
+presentan datos atipicos esto se represntan por fiera de la linea</p>
+<p><img src="recurso108_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
+<p>El punto en color más oscuro constituye un dato atípico que se
+detecta al trazar dos límites :</p>
+<p>limite inferior = <span class="math inline">\(Q_1 - 1.5 \times
+RIQ\)</span> límite superior = <span class="math inline">\(Q_3 + 1.5
+\times RIQ\)</span></p>
+<p>Si alguno de los datos se encuentra por fuera de estos límites se
+denomina atípico</p>
 <p><br/></p>
 </div>
 
