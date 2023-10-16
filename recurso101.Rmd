@@ -220,6 +220,11 @@ Investigación estadística que recopila información de todas las unidades que 
 
 El valor de una caracteristica de interes obtenida del censo. Por ejemplo la proporción de hombre en nuestro pais es del 48.8%
 
+
+```{r, echo=FALSE, out.width="20%", fig.align = "left"}
+knitr::include_graphics("img/parámetro1.png")
+```
+
 <br/><br/>
 
 ## <span style="color:#004080">**Muestra**</span>

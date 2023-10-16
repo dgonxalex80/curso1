@@ -373,21 +373,71 @@ Posición</strong></span></h1>
 
 
 <p><br><br></p>
+<p>Los indicadores de posición se centra en los
+<strong>percentiles</strong> que corresponden a indicadores estadísticos
+que dividen el conjunto de datos en 100 partes iguales, cada una
+equivalente al <span class="math inline">\(1\)</span>%, y cada percentil
+representa el valor por debajo del cual cae una determinada proporción
+de los datos.</p>
+<p>Por ejemplo, el percentil <span class="math inline">\(50\)</span>
+corresponde a la mediana, que divide los datos en dos partes iguales,
+con el <span class="math inline">\(50\)</span>% de los valores por
+encima y el <span class="math inline">\(50\)</span>% por debajo. Los
+percentiles son herramientas fundamentales para comprender la
+distribución y la posición de los datos en un conjunto de
+observaciones.</p>
+<p>Son utilizados en la evaluación de desempeño en pruebas
+estandarizadas, el análisis de distribuciones de ingresos, la
+identificación de valores atípicos y la toma de decisiones en campos
+como la atención médica y la gestión empresarial. También se utilizan en
+la creación de gráficos de caja (<code>boxplot</code>) para visualizar
+la dispersión y la posición de los datos en una distribución.</p>
+<p>Los percentiles más comúnmente utilizados incluyen el percentil 25
+(<span class="math inline">\(Q_1\)</span>, primer cuartil), el percentil
+50 (<span class="math inline">\(Q_2\)</span>, mediana o segundo cuartil)
+y el percentil 75 (<span class="math inline">\(Q_3\)</span>, tercer
+cuartil). Estos indicadores proporcionan información sobre la dispersión
+y la posición de los datos en el contexto de un rango intercuartil
+(<span class="math inline">\(QIR = Q_3 - Q_1\)</span>), que es
+especialmente útil para identificar valores atípicos y comprender la
+variabilidad en los datos.</p>
+<p><br/><br/></p>
 <div id="mínimo" class="section level2">
 <h2><strong>mínimo</strong></h2>
+<p>Corresponde al valor más pequeño de un conjunto de datos. Para
+obtenerlo se ordenan los datos de menor a mayor. Al ser comparado con el
+resto de datos permite establecer si se trata de un dato atípico o
+extraño.</p>
+<p><br/><br/></p>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<pre><code>##  [1] 30 32 34 35 36 36 38 38 38 39 39 39 39 41 41 42 43 43 43 44 44 45 45 46 47
+## [26] 49 50 51 52 53</code></pre>
+<pre><code>## valor mínimo :  30</code></pre>
 <p><br><br></p>
+</div>
 </div>
 <div id="máximo" class="section level2">
 <h2><strong>máximo</strong></h2>
+<p>Se referirse al valor más grande en un conjunto de datos o en una
+serie de números. Es una medida simple que indica el extremo superior de
+la escala de valores en un conjunto dado. Ayuda en la comprensión de la
+magnitud más alta de un conjunto de observaciones.</p>
+<p>Es útil para identificar límites o restricciones en un conjunto de
+datos y para determinar si hay valores atípicos o excepciones que
+superan ciertos umbrales.</p>
+<p><br/><br/></p>
 <p><br><br></p>
 </div>
 <div id="percentiles" class="section level2">
 <h2><strong>Percentiles</strong></h2>
 <p><br><br></p>
+<p><br/><br/></p>
 </div>
 <div id="deciles" class="section level2">
 <h2><strong>Deciles</strong></h2>
 <p><br><br></p>
+<p><br/><br/></p>
 </div>
 <div id="quintiles" class="section level2">
 <h2><strong>Quintiles</strong></h2>
@@ -396,6 +446,7 @@ Posición</strong></span></h1>
 <div id="cuartiles" class="section level2">
 <h2><strong>Cuartiles</strong></h2>
 <p><br><br></p>
+<p><br/></p>
 </div>
 
 

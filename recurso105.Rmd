@@ -7,7 +7,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA)
 # Colores - paleta de azules
 c1="#001A33"
 c2="#003366"
@@ -26,6 +26,8 @@ c7="#B3D9FF"
 ### <span style="color:#4DA6FF">
 ### <span style="color:#80BFFF">
 ### <span style="color:#B3D9FF">
+
+saldos <- c(1826, 521, 1586, 2321, 1843, 2248, 254, 841, 951, 120, 147, 51)
 
 ```
 
@@ -68,12 +70,12 @@ Propiedades de la media :
 ### **Ejemplo**
 
 Un cliente ha presentado los siguiente valores en saldo de cuenta de ahorro durante los úntimos seis meses
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
 saldos
 ```
-```{r}
-cat("promedio de seis meses en cuenta de ahorro : $", round(mean(saldos),1))
+```{r, echo=FALSE}
+cat("promedio de doce meses en cuenta de ahorro : $", round(mean(saldos),1))
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -84,10 +86,8 @@ if (!require(ggplot2)) {
 }
 
 # Vector de saldos
-saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
-
 # Nombres de los meses
-meses <- c("mes1", "mes2", "mes3", "mes4", "mes5", "mes6")
+meses <- c("m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12")
 
 # Calcular la media
 media <- mean(saldos)
@@ -127,14 +127,13 @@ $$
 
 Para el caso de los saldos en cuenta de ahorros tenemos los valores ordenados para determinar el centro
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
-saldos
+sort(saldos)
 ```
 
 En este caso como $n=6$ es un número **par**, la mediana corresponde al dato que se encuentra en la posición: 
 
 $$
-Me = \dfrac{x_{n/2} + x_{(n/2+1)}}{2} = \dfrac{x_{6/2} + x_{(6/2+1)}}{2} = \dfrac{1586+ 2321}{2} = 1953.5  
+Me = \dfrac{x_{n/2} + x_{(n/2+1)}}{2} = \dfrac{x_{12/2} + x_{(12/2+1)}}{2} = \dfrac{841+951}{2} =    896
 $$
 A diferencia de la media, la mediana es un indicador mas fuerte a cambios que se pueden presentar en los extremos.
 
@@ -147,10 +146,9 @@ if (!require(ggplot2)) {
 }
 
 # Vector de saldos
-saldos <- c(1826, 521, 1586, 2321, 1843, 2248)
 
 # Nombres de los meses
-meses <- c("mes1", "mes2", "mes3", "mes4", "mes5", "mes6")
+meses <- c("m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12")
 
 # Calcular la mediana
 mediana <- median(saldos)
@@ -176,6 +174,41 @@ ggplot(datos, aes(x = Mes, y = Saldos)) +
 
 ### **Ejemplo**
 
+La dsitribución de productos bancarios en una oficina bancaria está descrita en la siguiente tabla :
+
+```{r, echo=FALSE}
+# Definir el número total de personas naturales
+total_personas <- 4264
+
+# Definir las proporciones de productos bancarios
+proporcion_cuenta_ahorro <- 0.30
+proporcion_cuenta_corriente <- 0.25
+proporcion_tarjeta_credito <- 0.20
+proporcion_prestamo_personal <- 0.15
+proporcion_hipoteca <- 0.05
+proporcion_inversiones <- 0.05
+
+# Calcular la frecuencia absoluta y redondear al entero más cercano
+frecuencia_cuenta_ahorro <- round(proporcion_cuenta_ahorro * total_personas)
+frecuencia_cuenta_corriente <- round(proporcion_cuenta_corriente * total_personas)
+frecuencia_tarjeta_credito <- round(proporcion_tarjeta_credito * total_personas)
+frecuencia_prestamo_personal <- round(proporcion_prestamo_personal * total_personas)
+frecuencia_hipoteca <- round(proporcion_hipoteca * total_personas)
+frecuencia_inversiones <- round(proporcion_inversiones * total_personas)
+
+# Crear un data frame con los resultados
+resultados <- data.frame(
+  Producto = c("Cuenta de Ahorro", "Cuenta Corriente", "Tarjeta de Crédito", "Préstamo Personal", "Hipoteca", "Inversiones"),
+  Frecuencia_Absoluta = c(frecuencia_cuenta_ahorro, frecuencia_cuenta_corriente, frecuencia_tarjeta_credito, frecuencia_prestamo_personal, frecuencia_hipoteca, frecuencia_inversiones)
+)
+
+# Mostrar el data frame
+print(resultados)
+
+
+```
+
+En este caso la moda corresponde a **Cuentas de Ahorro**
 
 <br><br>
 
@@ -186,6 +219,22 @@ La media truncada es similar a la media aritmética, pero excluye un cierto porc
 
 ### **Ejemplo**
 
+Para la información relacionada con los saldos de cuentas de ahorro se eliminan los tados extremos y se calcula la media con los 10 valores restantes
+
+
+```{r, echo=FALSE}
+# sort(saldos)
+```
+
+<pre>
+  51 | 120  147  254  521  841  951 1586 1826 1843 2248 | 2321
+</pre>  
+  
+```{r, echo=FALSE}
+cat("media truncada al 20%  : ", mean(saldos[2:11]))
+
+```
+  
 <br><br>
 
 ## **Rango medio**
@@ -193,8 +242,18 @@ La media truncada es similar a la media aritmética, pero excluye un cierto porc
 El rango medio es la media de los valores más pequeños y más grandes en un conjunto de datos. Se calcula sumando el valor mínimo y el valor máximo y luego dividiéndolo por 2. Proporciona una medida de la tendencia central que tiene en cuenta los valores extremos.
 
 $$\frac{1}{2}\big(max(x)+min(x)\big)$$
+Este indicador es fácil de calcular pero es muy sensible a cambios en los extemos o a presencia de datos atípicos
 
 ### **Ejemplo**
+
+
+```{r, echo=FALSE}
+sort(saldos)
+```
+
+$$ 
+RM = \dfrac{2321 + 51}{2} = 1186
+$$
 
 <br><br>
 
@@ -208,12 +267,26 @@ donde :
 * $x_{i}$ : valor individual en el conjunto de datos
 * $w_{i}$ : el peso asociado a cada valor de $x_{i}$
 
+<br><br>
 
 ### **Nota**:
 
 En al gunos casos el valor individual $x_{i}$ puede representar la media de un subgrupo $i$ de la muestra. En este caso la media ponderada se convierte en una media de medias, poderada por el tamaño de cada subgrupo
 
+<br><br>
+
 ### **Ejemplo**
+
+Para este caso supongamos que se tienen dos estratos o divisiones entre los clientes de cuentas de ahorros : 
+
+| Tipo de cliente     | núnero de clientes   |  promedio    |
+|:--------------------|---------------------:|-------------:|
+| Personas naturales  |  892                 | 1059.1       |
+| Personas jurídicas  |  384                 | 34623.3      | 
+
+$$
+\bar{x} = \dfrac{892 \times 1089.1 + 384 \times 34623.3}{892 +384} = 11180.9
+$$
 
 <br><br>
 
@@ -227,6 +300,28 @@ Este indicador corresponde al inverso de la media aritmética
 
 ### **Ejemplo**
 
+Suponga que se desea calcular el rendimiento promedio de dos inversiones diferentes en su cartera:
+Inversión 1 : rendimiento del 5% 
+Inversión 2 : rendimiento del 10% 
+
+Ambas durante un periodo de dos años.
+
+Para calcular la media armónica de estos dos rendimientos, primero se toma el inverso (recíproco) de cada rendimiento. Luego, se promedian estos inversos y se calcula el inverso del resultado para obtener la media armónica
+
+Rendimiento 1 (5%): 1 / 5% = 20
+Rendimiento 2 (10%): 1 / 10% = 10
+
+$$
+H = \dfrac{2}{\dfrac{1}{0.05}+ \dfrac{1}{0.10}} = 0.06667 
+$$
+
+La media armónica en este contexto financiero sería del 6.67%. La diferencia con la media aritmética es que la media armónica da más peso a los valores más bajos. Esto puede ser útil en situaciones donde se desee dar mayor importancia a rendimientos más bajos en una cartera de inversiones.
+
+
+
+
+
+
 <br><br>
 
 ## **Media geométrica**
@@ -237,4 +332,30 @@ Para encontrar su valor se multiplican los valores de $n$ tasas incrementadas en
 
 
 $$MG = \Bigg(\displaystyle\prod_{i=1}^n (r_{i}+1)\Bigg)^{1/n}$$
+<br><br>
+
 ### **Ejemplo**
+
+
+Se itene las siguientes tasas de cremiento de las ventas durante los úntomos 5 meses : 5%, 3%, 7%, 2% y 6%. Se desea calcular la tasa promedio de crecimiento en ventas durante los últimos cinco meses.
+
+$$
+MG = \sqrt[5]{1.05 \times 1.03 \times  1.07 \times 1.02 \times 1.06} = \sqrt[5]{1.25117} = 1.045835
+$$
+La tasa de crecimiento promedio es igual a : $4.58%$
+
+<br><br>
+
+Otra forma de calcular la tasa promedio es: 
+
+```{r}
+# Ejemplo de cálculo de media geométrica en R
+tasas_crecimiento <- c(0.05, 0.03, 0.07, 0.02, 0.06)
+media_geometrica <- exp(mean(log(1 + tasas_crecimiento))) - 1
+print(paste("La media geométrica de las tasas de crecimiento es:", media_geometrica))
+
+```
+
+
+
+

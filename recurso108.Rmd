@@ -27,15 +27,62 @@ c7="#B3D9FF"
 ### <span style="color:#80BFFF">
 ### <span style="color:#B3D9FF">
 
+# Cargar la librería ggplot2
+library(ggplot2)
+
+# Generar datos continuos
+set.seed(123)  # Para que los datos generados sean reproducibles
+datos <- rnorm(30, mean = 42, sd = 6)
+#round(datos,0)
 ```
+
 
 <br><br>
 
+Los indicadores de posición se centra en los **percentiles** que corresponden a indicadores estadísticos que dividen el conjunto de datos en 100 partes iguales, cada una equivalente al $1$%, y  cada percentil representa el valor por debajo del cual cae una determinada proporción de los datos. 
+
+Por ejemplo, el percentil $50$ corresponde a la mediana, que divide los datos en dos partes iguales, con el $50$% de los valores por encima y el $50$% por debajo. Los percentiles son herramientas fundamentales para comprender la distribución y la posición de los datos en un conjunto de observaciones.
+
+Son utilizados en la evaluación de desempeño en pruebas estandarizadas, el análisis de distribuciones de ingresos, la identificación de valores atípicos y la toma de decisiones en campos como la atención médica y la gestión empresarial. También se utilizan en la creación de gráficos de caja (`boxplot`) para visualizar la dispersión y la posición de los datos en una distribución.
+
+Los percentiles más comúnmente utilizados incluyen el percentil 25 ($Q_1$, primer cuartil), el percentil 50 ($Q_2$, mediana o segundo cuartil) y el percentil 75 ($Q_3$, tercer cuartil). Estos indicadores proporcionan información sobre la dispersión y la posición de los datos en el contexto de un rango intercuartil ($QIR = Q_3 - Q_1$), que es especialmente útil para identificar valores atípicos y comprender la variabilidad en los datos.
+
+<br/><br/>
+
 ## **mínimo**
+
+Corresponde al valor más pequeño de un conjunto de datos. Para obtenerlo se ordenan los datos de menor a mayor. Al ser comparado con el resto de datos permite establecer si se trata de un dato atípico o extraño.
+
+<br/><br/>
+
+### **Ejemplo**
+
+```{r, echo=FALSE}
+sort(round(datos,0))
+```
+
+
+```{r, echo=FALSE}
+cat("valor mínimo : ",round(min(datos),0))
+```
+
+
+
 
 <br><br>
 
 ## **máximo**
+
+Se referirse al valor más grande en un conjunto de datos o en una serie de números. Es una medida simple que indica el extremo superior de la escala de valores en un conjunto dado. Ayuda en la comprensión de la magnitud más alta de un conjunto de observaciones.
+
+
+Es útil para identificar límites o restricciones en un conjunto de datos y para determinar si hay valores atípicos o excepciones que superan ciertos umbrales. 
+
+
+<br/><br/>
+
+
+
 
 <br><br>
 
@@ -43,9 +90,15 @@ c7="#B3D9FF"
 
 <br><br>
 
+<br/><br/>
+
+
 ## **Deciles**
 
 <br><br>
+
+
+<br/><br/>
 
 ## **Quintiles**
 
@@ -54,4 +107,6 @@ c7="#B3D9FF"
 ## **Cuartiles**
 
 <br><br>
+
+<br/>
 
