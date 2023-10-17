@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-01-01" />
 
-<title>Visualización de Datos</title>
+<title>Correlación entre variables</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -286,10 +286,10 @@ $(document).ready(function () {
       <a href="recurso110.html">Visualización de datos</a>
     </li>
     <li>
-      <a href="recurso000.html">Correlación entre variables</a>
+      <a href="recurso111.html">Correlación entre variables</a>
     </li>
     <li>
-      <a href="recurso000.html">Informe estadístico</a>
+      <a href="recurso112.html">Informe estadístico</a>
     </li>
   </ul>
 </li>
@@ -359,7 +359,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Visualización de Datos</h1>
+<h1 class="title toc-ignore">Correlación entre variables</h1>
 <h3 class="subtitle">Estadística Básica</h3>
 <h4 class="author">Pontificia Universidad Javeriana Cali</h4>
 <h4 class="date">2023</h4>
@@ -367,32 +367,39 @@ $(document).ready(function () {
 </div>
 
 
-Correlación entre las variables <span
+<p>En muchos casos es de interés establecer si existe relación entre dos
+variables como por ejemplo:</p>
+<ul>
+<li>tasa de interés y la tasa de inflación</li>
+<li>precio de la gasolina y el indice de precios al consumidor</li>
+<li>los ingresos familiares y el ahorro</li>
+<li>Edad del cliente y preferencias por productos bancarios</li>
+<li>Antiguedad del cliente y su lealtad financiera</li>
+</ul>
+<p>En el caso de dos variables cuantitativas esta relación se puede
+cuantificar en magnitud y sentido, utilizando para ellos el
+<strong>Coeficiente de correlación de Pearson</strong> (<span
+class="math inline">\(\rho_{_{XY}}\)</span>) en el caso de que las
+variables se aproximen a una distribución normal (que tengan forma
+acamapanada).</p>
+<p>Correlación entre las variables <span
 class="math inline">\(X\)</span>,<span class="math inline">\(Y\)</span>
-<span
-class="math display">\[\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}}
-\]</span> La correlación es una medida que mide el grado de asociación
-lineal entre dos variables. <span class="math inline">\(-1 \leq \rho
-\leq 1\)</span>
-</div>
+<span class="math display">\[ -1 \leq  \rho  \leq 1\]</span> La
+correlación es una medida que mide el grado de asociación lineal entre
+dos variables que varia entre <span class="math inline">\(-1\)</span> y
+<span class="math inline">\(1\)</span>.</p>
 <p><br/><br/></p>
 <p><strong>Escala para interpretación</strong> : <span
 class="math inline">\(\rho\)</span> <br/></p>
 <table>
 <colgroup>
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="8%" />
-<col width="7%" />
-<col width="8%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
-<col width="8%" />
-<col width="8%" />
-<col width="7%" />
+<col width="13%" />
+<col width="15%" />
+<col width="16%" />
+<col width="11%" />
+<col width="11%" />
+<col width="14%" />
+<col width="16%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -403,12 +410,6 @@ class="math inline">\(\rho\)</span> <br/></p>
 <th align="center">-0.25</th>
 <th align="center">-0.10</th>
 <th align="center">0</th>
-<th align="center">0.10</th>
-<th align="center">0.25</th>
-<th align="center">0.50</th>
-<th align="center">0.75</th>
-<th align="center">0.90</th>
-<th align="center">1.0</th>
 </tr>
 </thead>
 <tbody>
@@ -420,20 +421,8 @@ class="math inline">\(\rho\)</span> <br/></p>
 <td align="center">Negativa debil</td>
 <td align="center">Negativa muy debil</td>
 <td align="center">No existe correlación</td>
-<td align="center">Positiva muy debil</td>
-<td align="center">Positiva debil</td>
-<td align="center">Positiva media</td>
-<td align="center">Positiva considerable</td>
-<td align="center">Positiva muy fuerte</td>
-<td align="center">Positiva perfecta</td>
 </tr>
 <tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -445,8 +434,64 @@ class="math inline">\(\rho\)</span> <br/></p>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="recurso111_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="recurso111_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="recurso111_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="recurso111_files/figure-html/unnamed-chunk-1-5.png" width="672" /></p>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="14%" />
+<col width="21%" />
+<col width="19%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">0.10</th>
+<th align="center">0.25</th>
+<th align="center">0.50</th>
+<th align="center">0.75</th>
+<th align="center">0.90</th>
+<th align="center">1.0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Positiva muy debil</td>
+<td align="center">Positiva debil</td>
+<td align="center">Positiva media</td>
+<td align="center">Positiva considerable</td>
+<td align="center">Positiva muy fuerte</td>
+<td align="center">Positiva perfecta</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p><br/><br/><br/></p>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<pre class="r"><code>plot(credit$ingresos/1000, credit$cuota/1000)</code></pre>
+<p><img src="recurso111_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>cor(credit$ingresos/1000, credit$cuota/1000)</code></pre>
+<pre><code>[1] 0.2780394</code></pre>
+</div>
 
 
 

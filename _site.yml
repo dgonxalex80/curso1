@@ -25,9 +25,9 @@ navbar:
         - text: "Visualización de datos"
           href: recurso110.html               
         - text: "Correlación entre variables"
-          href: recurso000.html   
+          href: recurso111.html   
         - text: "Informe estadístico"
-          href: recurso000.html   
+          href: recurso112.html   
     - text: "Estadística avanzada"
       menu:
         - text: "Ciclo de mejoramiento y de control"

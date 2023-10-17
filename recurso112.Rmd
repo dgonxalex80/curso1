@@ -1,5 +1,5 @@
 ---
-title: "Visualización de Datos"
+title: "Informe Estadístico"
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
