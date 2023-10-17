@@ -290,11 +290,29 @@ ggplot(data = muestra, aes(x = x, y = y)) +
 ### **Ejemplo**
 
 
-```{r}
-plot(credit$ingresos/1000, credit$cuota/1000)
+```{r, echo=FALSE}
 
-cor(credit$ingresos/1000, credit$cuota/1000)
+muestra <- data.frame(x = creditos$ingresos/1000, y = creditos$cuota/1000)
+
+# Crea el gráfico de dispersión con ggplot2
+ggplot(data = muestra, aes(x = x, y = y)) +
+  geom_point(shape = 19) +
+  labs(
+    title = "  ",
+    x = "ingresos",
+    y = "cuota"
+  ) +
+  theme_minimal()
+
 ```
+
+
+```{r, echo=FALSE}
+cat("Correlación entre los ingresos y el valor de la cuota :" ,cor(creditos$ingresos/1000, creditos$cuota/1000))
+```
+
+Este valor se puede considerar como una relación entre las dos variables como positiva y debil
+
 
 
 
