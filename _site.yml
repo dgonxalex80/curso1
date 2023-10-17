@@ -19,9 +19,7 @@ navbar:
         - text: "Medidas de forma"
           href: recurso107.html    
         - text: "Medidas de posición"
-          href: recurso000.html    
-        - text: "Medidas de forma"
-          href: recurso108.html           
+          href: recurso108.html    
         - text: "Curva normal"
           href: recurso109.html           
         - text: "Visualización de datos"

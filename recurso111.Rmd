@@ -1,0 +1,148 @@
+---
+title: "Visualización de Datos"
+subtitle: "Estadística Básica"
+author: "Pontificia Universidad Javeriana Cali"
+date: "2023"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+# Colores - paleta de azules
+c1="#001A33"
+c2="#003366"
+c3="#004080"
+c4="#1A8CFF"
+c5="#4DA6FF"
+c6="#80BFFF"
+c7="#B3D9FF"
+
+# <span style="color:#001A33"> 
+
+## <span style="color:#003366">  
+
+### <span style="color:#004080">
+### <span style="color:#1A8CFF">
+### <span style="color:#4DA6FF">
+### <span style="color:#80BFFF">
+### <span style="color:#B3D9FF">
+
+# Cargar la librería ggplot2
+library(ggplot2)
+
+# Generar datos continuos
+set.seed(123)  # Para que los datos generados sean reproducibles
+datos <- rnorm(30, mean = 42, sd = 6)
+#round(datos,0)
+
+library(paqueteMODELOS)
+data(creditos)
+id = sample(1:780, 200, replace = FALSE)
+credit = creditos[id,]
+
+```
+
+
+
+Correlación entre las variables $X$,$Y$
+	$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
+	La correlación es una medida que mide el grado de asociación lineal entre dos variables. $-1 \leq \rho \leq 1$
+</div>
+
+<br/><br/>
+
+**Escala para interpretación** : $\rho$ <br/>
+
+ 
+|-1        | -0.90    | -0.75      | -0.50    | -0.25     | -0.10    | 0         | 0.10     | 0.25     | 0.50     | 0.75       | 0.90      | 1.0      |
+|:--------:|:--------:|:--------:|:--------:|:---------:|:--------:|:---------:|:--------:|:--------:|:--------:|:----------:|:---------:|:--------:|
+|	Negativa perfecta| Negativa muy fuerte | Negativa considerable| Negativa  media|  Negativa debil| Negativa muy debil | No existe correlación| Positiva muy debil| Positiva debil| Positiva media |  Positiva considerable |  Positiva muy fuerte | Positiva perfecta| 
+|	 | | | 	|    | |   |  |     |   |  |  | | 
+
+
+<br/><br/>
+
+```{r, echo=FALSE}
+gen.corr.data<- function(rho,n){
+  x <- rnorm(n)
+  z <- rnorm(n)
+  y<- rho*x + sqrt(1-rho^2)*z
+    result <-cbind(y,x)
+  return(result)
+}
+par(mfrow = c(1, 2),
+    mar = c(5, 4, 4, 2) + 0.1,
+                cex.lab=.5,  # tamaño de etiqueta ejes
+                cex.axis=.5, # tamaño escalas de los ejes 
+                cex.main=.5, # tamaño del titulo
+                cex.sub=.5)
+
+muestra<-gen.corr.data(-1,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=-1.0")
+grid()
+
+muestra<-gen.corr.data(-0.90,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=-0.9")
+grid()
+
+muestra<-gen.corr.data(-0.7,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=-0.70")
+grid()
+
+muestra<-gen.corr.data(-0.50,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=-0.50")
+grid()
+
+muestra<-gen.corr.data(-0.25,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=-0.25")
+grid()
+
+muestra<-gen.corr.data(0,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=0")
+grid()
+
+
+muestra<-gen.corr.data(0.3,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=0.30")
+grid()
+
+
+muestra<-gen.corr.data(0.60,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=0.60")
+grid()
+
+
+muestra<-gen.corr.data(0.8,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=0.80")
+grid()
+
+muestra<-gen.corr.data(1,200)
+x=muestra[,2]+100
+y=muestra[,1]+100
+plot(x,y, pch=19,main="Correlación Rho=1.0")
+grid()
+
+```
+
+
+<br/><br/><br/>
+

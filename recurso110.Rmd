@@ -6,8 +6,9 @@ date: "2023"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 # Colores - paleta de azules
 c1="#001A33"
 c2="#003366"
@@ -23,34 +24,221 @@ c7="#B3D9FF"
 
 ### <span style="color:#004080">
 ### <span style="color:#1A8CFF">
-
 ### <span style="color:#4DA6FF">
 ### <span style="color:#80BFFF">
 ### <span style="color:#B3D9FF">
 
+# Cargar la librería ggplot2
+library(ggplot2)
+
+# Generar datos continuos
+set.seed(123)  # Para que los datos generados sean reproducibles
+datos <- rnorm(30, mean = 42, sd = 6)
+#round(datos,0)
+
+library(paqueteMODELOS)
+data(creditos)
+id = sample(1:780, 200, replace = FALSE)
+credit = creditos[id,]
+
+
 ```
 
+>Una gráfica o una representación gráfica o un gráfico, es un tipo de representación de datos, generalmente cuantitativos, mediante recursos visuales (líneas, vectores, superficies o símbolos), para que se manifieste visualmente la relación matemática o correlación estadística que guardan entre sí.
+
+Wikipedia
+
 <br><br>
+
+
+Elegir el gráfico adecuado es muy importante pues existen diferentes alternativos  y se debe escoger el apropiado para representar los datos. El tipo de dato determina el tipo de grafico asi:
+
+|Tipo de variable  | Escala          | Gráfico                                   |
+|:-----------------|:----------------|:------------------------------------------|
+|Cualitativas      |                 |                                           |
+|                  |Nominal          | torta                                     |
+|                  |Ordinal          | barras                                    |
+|                  |                 | likert                                    |
+|                  |                 |                                           |
+|Cuantitativas     |Intervalo-razón  | diagrama de tallos y hojas                |
+|                  |                 | histograma                                |
+|                  |                 | diagrama de cajas                         |
+|                  |                 | diagrama de densidad                      |
+|                  |                 | diagrama de puntos                        |
+|                  |                 | diagrama de lineas                        |
+|                  |                 | diagrama de radar                         |
+|                  |                 | mapa de calor                             |
+
+
+
+<br><br><br><br>
+
 
 ## <span style="color:#004080">**Variables cualitativas nominales**</span>
 
-<br><br>
-
 ### <span style="color:#1A8CFF">**Diagrama de tortas**</span>
 
-<br><br>
 
-## <span style="color:#004080">**Variables cualitativas ordinales</span>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+library(dplyr)
+
+count.data <- data.frame(
+  servicio = c("Atención telefónica", "Modulo de atención", "Mail", "Redes sociales", "Chat en línea"),
+  n = c(1043, 420, 387, 305, 46),
+  prop = c(47.4, 19.1, 17.6, 13.8, 2.1)
+)
+
+count.data$prop = round(count.data$prop, 1)
+
+count.data <- count.data %>%
+  arrange(desc(servicio)) %>%
+  mutate(lab.ypos = cumsum(prop) - 0.5 * prop,
+         label = paste0(prop, "%"))
+
+mycols <- c("#11224D", "#193A6F", "#2C599D", "#5B84C4", "#FB9B50")
+
+ggplot(count.data, aes(x = factor(1), y = prop, fill = servicio)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y") +
+  scale_fill_manual(values = mycols) +
+  theme_void() +
+  geom_text(aes(x = 1.5, y = lab.ypos, label = label), 
+            color = "black", size = 4, hjust = 1, vjust = 3)
+
+
+```
+
+El gráfico de torta o circular es útil al representar una variable en escala nominal, en este caso el tipo de servicio empleado para reportar una queja a la empresa. Rápidamente se puede observar que la gran parte de las quejas son reportadas por medio del servicio de atención telefónica con un valor cercano a la mitad de los reportes (47.4%), mientras que la menos utilizada corresponde al chat en línea.
+
+<br><br><br><br>
+
+
+
+
+
+## <span style="color:#004080">**Variables cualitativas ordinales**</span>
 
 <br><br>
 
 ### <span style="color:#1A8CFF">**Diagrama de barras**</span>
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+
+# Crear un conjunto de datos de ejemplo
+data <- data.frame(
+  Calificacion = c("Excelente", "Muy Bueno", "Bueno", "Regular", "Muy Regular"),
+  Frecuencia = c(45, 60, 30, 25, 15)
+)
+
+# Calcular porcentajes
+data$Porcentaje <- (data$Frecuencia / sum(data$Frecuencia)) * 100
+
+# Definir el orden de las categorías
+data$Calificacion <- factor(data$Calificacion, levels = c("Excelente", "Muy Bueno", "Bueno", "Regular", "Muy Regular"))
+
+# Definir colores por separado para cada categoría
+colores <- c("#9EC1CF", "#A6E3A4", "#FFD7A1","#FFA087","#FF6E83")
+
+# Crear la gráfica de barras con etiquetas de porcentaje y sin leyendas
+ggplot(data, aes(x = Calificacion, y = Porcentaje, fill = Calificacion)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = colores) +
+  geom_text(aes(label = paste0(round(Porcentaje, 1), "%")), vjust = -0.5, color = "black") +
+  labs(title = "Calificaciones", x = "Calificación", y = "Porcentaje") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+Cuando la variables es de tipo cualitativa en escala ordinal, el diagrama de barras es el apropiado para su prepresentación.  Claramente las barras se encuentra en orden de acuerdo con los niveles establecidos en la variable. 
+
+La grafica corresponde a la evaluación realizada a un grupo de personas que pueden ser clientes de una entidad financiera calificando el servicio prestado. El color de las barras ayuda a interpresta que los colores rojos, maranjas y amarillo corresponde a calificaciones bajas, mientras que los colores verdes y azules a niveles deseables.
+
+
+
 <br><br>
 
 ### <span style="color:#1A8CFF">**Diagrama de likert**</span>
 
-<br><br>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(reshape2)
+library(RColorBrewer)
+library(dplyr)
+library(ggthemes)
+library(stringr)
+library(forcats)
+
+data_2 <- data.frame("Excelente"=c(4,2),
+                     "Bueno"=c(14,6),
+                     "Regular"=c(15,16),
+                     "Malo"=c(17,17),
+                     "Muy Regular"=c(44,48),
+                     "Género"=c("Hombre","Mujer"))
+
+data_2 <- data_2[,c(6,1,2,3,4,5)]
+
+d <- data_2
+d[,2:6] <- d[,2:6]/rowSums(d[,2:6])
+
+mytitle <- "Satisfacción en el servicio"
+mylevels <- c("Muy regular", "Regular", "Bueno", "Muy bueno", "Excelente")
+
+# Generar el valor medio de la categoría neutral
+numlevels <- length(d[1,])-1
+numcenter <- ceiling(numlevels/2) + 1
+d$midvalues <- d[,numcenter]/2
+d_2 <- cbind(d[,1],d[,2:ceiling(numlevels/2)], d$midvalues, d$midvalues,d[,numcenter:numlevels+1])
+colnames(d_2) <- c("Género", mylevels[1:floor(numlevels/2)], "Mitad baja", "Mitad alta", mylevels[numcenter:numlevels])
+
+# Dividir en seis categorías
+numlevels <- length(mylevels) + 1
+point1 <- 2
+point2 <- ((numlevels)/2) + 1
+point3 <- point2 + 1
+point4 <- numlevels + 1
+
+# Asignar colores a cada categoría
+numlevels <- length(d[1,])-1
+temp.rows <- length(d_2[,1])
+pal <- brewer.pal((numlevels-1), "RdBu")
+pal[ceiling(numlevels/2)] <- "#DFDFDF"
+legend.pal <- pal
+pal <- c(pal[1:(ceiling(numlevels/2)-1)], pal[ceiling(numlevels/2)], 
+         pal[ceiling(numlevels/2)], pal[(ceiling(numlevels/2)+1):(numlevels-1)])
+
+# Generar nuevo marco de datos que incluye toda la información
+d_3 <- melt(d_2, id="Género")
+d_3$col <- rep(pal, each=temp.rows)
+d_3$value <- d_3$value*100
+d_3$Género <- str_wrap(d_3$Género, width = 40)
+d_3$Género <- factor(d_3$Género, levels = d_2$Género[order(-(d_2[,5]+d_2[,6]+d_2[,7]))])
+highs <- na.omit(d_3[(length(d_3[,1])/2)+1:length(d_3[,1]),])
+lows <- na.omit(d_3[1:(length(d_3[,1])/2),])
+
+# Gráfico
+ggplot() + geom_bar(data=highs, aes(x = Género, y=value, fill=col), position="stack", stat="identity", width = 0.5) +
+  geom_bar(data=lows, aes(x = Género, y=-value, fill=fct_inorder(col)), position="stack", stat="identity", width = 0.5) +
+  geom_hline(yintercept = 0, color = c("white")) +
+  scale_fill_identity("Porcentaje", labels = mylevels, breaks=legend.pal, guide="legend") + 
+  theme_fivethirtyeight() + 
+  coord_flip() +
+  labs(title=mytitle, y="",x="") +
+  theme(plot.title = element_text(size=14, hjust=0.5)) +
+  theme(axis.text.y = element_text(hjust=0)) +
+  theme(legend.position = "bottom")
+
+```
+
+Este gráfico permite visualizar las tendencias en las respuesta de una variable en escala ordinal, por lo general se requiere de una escala de números opciones impares (3,5,7). En este caso se cuenta de las opciones : Muy regular, Regular, Bueno (que obra como opción neutral), Muy bieno y Excelente.
+
+Se puede ver que aunque ambos sexos califican en un gran porcentaje el servicio como Muy bueno y Excelente, los hombre manifiestan una mayor proporción de evaliaciónes Excelentes.
+
+
+<br><br><br><br>
 
 ## <span style="color:#004080">**Variables cuantitavas de intervalo**</span>
 
@@ -58,7 +246,117 @@ c7="#B3D9FF"
 
 ### <span style="color:#1A8CFF">**Diagrama de radar**</span>
 
-<br><br>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Demo data
+exam_scores <- data.frame(
+  row.names = c("Candidato 1", "Candidato 2", "Candidato 3"),
+  c1 = c(17.9, 13.9, 19.4),
+  c2 = c(10, 15, 18),
+  c3 = c(13.7, 18.5, 12.5),
+  c4 = c(18.7, 20, 14),
+  c5 = c(17.9, 17.2, 12.4),
+  c6 = c(6.4, 13.5, 16.5),
+  c7 = c(2.4, 10.2, 15.8),
+  c8 = c(10, 15, 20),
+  c9 = c(20, 20, 20)
+)
+# exam_scores
+
+# install.packages("fmsb")
+library(fmsb)
+
+create_beautiful_radarchart <- function(data, color = "#00AFBB", 
+                                        vlabels = colnames(data), vlcex = 0.7,
+                                        caxislabels = NULL, title = NULL, ...){
+  radarchart(
+    data, axistype = 1,
+    # Customize the polygon
+    pcol = color, pfcol = scales::alpha(color, 0.5), plwd = 2, plty = 1,
+    # Customize the grid
+    cglcol = "grey", cglty = 1, cglwd = 0.8,
+    # Customize the axis
+    axislabcol = "grey", 
+    # Variable labels
+    vlcex = vlcex, vlabels = vlabels,
+    caxislabels = caxislabels, title = title, ...
+  )
+}
+
+# Define the variable ranges: maximum and minimum
+max_min <- data.frame(c1 = c(20, 0), 
+                      c2 = c(20, 0), 
+                      c3 = c(20, 0),
+                      c4 = c(20, 0), 
+                      c5 = c(20, 0), 
+                      c6 = c(20, 0),
+                      c7 = c(20, 0), 
+                      c8 = c(20, 0), 
+                      c9 = c(20, 0)
+)
+rownames(max_min) <- c("Max", "Min")
+
+# Bind the variable ranges to the data
+df <- rbind(max_min, exam_scores)
+# df
+
+# Reduce plot margin using par()
+op <- par(mar = c(1, 2, 2, 2))
+# Create the radar charts
+create_beautiful_radarchart(
+  data = df, caxislabels = c(0, 5, 10, 15, 20),
+  color = c("#BC9B6A", "#FDB515","#003262")
+)
+# Add an horizontal legend
+legend(
+  x = "topright", legend = rownames(df[-c(1,2),]), horiz = FALSE,
+  bty = "n", pch = 20 , col = c("#BC9B6A", "#FDB515","#003262"),
+  text.col = "black", cex = 1, pt.cex = 1.5
+)
+par(op)
+
+
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Define colors and titles
+colors <- c("#003262", "#FDB515", "#BC9B6A")
+titles <- c("Candidato 1", "Candidato 2", "Candidato 3")
+
+# Reduce plot margin using par()
+# Split the screen in 3 parts
+op <- par(mar = c(1, 1, 1, 1))
+par(mfrow = c(1,3))
+
+# Create the radar chart
+for(i in 1:3){
+  create_beautiful_radarchart(
+    data = df[c(1, 2, i+2), ], caxislabels = c(0, 5, 10, 15, 20),
+    color = colors[i], title = titles[i]
+  )
+}
+par(op)
+
+
+```
+
+
+El gráfico de radar permite representar una misma figura varias variables. En este caso representa los puntajes obtenidos por tres candidatos a ocupar una vacanta a los que se les ha realizado un test para evaluar el nivel en nueve competencias deseables para el cargo
+
+Supongamos que se evalua :
+
+* **c1** Liderazgo
+* **c2** Comunicación
+* **c3** Toma de decisiones
+* **c4** Gestión del tiempo
+* **c5** Resolución de problemas
+* **c6** Habilidades de planificación y organización
+* **c7** Desarrollo de equipos
+* **c8** Adaptabilidad
+* **c9** Empatía
+
+
+<br><br><br><br>
 
 
 ## <span style="color:#004080">**Variables cualitativas de razón**</span>
@@ -69,27 +367,196 @@ c7="#B3D9FF"
 
 <br><br>
 
-### <span style="color:#1A8CFF">**Diagrama de puntos**</span>
+```{r, echo=FALSE}
+stem(credit$edad)
+```
+
+Este diagrama presenta los datos de manera ordenada, de tal forma que el dígito del dato que se repite mucho constituye el tallo y las hojas corresponde la segunda parte. Por emplo el primer dato es 30 y se representa en dos partes 3|0 , el segundo como 3|2 que represnta el 32, de manera similar hasta el último dato representado como 9|2 que corresponde a una persona de 92 años que corresponde al máximo.
+
+Es útil para revisar los datos de manera rápida y tener una idea de la forma de los datos
 
 <br><br>
 
+
+### <span style="color:#1A8CFF">**Diagrama de puntos**</span>
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+# Crear un dataframe con los datos
+data <- data.frame(edad = credit$edad)
+
+# Crear el gráfico de puntos superpuestos en una sola dimensión de forma horizontal
+ggplot(data, aes(x = edad, y = "")) +
+  geom_jitter(width = 0, height = 0.2, size = 2, alpha = 0.7, color = "#003262") +
+  theme_minimal() +
+  labs(title = "Distribución de la edad",
+        x = "Edad", y = " ")  # Cambia la etiqueta del eje y
+
+
+```
+
+El diagrama de puntos en una sola dimensión permite visualizar la dispersión de los datos, en que parte estan más concentrados y en donde no.
+
+
+
+<br><br>
+
+En caso de dos variables cuantitativas se puede visualizar la relación que puede existir o no entre las dos variables
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+# Crear un dataframe con los datos
+data <- data.frame(edad = credit$edad,
+                   ingresos = credit$ingresos/1000)
+
+# Crear el gráfico de puntos superpuestos en una sola dimensión de forma horizontal
+ggplot(data, aes(x = edad, y = ingresos)) +
+  geom_jitter(width = 0, height = 0.2, size = 2, alpha = 0.7, color = "#003262") +
+  theme_minimal() +
+  labs(title = "Distribución de la edad por ingresos ",
+       x = "Edad", 
+       y = "Ingresos")  # Cambia la etiqueta del eje y
+
+
+```
+
+En este caso se visualiza una relación creciente entre la edad y los ingresos hasta los 80 años, edad a partir de la cual se denota una relación decreciente. Tambien se puede observar un dato atípico.
+
+
 ### <span style="color:#1A8CFF">**Histograma**</span>
+
+
+El histograma representa la densidad de los datos en intervalos continuos, mediante rectangulos que se hace grandes cuando en el intervalo se presenta una mayor frecuencia de datos
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+# Crear un histograma en ggplot2
+ggplot(credit, aes(x = edad)) +
+  geom_histogram(binwidth = 10, fill = "#003262", color = "black", alpha = 0.7) +
+  labs(title = "Distribución de la edad de los clientes ",
+       x = "Edad",
+       y = "Frecuencia")
+
+```
+
+
 
 <br><br>
 
 ### <span style="color:#1A8CFF">**Diagrama de cajas y bigores**</span>
 
+
+
+```{r, echo=FALSE, fig.width=8, fig.height=2}
+
+# Crear un dataframe con los datos
+data <- data.frame(edad = credit$edad)
+
+# Crear un gráfico de caja (boxplot) con los puntos superpuestos de forma horizontal
+gg_boxplot_horizontal <- ggplot(data, aes(y = edad, x = " ")) +
+  geom_boxplot(fill = "#40619F", color = "#003262") +
+  #geom_jitter(height = 0.1, size = 2, alpha = 0.5, color = "#BC9B6A") +
+  theme_void() +
+  coord_flip()
+
+gg_boxplot_horizontal
+
+
+```
+
 <br><br>
 
-### <span style="color:#1A8CFF">Diagrama de densidad**</span>
+
+```{r, echo=FALSE }
+library(ggplot2)
+
+# Crear un dataframe con los datos
+data <- data.frame(default = as.factor(creditos$default),
+                   edad = creditos$ingresos/1000)
+
+# Crear un gráfico de caja (boxplot) con los puntos superpuestos de forma horizontal
+ggplot(data, aes(x = edad, y = default, fill = default)) +
+  geom_boxplot(color = "black") +
+  scale_fill_manual(values = c("#40619F", "#BC9B6A")) +  # Colores personalizados
+  labs(title = "Edad por Default",
+       x = "Ingresos",
+       y = "Default") +
+  theme_minimal()
+
+
+
+```
+
+Los diagramas de cajas que represntan los ingresos de los clientes por que han inclumplido el pago y los que no lo han hecho. Sin embargo se notan datos atípicos en los clientes cumplidos 
 
 <br><br>
 
-### <span style="color:#1A8CFF">Diagrama de lineas**</span>
+### <span style="color:#1A8CFF">**Diagrama de densidad**</span>
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+
+# Crear un histograma en ggplot2 con una curva normal
+ggplot(credit, aes(x = edad)) +
+  geom_density(aes(y = ..count.. * 5), color = "#BC9B6A", size = 1) +
+  labs(title = "Distribución de la edad de los clientes ",
+       x = "Edad",
+       y = "frecuencia") +
+  theme_minimal()
+
+```
+
+Este diagrma permite visualizar la forma de los datos. En este caso la edad de los clientes se centra al rededor de los 60 años.
 
 <br><br>
-  
-### <span style="color:#1A8CFF">Gráficos multivariados**</span>
+
+
+### <span style="color:#1A8CFF">**Diagrama de lineas**</span>
+
+
+
+```{r, echo=FALSE}
+im=c(1.29,2.30,1.71,1.00,0.52,-0.02,-0.04,0.32,0.43,0.15,0.33,0.46,1.05,1.89,1.48,1.15,0.42,0.04,0.11,0.26,0.37,0.19,0.12,0.34,0.80,1.26,0.71,0.92,0.60,0.43,0.02,0.09,0.36,0.56,0.78,0.27,1.17,1.11,1.05,1.15,0.49,-0.05,-0.14,0.31,0.22,0.06,0.35,0.61,0.89,1.20,0.98,0.46,0.38,0.60,-0.03,0.03,0.30,-0.01,0.28,0.30,0.82,1.02,0.77,0.44,0.41,0.40,0.05,0.00,0.43,0.23,0.11,0.07,0.54,0.66,0.70,0.45,0.33,0.30,0.41,0.39,0.29,-0.14,0.24,0.23,0.77,1.17,1.21,0.90,0.30,0.12,0.17,-0.13,0.08,0.01,0.47,0.49,1.06,1.51,0.81,0.71,0.93,0.86,0.48,0.19,-0.19,0.35,0.28,0.44,0.59,0.84,0.50,0.32,0.01,-0.06,-0.04,0.04,-0.11,-0.13,-0.07,0.08,0.69,0.83,0.25,0.46,0.10,0.11,-0.04,0.11,-0.14,-0.09,0.19,0.65,0.91,0.60,0.27,0.12,0.28,0.32,0.14,-0.03,0.31,0.19,0.14,0.42,0.73,0.61,0.12,0.14,0.30,0.08,-0.02,0.04,0.29,0.16,-0.14,0.09,0.30,0.44,0.21,0.25,0.28,0.23,0.04,0.08,0.29,-0.26,-0.22,0.26,0.49,0.63,0.39,0.46,0.48,0.09,0.15,0.20,0.14,0.16,0.13,0.27,0.64,1.15,0.59,0.54,0.26,0.10,0.19,0.48,0.72,0.68,0.60,0.62,1.29,1.28,0.94,0.50,0.51,0.48,0.52,-0.32,-0.05,-0.06,0.11,0.42,1.02,1.01,0.47,0.47,0.23,0.11,-0.05,0.14,0.04,0.02,0.18,0.38,0.63,0.71,0.24,0.46,0.25,0.15,-0.13,0.12,0.16,0.12,0.12,0.30,0.60,0.57,0.43,0.50,0.31,0.27,0.22,0.09,0.23,0.16,0.10,0.26,0.42,0.67,0.57,0.16,-0.32,-0.38,0.00,-0.01,0.32,-0.06,-0.15,0.38,0.41,0.64,0.51,0.59,1.00,-0.05,0.32,0.45,0.38,0.01,0.50,0.73,1.67,1.63,1.00,1.25,0.84,0.51,0.81,1.02,0.93,0.72,0.77,1.26,1.78,1.66,1.05,0.78,0.43,0.30,0.50,0.70,0.54)
+
+im= rev(im)
+# y=ts(tc)
+# plot(y, type="l",
+#      main="Tasa de cambio",
+#      ylab="pesos por dolar",
+#      xlab = "", las=1,
+#      col="#ee964b", 
+#      lwd = 4)
+y=ts(im, star=c(2000,1), end=c(2023,9), frequency=12)
+
+library(ggplot2)
+
+# Supongamos que tienes una serie de tiempo llamada 'im'
+# Asegúrate de que 'im' tenga las fechas y valores adecuados
+
+# Crear un marco de datos con las fechas y valores
+df <- data.frame(Fecha = time(im), Valor = as.numeric(im))
+
+# Crear el gráfico con ggplot2 con línea más ancha y color azul
+ggplot(df, aes(x = Fecha, y = Valor)) +
+  geom_line(color = "#BC9B6A", size = 1) +  # Línea de color azul y más ancha (tamaño 2)
+  labs(title = "Inflación mensual",
+       y = "%",
+       x = "meses") +
+  theme_minimal()
+
+
+
+```
+<br><br>
+
+Este tipo de gráfico visualiza los cambios registrados en el tiempo de una variables. En este caso representa la inflació mensual de los últimos 12 años. 
 
   
      
