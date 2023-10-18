@@ -1,5 +1,5 @@
 ---
-title: "Correlación entre variables"
+title: "**Correlación entre variables**"
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -51,6 +51,7 @@ gen.corr.data<- function(rho,n){
 
 ```
 
+<br/><br/>
 
 En muchos casos es de interés establecer si existe relación entre dos variables como por ejemplo:
 
@@ -60,8 +61,11 @@ En muchos casos es de interés establecer si existe relación entre dos variable
 * Edad del cliente y preferencias por productos bancarios
 * Antiguedad del cliente y su lealtad financiera
 
+<br/><br/>
+
 En el caso de dos variables cuantitativas esta relación se puede cuantificar en magnitud y sentido, utilizando para ellos el **Coeficiente de correlación de Pearson** ($\rho_{_{XY}}$) en el caso de que las variables se aproximen a una distribución normal (que tengan forma acamapanada).
 
+<br/><br/>
 
 Correlación entre las variables $X$,$Y$
 	$$ -1 \leq  \rho  \leq 1$$
@@ -69,13 +73,11 @@ La correlación es una medida que mide el grado de asociación lineal entre dos 
 
 
 
-
-
 <br/><br/>
 
 **Escala para interpretación** : $\rho$ <br/>
 
-
+<br/>
  
 |-1                | -0.90               | -0.75                | -0.50          | -0.25          | -0.10              | 0                    | 
 |:----------------:|:-------------------:|:--------------------:|:--------------:|:--------------:|:------------------:|:--------------------:|
@@ -136,7 +138,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = -0.9",
     x = "X",
     y = "Y"
   ) +
@@ -153,7 +155,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = -0.7",
     x = "X",
     y = "Y"
   ) +
@@ -172,7 +174,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = -0.5",
     x = "X",
     y = "Y"
   ) +
@@ -189,7 +191,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = -0.25",
     x = "X",
     y = "Y"
   ) +
@@ -206,7 +208,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = 0",
     x = "X",
     y = "Y"
   ) +
@@ -224,7 +226,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = 0.3",
     x = "X",
     y = "Y"
   ) +
@@ -241,7 +243,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = 0.6",
     x = "X",
     y = "Y"
   ) +
@@ -258,7 +260,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = 0.8",
     x = "X",
     y = "Y"
   ) +
@@ -275,7 +277,7 @@ muestra <- data.frame(x = muestra[, 2] + 100, y = muestra[, 1] + 100)
 ggplot(data = muestra, aes(x = x, y = y)) +
   geom_point(shape = 19) +
   labs(
-    title = "Correlación Rho = -1.0",
+    title = "Correlación Rho = 1.0",
     x = "X",
     y = "Y"
   ) +
