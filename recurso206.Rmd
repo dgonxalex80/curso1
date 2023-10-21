@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#004080">**Identificación de causas**</span>
+title: <span style="color:#004080">**Organizar prioridades**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -28,3 +28,65 @@ c7="#B3D9FF"
 ### <span style="color:#B3D9FF">
 
 ```
+
+<br/><br/>
+
+La organización de prioridades es fundamental en la gestión del tiempo y la toma de decisiones. Existen diversas metodologías y enfoques que puedes emplear para priorizar tareas, proyectos o actividades de manera efectiva. Aquí tienes algunas de las metodologías más comunes:
+
+<br/><br/>
+
+## **Matriz de Eisenhower:** 
+
+Popularizada por el ex presidente de los Estados Unidos, Dwight D. Eisenhower, esta matriz clasifica las tareas en cuatro cuadrantes según su importancia y urgencia. Las tareas se dividen en cuadrantes de "Urgente e Importante", "No Urgente pero Importante", "Urgente pero No Importante" y "Ni Urgente ni Importante". Esto ayuda a priorizar las tareas según su impacto y tiempo restante.
+
+<br/><br/>
+
+##  **Método GTD (Getting Things Done):** 
+
+Desarrollado por David Allen, GTD es una metodología de gestión del tiempo que se centra en la organización de tareas y proyectos en listas, llamadas "Banders de Tareas". GTD se basa en capturar, aclarar, organizar, reflejar y comprometerse con las tareas.
+
+<br/><br/>
+
+##  **MoSCoW:** 
+
+Utilizado comúnmente en la gestión de proyectos, MoSCoW se refiere a Must (Deben), Should (Deberían), Could (Podrían) y Won't (No lo harán). Las tareas se clasifican en estas categorías para definir sus prioridades.
+
+<br/><br/>
+
+## **Técnica Pomodoro:** 
+
+Esta técnica se enfoca en la gestión del tiempo y la productividad. Consiste en trabajar en una tarea durante 25 minutos (un "Pomodoro") seguidos de un descanso de 5 minutos. Ayuda a mantener la concentración en tareas importantes.
+
+<br/><br/>
+
+## **Reto 1-3-5:** 
+
+Consiste en seleccionar una tarea importante, tres tareas medianamente importantes y cinco tareas menos importantes para abordar en un día determinado. Esto ayuda a priorizar y limitar el número de tareas diarias.
+
+<br/><br/>
+
+## **Priorización Covey:** 
+
+Basada en el libro "Los 7 Hábitos de las Personas Altamente Efectivas" de Stephen R. Covey, esta metodología se centra en clasificar tareas en cuatro cuadrantes según su urgencia e importancia. Se enfoca en realizar primero las tareas que son importantes pero no urgentes.
+
+<br/><br/>
+
+## **Método ABCD:** 
+
+Las tareas se dividen en cuatro categorías: A (urgente e importante), B (importante pero no urgente), C (urgente pero no importante) y D (ni urgente ni importante). Las tareas se priorizan en función de su categoría.
+
+<br/><br/>
+
+## **Técnica RICE:** 
+
+Utilizada comúnmente en la gestión de productos y proyectos, RICE se refiere a Reach (Alcance), Impact (Impacto), Confidence (Confianza) y Effort (Esfuerzo). Cada tarea recibe una puntuación en cada categoría, lo que ayuda a priorizar proyectos o características.
+
+<br/><br/>
+
+## **Análisis de Valor vs. Esfuerzo (Value vs. Effort):** 
+
+Se utiliza para comparar el valor potencial de una tarea o proyecto con el esfuerzo necesario para completarla. Esto ayuda a identificar las tareas de alto valor que requieren menos esfuerzo.
+
+La elección de la metodología dependerá de tus necesidades y preferencias personales, así como del contexto en el que trabajas. Puedes combinar varias de estas metodologías según la situación y los objetivos que deseas alcanzar. Lo importante es encontrar un enfoque que te ayude a priorizar y gestionar tu tiempo de manera efectiva.
+
+

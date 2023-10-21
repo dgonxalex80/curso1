@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-01-01" />
 
-<title>Correlación entre variables</title>
+<title>Análisis de Corespondencia</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -352,8 +352,9 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><strong>Correlación entre
-variables</strong></h1>
+<h1 class="title toc-ignore"><span
+style="color:#004080"><strong>Análisis de
+Corespondencia</strong></span></h1>
 <h3 class="subtitle">Estadística Básica</h3>
 <h4 class="author">Pontificia Universidad Javeriana Cali</h4>
 <h4 class="date">2023</h4>
@@ -361,135 +362,7 @@ variables</strong></h1>
 </div>
 
 
-<p><br/><br/></p>
-<p>En muchos casos es de interés establecer si existe relación entre dos
-variables como por ejemplo:</p>
-<ul>
-<li>tasa de interés y la tasa de inflación</li>
-<li>precio de la gasolina y el indice de precios al consumidor</li>
-<li>los ingresos familiares y el ahorro</li>
-<li>Edad del cliente y preferencias por productos bancarios</li>
-<li>Antiguedad del cliente y su lealtad financiera</li>
-</ul>
-<p><br/><br/></p>
-<p>En el caso de dos variables cuantitativas esta relación se puede
-cuantificar en magnitud y sentido, utilizando para ellos el
-<strong>Coeficiente de correlación de Pearson</strong> (<span
-class="math inline">\(\rho_{_{XY}}\)</span>) en el caso de que las
-variables se aproximen a una distribución normal (que tengan forma
-acamapanada).</p>
-<p><br/><br/></p>
-<p>Correlación entre las variables <span
-class="math inline">\(X\)</span>,<span class="math inline">\(Y\)</span>
-<span class="math display">\[ -1 \leq  \rho  \leq 1\]</span> La
-correlación es una medida que mide el grado de asociación lineal entre
-dos variables que varia entre <span class="math inline">\(-1\)</span> y
-<span class="math inline">\(1\)</span>.</p>
-<p><br/><br/></p>
-<p><strong>Escala para interpretación</strong> : <span
-class="math inline">\(\rho\)</span> <br/></p>
-<p><br/></p>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="15%" />
-<col width="16%" />
-<col width="11%" />
-<col width="11%" />
-<col width="14%" />
-<col width="16%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">-1</th>
-<th align="center">-0.90</th>
-<th align="center">-0.75</th>
-<th align="center">-0.50</th>
-<th align="center">-0.25</th>
-<th align="center">-0.10</th>
-<th align="center">0</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Negativa perfecta</td>
-<td align="center">Negativa muy fuerte</td>
-<td align="center">Negativa considerable</td>
-<td align="center">Negativa media</td>
-<td align="center">Negativa debil</td>
-<td align="center">Negativa muy debil</td>
-<td align="center">No existe correlación</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="15%" />
-<col width="13%" />
-<col width="14%" />
-<col width="21%" />
-<col width="19%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">0.10</th>
-<th align="center">0.25</th>
-<th align="center">0.50</th>
-<th align="center">0.75</th>
-<th align="center">0.90</th>
-<th align="center">1.0</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Positiva muy debil</td>
-<td align="center">Positiva debil</td>
-<td align="center">Positiva media</td>
-<td align="center">Positiva considerable</td>
-<td align="center">Positiva muy fuerte</td>
-<td align="center">Positiva perfecta</td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p><br/><br/><br/></p>
-<div id="ejemplo" class="section level3">
-<h3><strong>Ejemplo</strong></h3>
-<p><img src="recurso111_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<pre><code>Correlación entre los ingresos y el valor de la cuota : 0.3613627</code></pre>
-<p>Este valor se puede considerar como una relación entre las dos
-variables como positiva y debil</p>
-</div>
+
 
 
 

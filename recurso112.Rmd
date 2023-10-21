@@ -47,30 +47,37 @@ credit = creditos[id,]
 
 Despues de haber desarrollado todos los pasos de un estudio estadístico es necesario presentar los resultados obtenidos mediante un **Informe Final**, que esencialmente contiene los hallazgos más importantes, las conclusiones y recomendaciones.
 
+Es recomendable seguir criterios fijos para el desarrollo del informe como pueden ser las [**normas APA**](https://normas-apa.org/wp-content/uploads/Guia-Normas-APA-7ma-edicion.pdf)
+
 <br/>
 
 Los informes estadísticos suelen tener una estructura similar, que incluye las siguientes partes:
 
 <br/>
 
-* **Introducción**: En esta parte se presenta el tema del informe, los objetivos del estudio y la metodología utilizada.
+###  **Introducción**: 
+
+En esta parte se presenta el tema del informe, los objetivos del estudio y la metodología utilizada.
 
 <br/>
 
-* **Presentación de datos**: En esta parte se presentan los datos recopilados, en forma de tablas, gráficos o diagramas.
+###  **Marco teórico**
 
 <br/>
 
-* **Análisis de datos**: En esta parte se analiza los datos presentados, para identificar tendencias, patrones y relaciones.
+### **Metodología**
 
 <br/>
 
-* **Conclusiones y recomendaciones**: En esta parte se resumen los principales hallazgos del estudio y posibles trabajos futuros derivados del cono
+### **Resultados**
 
 <br/>
 
-* **Anexos**: Ademas de los puntos anteriores se destinan unos apartados con información adicional como tablas e información especifica 
+###  **Discusión**
 
+<br/>
+
+* **Anexos**: Ademas de los puntos anteriores se destinan unos apartados con información adicional como tablas e información especifica. 
 En esta parte se pueden incluir:
 
 <br/>

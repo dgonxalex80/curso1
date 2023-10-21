@@ -28,3 +28,226 @@ c7="#B3D9FF"
 ### <span style="color:#B3D9FF">
 
 ```
+
+<br/><br/>
+
+Para el planteamiento de proyectos desde la detección de problemas, hay varias metodologías y enfoques que se pueden emplear. A continuación, te presento algunas de las metodologías más comunes y efectivas:
+
+<br/><br/>
+
+## **Ciclo PHVA (Planificar, Hacer, Verificar, Actuar):** 
+
+Como se mencionó anteriormente, el ciclo PHVA es un enfoque efectivo para abordar problemas y proyectos. Comienza identificando el problema en la etapa "Planificar", desarrollando un plan de acción, implementándolo en la etapa "Hacer", verificando los resultados y actuando en consecuencia para mejorar. Luego, se repite el ciclo para la mejora continua.
+
+<br/><br/>
+
+## **Six Sigma:** 
+
+Six Sigma es un enfoque de mejora de procesos que se enfoca en reducir la variabilidad y mejorar la calidad. Se utiliza DMAIC (Definir, Medir, Analizar, Mejorar, Controlar) como una metodología estructurada para abordar problemas y proyectos. Comienza con la definición del problema, la medición de los datos, el análisis de las causas raíz, la implementación de mejoras y el control continuo del proceso.
+
+<br/><br/>
+
+## **Design Thinking:** 
+
+Design Thinking es una metodología centrada en el usuario que se utiliza para abordar problemas complejos y fomentar la innovación. Se inicia con la empatía hacia los usuarios, la definición del problema, la generación de ideas, la creación de prototipos y pruebas, y la implementación de soluciones.
+
+<br/><br/>
+
+##  **Lean Startup:** 
+
+El enfoque Lean Startup se centra en la creación rápida de prototipos y pruebas de hipótesis para desarrollar un proyecto o producto. Se inicia con la identificación de un problema, la creación de un producto mínimo viable (MVP), la medición de resultados y el aprendizaje continuo. Este enfoque es especialmente adecuado para proyectos empresariales y startups.
+
+<br/><br/>
+
+## **Project Management Institute (PMI):** 
+
+El PMI proporciona un marco de trabajo completo para la gestión de proyectos, que incluye la identificación del problema (iniciación del proyecto), la planificación, la ejecución, el monitoreo y control, y el cierre del proyecto. Este enfoque es ampliamente utilizado en la gestión de proyectos en diversas industrias.
+
+<br/><br/>
+
+## **Metodología Canvas:** 
+
+El Modelo Canvas es una herramienta que permite definir, visualizar y comunicar aspectos clave de un proyecto o negocio. Ayuda a identificar problemas y oportunidades al enfocarse en segmentos de clientes, propuesta de valor, canales, relaciones con clientes, fuentes de ingresos, recursos clave, actividades clave, socios clave y estructura de costos.
+
+El enfoque que elijas dependerá de la naturaleza del problema, el tipo de proyecto y tus objetivos específicos. Es importante seleccionar la metodología que mejor se adapte a tu situación y asegurarte de seguir un proceso estructurado para abordar los problemas y proyectos de manera efectiva.
+
+
+<br/><br/><br/>
+
+# **Design Thinking** 
+
+
+
+
+<br/><br/>
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/desingt.png")
+```
+
+Design Thinking es una metodología de resolución de problemas centrada en el usuario que se utiliza para abordar desafíos complejos y fomentar la innovación. Esta metodología se originó en el ámbito del diseño de productos, pero se ha expandido a otros campos, incluyendo el diseño de servicios, la gestión empresarial y la resolución de problemas en general. Design Thinking se caracteriza por su enfoque en la empatía, la colaboración y la experimentación.
+
+Las etapas fundamentales del proceso de Design Thinking son las siguientes:
+
+<br/><br/>
+
+## **Empatizar (Empathize):** 
+
+En esta etapa, el equipo se sumerge en el mundo de los usuarios para comprender sus necesidades, deseos y desafíos. Esto implica la observación directa, la realización de entrevistas, la creación de perfiles de usuario y la empatía profunda con las personas a las que se busca servir. El objetivo es obtener una comprensión auténtica de la perspectiva del usuario.
+
+<br/><br/>
+
+## **Definir (Define):** 
+
+Una vez que se han recopilado datos y se ha ganado empatía con los usuarios, se procede a definir claramente el problema o desafío a abordar. En esta etapa, se sintetizan los hallazgos de la etapa de empatía y se crea una declaración de problema (o "statement") que servirá como guía para el resto del proceso.
+
+<br/><br/>
+
+## **Idear (Ideate):** 
+
+En esta fase, se fomenta la generación de ideas creativas y soluciones innovadoras. Los miembros del equipo, a menudo en sesiones de lluvia de ideas (brainstorming), proponen una amplia variedad de soluciones posibles sin juzgarlas. La creatividad es fundamental, y se anima a pensar más allá de lo convencional.
+
+<br/><br/>
+
+## **Prototipar (Prototype):** 
+
+Una vez que se han identificado algunas ideas prometedoras en la etapa de ideación, se procede a la creación de prototipos rápidos y económicos de esas soluciones. Estos prototipos pueden ser simples representaciones visuales o modelos funcionales. El objetivo es tener algo tangible para probar y refinar.
+
+<br/><br/>
+
+## **Probar (Test):** 
+
+En esta etapa, se ponen los prototipos en manos de los usuarios para obtener retroalimentación real. La retroalimentación de los usuarios es crucial para comprender cómo las soluciones propuestas se ajustan a las necesidades y expectativas de los usuarios. El proceso de prueba es iterativo, lo que significa que se pueden realizar ajustes en función de la retroalimentación y volver a probar iterativamente.
+
+<br/><br/>
+
+## **Implementar (Implement):** 
+
+Una vez que se ha refinado y validado una solución a través del proceso de prueba, se procede a la implementación final. Esto puede incluir la puesta en marcha de la solución a gran escala, la planificación de la ejecución y la gestión de los recursos necesarios.
+
+<br/><br/>
+
+El proceso de **Design Thinking** es altamente iterativo, lo que significa que las etapas no necesariamente se siguen en un orden lineal. En lugar de eso, se pueden retroceder y avanzar entre las etapas según sea necesario para perfeccionar la solución. Design Thinking se basa en la colaboración y la creatividad, y se centra en la resolución de problemas de manera holística, teniendo en cuenta tanto las necesidades de los usuarios como las oportunidades de innovación. Es una metodología poderosa para abordar una amplia variedad de desafíos en diferentes contextos.
+
+
+<br/><br/><br/>
+
+## **Ejemplo 1**:
+
+<br/><br/>
+
+### **Problema:** 
+
+El banco ha notado que muchos clientes tienen dificultades para navegar por su sitio web y realizar operaciones en línea de manera eficiente, lo que ha llevado a una disminución en la satisfacción del cliente y un aumento en las consultas de soporte.
+
+<br/><br/>
+
+### **1. Empatizar:**
+
+* El equipo de Design Thinking se sumerge en la experiencia de los clientes. Realizan entrevistas con usuarios reales para comprender sus frustraciones y desafíos al utilizar el sitio web del banco.
+
+* Observan cómo los clientes interactúan con el sitio web y recopilan datos sobre las áreas de mayor confusión y dificultad.
+
+* Entrevistan al personal de atención al cliente para obtener información sobre los problemas más comunes reportados por los clientes.
+
+<br/><br/>
+
+**2. Definir:**
+
+* A partir de la información recopilada en la etapa de empatía, el equipo define el problema central: "Los clientes tienen dificultades para navegar y utilizar eficientemente el sitio web del banco, lo que resulta en una disminución de la satisfacción del cliente y un aumento en las consultas de soporte".
+
+<br/><br/>
+
+**3. Idear:**
+
+* En una sesión de ideación, el equipo de Design Thinking genera una serie de ideas creativas para abordar el problema, como una interfaz de usuario más intuitiva, tutoriales interactivos, un chatbot de asistencia en línea, y una revisión de la estructura de menús del sitio web.
+
+<br/><br/>
+
+**4. Prototipar:**
+
+* El equipo selecciona una de las ideas, por ejemplo, la creación de una interfaz de usuario más intuitiva. Luego, crean prototipos de esta nueva interfaz utilizando herramientas de diseño. Estos prototipos son simples representaciones visuales de la nueva interfaz.
+
+<br/><br/>
+
+**5. Probar:**
+
+* Los prototipos se prueban con un grupo de clientes seleccionados al azar. Los usuarios interactúan con la nueva interfaz y proporcionan retroalimentación en tiempo real.
+
+* Se recopila retroalimentación sobre la usabilidad, la claridad y la eficiencia de la nueva interfaz.
+
+<br/><br/>
+
+**6. Implementar:**
+
+* Basándose en la retroalimentación de los usuarios y los hallazgos de las pruebas, el equipo de Design Thinking finaliza la nueva 
+interfaz y trabaja con el equipo de desarrollo para implementarla en el sitio web del banco.
+
+* Se comunican los cambios a los clientes y se proporciona soporte adicional para ayudarlos a familiarizarse con la nueva interfaz.
+
+<br/><br/>
+
+El proceso de Design Thinking ha permitido al banco abordar de manera efectiva el problema de usabilidad en su sitio web, mejorando la experiencia del cliente y reduciendo la carga de trabajo del equipo de soporte. Además, este enfoque enfocado en el usuario ha llevado a una solución más centrada en las necesidades de los clientes.
+
+
+<br/><br/><br/>
+
+## **Ejemplo 1**:
+
+<br/>
+
+### **Problema:** 
+
+La oficina bancaria ha notado una disminución en la colaboración y comunicación efectiva entre los empleados, lo que ha llevado a un menor rendimiento y una disminución de la moral del equipo.
+
+<br/><br/>
+
+### **1. Empatizar:**
+
+* El equipo de Design Thinking realiza entrevistas y encuestas con los empleados de la oficina para comprender sus desafíos y frustraciones en relación con la colaboración y la comunicación.
+
+* Observan cómo los empleados interactúan en el entorno de trabajo y recopilan información sobre los obstáculos a la colaboración efectiva.
+
+* Se reúnen con diferentes equipos y departamentos para obtener perspectivas variadas.
+
+<br/><br/>
+
+### **2. Definir:**
+
+* A partir de la información recopilada en la etapa de empatía, el equipo define el problema central: "La falta de colaboración y comunicación efectiva entre los empleados está afectando negativamente el rendimiento y la moral del equipo en la oficina bancaria".
+
+<br/><br/>
+
+### **3. Idear:**
+
+* En una sesión de ideación, el equipo de Design Thinking genera una serie de ideas creativas para abordar el problema, como la creación de espacios comunes de trabajo, la implementación de reuniones regulares de colaboración interdepartamental, la introducción de herramientas de comunicación interna y la realización de eventos para fomentar el trabajo en equipo.
+
+<br/><br/>
+
+### **4. Prototipar:**
+
+* El equipo selecciona una de las ideas, por ejemplo, la creación de espacios comunes de trabajo. Luego, crea prototipos de cómo podrían ser estos espacios, considerando la disposición del mobiliario, la tecnología y la comunicación visual.
+
+<br/><br/>
+
+### **5. Probar:**
+
+* Se instalan versiones piloto de los espacios comunes de trabajo en una parte de la oficina.
+
+* Los empleados tienen la oportunidad de utilizar estos espacios y proporcionar retroalimentación sobre su utilidad y comodidad.
+
+<br/><br/>
+
+### **6. Implementar:**
+
+*Basándose en la retroalimentación de los empleados y los hallazgos de las pruebas, se finaliza el diseño de los espacios comunes de trabajo.
+
+* Se implementan estos espacios en toda la oficina bancaria y se comunican los cambios a los empleados.
+* Se establece un plan de seguimiento para evaluar continuamente el impacto de los nuevos espacios en la colaboración y la moral del equipo.
+
+<br/><br/>
+
+El proceso de Design Thinking ha permitido a la oficina bancaria abordar de manera efectiva el problema de la falta de colaboración interna, mejorando el ambiente de trabajo y el rendimiento de los empleados. Además, este enfoque ha fomentado una cultura de innovación y mejora continua dentro de la organización.
+
+
+<br/><br/>

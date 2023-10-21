@@ -31,31 +31,31 @@ navbar:
     - text: "Estadística avanzada"
       menu:
         - text: "Ciclo de mejoramiento y de control"
-          href: recurso000.html
+          href: recurso201.html
         - text: "Problemas y proyectos"
-          href: recurso000.html
+          href: recurso202.html
         - text: "Cómo lograr la participación"
-          href: recurso000.html    
+          href: recurso203.html    
         - text: "Como registrar la información"
-          href: recurso000.html    
+          href: recurso204.html    
         - text: "Cómo identificar causas de problemas"
-          href: recurso000.html    
+          href: recurso205.html    
         - text: "Cómo organizar prioridades "
-          href: recurso000.html    
+          href: recurso206.html    
         - text: "Análisis de regresión"
-          href: recurso000.html           
-    - text: "Técnicas de análisis descriptivas"
-      menu: 
+          href: recurso207.html           
+        - text: "-----------------------------"
+        - text: "Tecnicas descriptivas multivariadas"
         - text: "Introducción"
-          href: recurso000.html        
+          href: recurso208.html        
         - text: "Análisis de componentes principales"
-          href: recurso000.html  
+          href: recurso209.html  
         - text: "Análisis de conglomerados"
-          href: recurso000.html    
+          href: recurso2010.html    
         - text: "Análisis de correspondencia"
-          href: recurso000.html    
+          href: recurso211.html    
         - text: "Ejemplo"
-          href: recurso000.html    
+          href: recurso212.html    
 output:
   html_document:
     css: style.css

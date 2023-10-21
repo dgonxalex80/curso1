@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#004080">**Organizando prioridades**</span>
+title: <span style="color:#004080">**Modelo de regresión lineal**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

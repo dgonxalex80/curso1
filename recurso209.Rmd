@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#004080">**Introducción**</span>
+title: <span style="color:#004080">**Análisis de Componentes Principales**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"

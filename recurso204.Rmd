@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#004080">**Herramientas básicas**</span>
+title: <span style="color:#004080">**El registro de la información**</span>
 subtitle: "Estadística Básica"
 author: "Pontificia Universidad Javeriana Cali"
 date: "2023"
@@ -28,3 +28,155 @@ c7="#B3D9FF"
 ### <span style="color:#B3D9FF">
 
 ```
+
+<br/><br/>
+
+El registro de información es una parte fundamental de la gestión de proyectos y la recopilación de datos en diversos contextos. Existen diversas técnicas y herramientas que se utilizan para registrar información de manera efectiva. Aquí tienes algunas de las técnicas más comunes:
+
+<br/><br/>
+
+## **Documentación escrita:** 
+
+Esta es una de las formas más tradicionales de registrar información. Incluye la creación de documentos, informes, notas y registros escritos a mano o digitales. Puedes utilizar procesadores de texto, hojas de cálculo, documentos en línea, aplicaciones de toma de notas, entre otros.
+
+<br/><br/>
+
+## **Bases de datos:** 
+
+Las bases de datos permiten organizar y gestionar grandes volúmenes de información de manera estructurada. Puedes utilizar software de bases de datos como Microsoft Access, MySQL, Oracle o sistemas de gestión de bases de datos (DBMS) en línea.
+
+<br/><br/>
+
+## **Herramientas de gestión de proyectos:** 
+
+Software de gestión de proyectos como Microsoft Project, Trello, Asana o Jira ofrecen funcionalidades para registrar y rastrear el progreso del proyecto, asignar tareas y documentar la información del proyecto.
+
+
+<br/><br/>
+
+## **Hoja de registro o bitácora:** 
+
+
+Estas hojas permiten llevar un registro detallado de eventos, actividades o datos específicos. Se utilizan comúnmente en la gestión de proyectos, control de calidad y seguridad.
+
+<br/><br/>
+
+## **Diagramas y mapas conceptuales:** 
+
+Software de diagramación como Microsoft Visio, Lucidchart o herramientas en línea como MindMeister son útiles para representar visualmente información y relaciones complejas.
+
+<br/><br/>
+
+## **Notas adhesivas y pizarras blancas:** 
+
+Las notas adhesivas (post-it) se utilizan para capturar ideas y conceptos clave de manera rápida. Las pizarras blancas son ideales para sesiones de lluvia de ideas y para representar información visualmente.
+
+<br/><br/>
+
+## **Grabación de audio y video:** 
+
+Para capturar información hablada o visual, la grabación de audio y video es una opción valiosa. Puedes utilizar grabadoras de voz, cámaras de video o software de grabación.
+
+<br/><br/>
+
+## **Herramientas de gestión de documentos:** 
+
+Aplicaciones como Microsoft SharePoint, Google Drive, Dropbox y sistemas de gestión de documentos electrónicos (EDMS) son eficaces para almacenar, organizar y recuperar documentos de manera eficiente.
+
+<br/><br/>
+
+## **Encuestas y cuestionarios en línea:** 
+
+Plataformas en línea como SurveyMonkey o Google Forms permiten recopilar información de manera estructurada a través de cuestionarios.
+
+<br/><br/>
+
+## **Redes sociales y foros:** 
+
+Las redes sociales y foros en línea son útiles para registrar comentarios, opiniones y discusiones relacionadas con temas específicos.
+
+<br/><br/>
+
+## **Sistemas de gestión de relaciones con el cliente (CRM):** 
+
+Estas herramientas se utilizan para registrar y gestionar información sobre clientes, interacciones y actividades comerciales.
+
+<br/><br/>
+
+## **Herramientas de automatización de procesos (BPM):** 
+
+Software de automatización de procesos empresariales como Microsoft Power Automate o Zapier ayudan a automatizar la recopilación y el registro de datos.
+
+<br/><br/>
+
+La elección de la técnica adecuada dependerá del tipo de información que deseas registrar, tus objetivos y las necesidades de tu proyecto o negocio. Es común utilizar una combinación de estas técnicas para abordar diversas necesidades de registro de información.
+
+
+<br/><br/>
+
+
+# **Para una entidad bancaria**
+
+<br/><br/>
+
+En una entidad bancaria, la elección de las técnicas de registro de información depende de las necesidades específicas y de los procesos que se deseen mejorar o agilizar. Sin embargo, aquí te presento algunas técnicas y herramientas que son particularmente aconsejables en una entidad bancaria:
+
+<br/><br/>
+
+## **Sistemas de Gestión de Documentos (DMS):** 
+
+Los DMS permiten gestionar, organizar y recuperar documentos de manera eficiente. En una entidad bancaria, donde se manejan grandes cantidades de documentos, un DMS es fundamental para el almacenamiento seguro y la búsqueda rápida de contratos, expedientes de clientes, estados de cuenta, entre otros.
+
+<br/><br/>
+
+## **Bases de Datos:** 
+
+Las bases de datos son esenciales para gestionar información crítica, como registros de cuentas, transacciones, perfiles de clientes y gestión de riesgos. Utilizar un sistema de gestión de bases de datos para el almacenamiento y acceso rápido a los datos es fundamental.
+
+<br/><br/>
+
+## **Hojas de Registro o Bitácoras:** 
+
+Las hojas de registro son útiles para mantener un seguimiento detallado de eventos y actividades, como auditorías, control de acceso a la bóveda, visitas de clientes y movimientos de efectivo.
+
+<br/><br/>
+
+## **Herramientas de Seguimiento de Proyectos:** 
+
+Las entidades bancarias a menudo trabajan en proyectos internos o relacionados con la implementación de nuevos servicios. Herramientas de gestión de proyectos como Microsoft Project o Trello pueden ser útiles para planificar, rastrear y documentar el progreso de los proyectos.
+
+<br/><br/>
+
+## **Notas Adhesivas y Pizarras Blancas:** 
+
+Estas herramientas son ideales para reuniones y sesiones de lluvia de ideas, donde se pueden capturar ideas y conceptos clave de manera rápida y visual.
+
+<br/><br/>
+
+## **Sistemas de CRM (Gestión de Relaciones con el Cliente):** 
+
+Las entidades bancarias utilizan sistemas de CRM para gestionar la información de los clientes, incluyendo detalles de contacto, interacciones y transacciones. Estos sistemas ayudan a mantener un registro organizado de las relaciones con los clientes.
+
+<br/><br/>
+
+## **Documentación Escrita:** 
+
+La documentación escrita, como informes, políticas y procedimientos, es crucial para mantener un registro de las operaciones bancarias, políticas de cumplimiento, regulaciones y políticas internas.
+
+<br/><br/>
+
+## **Sistemas de Grabación de Llamadas:** 
+
+En entidades bancarias, donde se realizan muchas transacciones telefónicas, la grabación de llamadas es importante para garantizar la precisión y la seguridad de las transacciones y para el registro de conversaciones con los clientes.
+
+<br/><br/>
+
+## **Software de Automatización de Procesos:** 
+
+Las entidades bancarias pueden beneficiarse de la automatización de procesos para la recopilación y registro de datos en aplicaciones de gestión de procesos empresariales (BPM) que permiten flujos de trabajo eficientes.
+
+
+<br/><br/>
+
+
+La elección de las técnicas y herramientas dependerá de las necesidades específicas de la entidad bancaria, el tamaño de la organización y los procesos internos. Por lo general, es aconsejable utilizar una combinación de estas herramientas para abordar las diversas necesidades de registro de información en una entidad bancaria. Además, es importante cumplir con las regulaciones y políticas de seguridad de datos en la industria bancaria para garantizar la protección y la confidencialidad de la información.

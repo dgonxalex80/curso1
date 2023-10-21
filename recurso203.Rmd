@@ -29,3 +29,153 @@ c7="#B3D9FF"
 
 ```
 
+<br/><br/>
+La participación en una tormenta de ideas, también conocida como "brainstorming", es esencial para fomentar la creatividad y la generación de ideas en un equipo de trabajo. Aquí te proporciono algunas estrategias para lograr una participación efectiva en una sesión de tormenta de ideas:
+
+<br/><br/>
+
+## **Crea un Ambiente de Confianza:** 
+
+Fomentar un ambiente donde los miembros del equipo se sientan seguros para compartir ideas sin temor a críticas o juicios negativos. Esto promoverá la participación activa.
+
+<br/><br/>
+
+## **Establece Reglas Claras:** 
+
+Antes de comenzar la tormenta de ideas, establece reglas claras para el proceso. Esto puede incluir reglas como "no hay respuestas incorrectas", "escuchar sin juzgar" y "evitar interrupciones".
+
+<br/><br/>
+
+## **Designa un Moderador:** 
+
+Un moderador puede guiar la sesión de tormenta de ideas y asegurarse de que todos tengan la oportunidad de hablar. También pueden ayudar a mantener el enfoque y evitar que la discusión se desvíe demasiado.
+
+<br/><br/>
+
+## **Diversidad en el Grupo:** 
+
+Involucra a personas con diferentes antecedentes, experiencias y perspectivas en la sesión de tormenta de ideas. La diversidad de pensamiento puede llevar a ideas más innovadoras.
+
+<br/><br/>
+
+## **Tiempo Limitado:** 
+
+Establece un límite de tiempo para la sesión. Esto puede ayudar a mantener la energía y la concentración, así como a evitar que la sesión se vuelva tediosa.
+
+<br/><br/>
+
+## **Usa Técnicas de Estimulación:** 
+
+Anima a los participantes a pensar de manera no convencional utilizando técnicas de estimulación, como analogías, metáforas o provocaciones creativas.
+
+<br/><br/>
+
+## **Fomenta la Combinación de Ideas:** 
+
+Anima a los participantes a construir sobre las ideas de los demás. Pueden combinar o mejorar las ideas existentes para generar soluciones más sólidas.
+
+<br/><br/>
+
+## **Proporciona un Espacio Visual:** 
+
+Utiliza pizarras o herramientas de colaboración en línea para visualizar las ideas a medida que se generan. Esto puede ayudar a los participantes a ver las conexiones y las posibles asociaciones.
+
+<br/><br/>
+
+## **No Evaluar en la Etapa de Generación:** 
+
+Recuerda a los participantes que la etapa de tormenta de ideas se centra en la generación de ideas, no en la evaluación. La evaluación debe hacerse en etapas posteriores.
+
+<br/><br/>
+
+## **Celebra la Diversidad de Ideas:** 
+
+Reconoce y valora todas las ideas, incluso las que pueden parecer inusuales o poco convencionales. Aprecia la diversidad de pensamiento.
+
+
+<br/><br/>
+
+## **Documenta y Prioriza:** 
+
+Registra todas las ideas, por más pequeñas o locas que parezcan. Luego, el equipo puede revisar y priorizar las ideas más tarde.
+
+<br/><br/>
+
+## **Seguimiento:** 
+
+Después de la tormenta de ideas, asegúrate de que haya un seguimiento para evaluar y desarrollar las ideas más prometedoras. Esto puede incluir la creación de un plan de acción.
+
+Recuerda que no todas las sesiones de tormenta de ideas serán igualmente fructíferas. La práctica y la iteración son clave para perfeccionar este proceso a lo largo del tiempo. Además, es importante mantener una cultura de apertura y creatividad en el equipo en general, no solo durante las sesiones de tormenta de ideas.
+
+
+<br/><br/><br/><br/>
+
+# **Tecnicas**
+
+Existen diversas metodologías y enfoques que puedes utilizar para canalizar la participación y la tormenta de ideas en un proyecto. Estas metodologías están diseñadas para fomentar la creatividad, la colaboración y la generación de ideas. Aquí hay algunas de las más populares:
+
+<br/><br/>
+
+## **Brainstorming tradicional:** 
+
+En una sesión de brainstorming, los participantes generan ideas de manera libre y abierta en un ambiente sin juicios. Esta es una forma efectiva de reunir muchas ideas en un corto período de tiempo. Puede llevarse a cabo de manera presencial o en línea.
+
+<br/><br/>
+
+## **Brainwriting:** 
+
+Similar al brainstorming, pero en lugar de compartir ideas verbalmente, los participantes las escriben en un papel o en una plataforma en línea. Luego, las ideas se comparten y discuten.
+
+<br/><br/>
+
+## **Método SCAMPER:** 
+
+SCAMPER es un acrónimo que representa diferentes formas de abordar un problema o una idea existente: Sustituir, Combinar, Adaptar, Modificar, Poner en otro uso, Eliminar y Reorganizar. Este enfoque ayuda a estimular la creatividad al ver un problema desde múltiples perspectivas.
+
+<br/><br/>
+
+## **Metodología 6-3-5:** 
+
+En esta técnica, seis participantes generan tres ideas en cinco minutos y luego pasan sus hojas de ideas a otras personas que añaden tres nuevas ideas en otros cinco minutos. Este proceso se repite varias veces, lo que resulta en una gran cantidad de ideas en un corto período de tiempo.
+
+<br/><br/>
+
+## **Técnica de Mapas Mentales:** 
+
+Los mapas mentales son diagramas que representan visualmente ideas y conceptos interconectados. Los participantes pueden colaborar en la creación de mapas mentales para explorar ideas y conexiones.
+
+<br/><br/>
+
+## **Lluvia de ideas inversa:** 
+
+En lugar de buscar soluciones directas, los participantes generan ideas sobre cómo causar o empeorar el problema. Esto puede llevar a perspectivas inusuales y soluciones innovadoras.
+
+<br/><br/>
+
+## **Técnica del 20-20:** 
+
+Los participantes tienen 20 minutos para escribir 20 ideas relacionadas con un tema específico. Esta técnica fomenta la generación rápida de ideas y la eliminación del pensamiento crítico en las etapas iniciales.
+
+<br/><br/>
+
+## **Sprint de Diseño:** 
+
+Popularizado por Google Ventures, un Sprint de Diseño es un enfoque estructurado para abordar desafíos y generar soluciones en un período de tiempo específico, generalmente una semana. Incluye actividades de tormenta de ideas, creación de prototipos y pruebas de concepto.
+
+<br/><br/>
+
+## **Técnica Delphi:** 
+
+Utilizada para recopilar opiniones y conocimientos de expertos. Los expertos generan ideas de manera independiente, y luego se resumen y reflejan para llegar a un consenso o solución.
+
+<br/><br/>
+
+## **Técnica Del Arte en Pared:** 
+
+Los participantes utilizan elementos visuales, como imágenes, ilustraciones o recortes de revistas, para representar sus ideas y conceptos. Esto puede desencadenar pensamiento creativo y discusiones interesantes.
+
+La elección de la metodología adecuada depende del contexto, los objetivos y las preferencias del equipo. A menudo, una combinación de varias de estas técnicas puede ser la más efectiva para generar ideas y canalizar la participación en un proyecto.
+
+
+
+
