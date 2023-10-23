@@ -34,6 +34,8 @@ navbar:
           href: recurso201.html
         - text: "Problemas y proyectos"
           href: recurso202.html
+        - text: "___Design Thinking"
+          href: recurso202A.html         
         - text: "Cómo lograr la participación"
           href: recurso203.html    
         - text: "Como registrar la información"

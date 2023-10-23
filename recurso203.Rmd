@@ -32,6 +32,15 @@ c7="#B3D9FF"
 <br/><br/>
 La participación en una tormenta de ideas, también conocida como "brainstorming", es esencial para fomentar la creatividad y la generación de ideas en un equipo de trabajo. Aquí te proporciono algunas estrategias para lograr una participación efectiva en una sesión de tormenta de ideas:
 
+
+
+
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/f14.png")
+```
+
+
 <br/><br/>
 
 ## **Crea un Ambiente de Confianza:** 

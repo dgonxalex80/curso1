@@ -37,12 +37,23 @@ La identificación de causas es un proceso fundamental en la resolución de prob
 
 ## **Diagrama de Ishikawa (o Diagrama de Espina de Pescado):** 
 
+
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/Ishikawa.png")
+```
+
 También conocido como "Diagrama de Causa y Efecto", este método visual ayuda a identificar las posibles causas de un problema al mapearlas en una estructura similar a la espina de un pez. Categorías comunes de causas incluyen personas, procesos, equipo, entorno y materiales.
 
 <br/><br/>
 
 
 ## **5 Por qué (5 Whys):** 
+
+
+```{r, echo=FALSE, out.width="30%", fig.align = "center"}
+knitr::include_graphics("img/5W.png")
+```
 
 Esta técnica consiste en hacer repetidamente la pregunta "¿Por qué?" para profundizar en las causas de un problema. Cada respuesta a la pregunta inicial se convierte en una nueva pregunta "¿Por qué?", lo que ayuda a descubrir las causas fundamentales.
 
@@ -51,12 +62,19 @@ Esta técnica consiste en hacer repetidamente la pregunta "¿Por qué?" para pro
 
 ## **Análisis FODA (Fortalezas, Oportunidades, Debilidades, Amenazas):** 
 
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/FODA.png")
+```
+
 Esta técnica se utiliza para analizar problemas o situaciones desde cuatro perspectivas: fortalezas, oportunidades, debilidades y amenazas. Al identificar las debilidades, puedes determinar sus causas.
 
 <br/><br/>
 
 
 ## **Matriz Causa-Efecto (Matriz de relaciones interfuncionales):** 
+
+
 
 Esta técnica involucra la creación de una matriz que muestra las relaciones entre diversas variables. Ayuda a identificar las interacciones entre factores y sus efectos en un problema.
 

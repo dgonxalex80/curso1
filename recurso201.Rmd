@@ -32,7 +32,7 @@ c7="#B3D9FF"
 
 <br/><br/>
 
-El ciclo **PHVA** es un enfoque de gestión utilizado en la mejora continua de la calidad, la productividad y la eficiencia en una organización. PHVA son las siglas de Planificar, Hacer, Verificar y Actuar, y se refieren a las cuatro etapas clave del ciclo. También se conoce como el ciclo de Deming o el ciclo de Shewhart, en honor a los pioneros de la gestión de la calidad, W. Edwards Deming y Walter A. Shewhart.
+El ciclo **PHVA** es un enfoque de gestión utilizado en la mejora continua de la calidad, la productividad y la eficiencia en una organización. **PHVA** son las siglas de *Planificar*, *Hacer*, *Verificar* y *Actuar*, y se refieren a las cuatro etapas clave del ciclo. También se conoce como el ciclo de **Deming** o el ciclo de **Shewhart**, en honor a los pioneros de la gestión de la calidad, W. Edwards Deming y Walter A. Shewhart.
 
 
 <br/><br/>
@@ -66,13 +66,76 @@ En función de los resultados y el análisis en la etapa de verificación, se to
 
 <br/><br/>
 
-Este ciclo no es lineal, lo que significa que una vez que se completa la etapa de "Actuar", se puede volver a la etapa de "Planificar" para iniciar un nuevo ciclo de mejora continua. Esto permite a las organizaciones adaptarse constantemente a las cambiantes condiciones y necesidades del entorno.
+Este ciclo no es lineal, lo que significa que una vez que se completa la etapa de "Actuar", se puede volver a la etapa de "Planificar" para iniciar un nuevo ciclo de mejora continua. 
+Esto permite a las organizaciones adaptarse constantemente a las cambiantes condiciones y necesidades del entorno.
 
 <br/><br/>
 
-El ciclo PHVA se utiliza ampliamente en la gestión de la calidad y se aplica en muchas áreas, incluyendo la gestión de proyectos, la gestión ambiental, la gestión de la seguridad, la gestión de la seguridad alimentaria y la gestión de la calidad en general. Es una herramienta efectiva para impulsar mejoras constantes en los procesos y productos, lo que conduce a una mayor eficiencia y satisfacción del cliente.
+El ciclo **PHVA** se utiliza ampliamente en la gestión de la calidad y se aplica en muchas áreas, incluyendo la gestión de proyectos, la gestión ambiental, la gestión de la seguridad, la gestión de la seguridad alimentaria y la gestión de la calidad en general. Es una herramienta efectiva para impulsar mejoras constantes en los procesos y productos, lo que conduce a una mayor eficiencia y satisfacción del cliente.
 
 
 <br/><br/>
+
+## **Ejemplo**
+
+#### **1. Planificar (Plan)**  
+
+Un banco desea mejorar su proceso de revisión de solicitudes de préstamos para garantizar una mayor eficiencia y precisión en la toma de decisiones de aprobación de préstamos.
+
+Actividades:
+
+* Definir los objetivos del proceso, como reducir el tiempo de revisión de solicitudes en un 20% y mejorar la precisión en la toma de decisiones.
+
+* Formar un equipo de proyecto que incluya expertos en análisis de crédito, tecnología de la información y operaciones bancarias.
+
+* Establecer un plan detallado que incluya acciones específicas, como la implementación de un sistema de puntuación crediticia automatizado y la revisión de los procedimientos de revisión de préstamos.
+
+<br/><br/>
+
+### **2. Hacer (Do)**
+
+El banco implementa las acciones planificadas.
+
+Actividades:
+
+* Introducir un sistema de puntuación crediticia automatizado que agilice la revisión de solicitudes.
+
+* Capacitar al personal en el uso del nuevo sistema y en la revisión de préstamos de acuerdo con los nuevos procedimientos.
+
+* Recopilar datos durante la implementación para evaluar el rendimiento del nuevo sistema.
+
+<br/><br/>
+
+### **3. Verificar (Check)**
+
+El banco revisa los resultados después de la implementación de las mejoras.
+
+Actividades:
+
+* Comparar los datos de tiempo y precisión antes y después de la implementación para evaluar si se han logrado los objetivos.
+
+* Realizar auditorías de calidad en una muestra de solicitudes de préstamos para asegurarse de que se sigan los procedimientos y se mantenga la precisión.
+
+<br/><br/>
+
+### **4. Actuar (Act)**
+
+Actividades:
+
+* El banco toma decisiones basadas en los resultados de la fase de Verificación.
+
+<br/><br/>
+
+Si se ha logrado la reducción del 20% en el tiempo de revisión y se ha mejorado la precisión, se mantienen las nuevas prácticas como parte de los procesos estándar del banco.
+
+Si los resultados son insatisfactorios, se identifican las deficiencias y se ajusta el plan, posiblemente realizando mejoras adicionales.
+
+Se continúa monitoreando y midiendo el rendimiento del proceso de revisión de préstamos de manera regular para asegurarse de que se mantenga en niveles aceptables.
+
+
+En una entidad financiera, la aplicación del ciclo **PHVA** es esencial para garantizar la calidad de los servicios financieros, la eficiencia de los procesos y la gestión adecuada del riesgo. Además, ayuda a la entidad a adaptarse a las cambiantes regulaciones financieras y a las necesidades cambiantes de los clientes.
+
+
+
 
 
