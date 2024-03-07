@@ -61,7 +61,7 @@ navbar:
     - text: "Introducción al análisis de datos"
       menu:
         - text: "Introducción a la Analítica de Datos"
-          href: recurso000.html        
+          href: recurso301.html        
         - text: "La inspección, depuración y transformación de datos"
           href: recurso000.html  
         - text: "Principios de visualización de Datos para Business Intelligence"
