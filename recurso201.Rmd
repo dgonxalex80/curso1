@@ -32,7 +32,24 @@ c7="#B3D9FF"
 
 <br/><br/>
 
-El ciclo **PHVA** es un enfoque de gestión utilizado en la mejora continua de la calidad, la productividad y la eficiencia en una organización. **PHVA** son las siglas de *Planificar*, *Hacer*, *Verificar* y *Actuar*, y se refieren a las cuatro etapas clave del ciclo. También se conoce como el ciclo de **Deming** o el ciclo de **Shewhart**, en honor a los pioneros de la gestión de la calidad, W. Edwards Deming y Walter A. Shewhart.
+>
+"El ciclo PHVA (Planificar-Hacer-Verificar-Actuar), es un método iterativo para la mejora continua de la calidad. El ciclo comienza con la planificación de un cambio, luego se implementa el cambio, se verifica el efecto del cambio y finalmente se actúa sobre los resultados para estandarizar el cambio o realizar más mejoras."
+>
+Deming, W. E. (1986)
+
+<br/><br/>
+
+Es también conocido como ciclo  **Shewhart** o **Deming**, en honor a los pioneros de la gestión de la calidad, W. Edwards Deming y Walter A. Shewhart,
+
+
+```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+knitr::include_graphics("img/authors_PHVA.png")
+```
+<center>
+<sub>
+William Edwards Deming (1900-1993), Walter Andrew Shewhart (1891-1967)
+</sub>
+</center>
 
 
 <br/><br/>
@@ -56,7 +73,7 @@ En esta etapa, se implementan los planes y se ejecutan las acciones definidas en
 
 ## **Verificar (Check):** 
 
-En esta etapa, se realiza un seguimiento y una evaluación de los resultados obtenidos. Se recopilan datos, se comparan con los KPIs y se analizan para determinar si se han alcanzado los objetivos establecidos. Se identifican desviaciones o problemas.
+En esta etapa, se realiza un seguimiento y una evaluación de los resultados obtenidos. Se recopilan datos, se comparan con los KPIs (Key Performance Indicators - indicadores clave de rendimiento) y se analizan para determinar si se han alcanzado los objetivos establecidos. Se identifican desviaciones o problemas.
 
 <br/><br/>
 
@@ -66,13 +83,11 @@ En función de los resultados y el análisis en la etapa de verificación, se to
 
 <br/><br/>
 
-Este ciclo no es lineal, lo que significa que una vez que se completa la etapa de "Actuar", se puede volver a la etapa de "Planificar" para iniciar un nuevo ciclo de mejora continua. 
-Esto permite a las organizaciones adaptarse constantemente a las cambiantes condiciones y necesidades del entorno.
+Este ciclo PHVA no es lineal, lo que significa que una vez que se completa la etapa de "Actuar", se puede volver a la etapa de "Planificar" para iniciar un nuevo ciclo de mejora continua. Esto permite a las organizaciones adaptarse constantemente a las cambiantes condiciones y necesidades del entorno.
 
 <br/><br/>
 
-El ciclo **PHVA** se utiliza ampliamente en la gestión de la calidad y se aplica en muchas áreas, incluyendo la gestión de proyectos, la gestión ambiental, la gestión de la seguridad, la gestión de la seguridad alimentaria y la gestión de la calidad en general. Es una herramienta efectiva para impulsar mejoras constantes en los procesos y productos, lo que conduce a una mayor eficiencia y satisfacción del cliente.
-
+El **PHVA** se utiliza ampliamente en la gestión de la calidad y se aplica en muchas áreas, incluyendo la gestión de proyectos, la gestión ambiental, la gestión de la seguridad, la gestión de la seguridad alimentaria y la gestión de la calidad en general. Es una herramienta efectiva para impulsar mejoras constantes en los procesos y productos, lo que conduce a una mayor eficiencia y satisfacción del cliente.
 
 <br/><br/>
 
@@ -80,9 +95,9 @@ El ciclo **PHVA** se utiliza ampliamente en la gestión de la calidad y se aplic
 
 #### **1. Planificar (Plan)**  
 
-Un banco desea mejorar su proceso de revisión de solicitudes de préstamos para garantizar una mayor eficiencia y precisión en la toma de decisiones de aprobación de préstamos.
+Una entidad  financiera desea mejorar su proceso de revisión de solicitudes de préstamos para garantizar una mayor eficiencia y precisión en la toma de decisiones de aprobación de préstamos.
 
-Actividades:
+Para lograrlo se debe plantear las siguientes actividades:
 
 * Definir los objetivos del proceso, como reducir el tiempo de revisión de solicitudes en un 20% y mejorar la precisión en la toma de decisiones.
 
@@ -94,9 +109,7 @@ Actividades:
 
 ### **2. Hacer (Do)**
 
-El banco implementa las acciones planificadas.
-
-Actividades:
+Para ejecutar lo planeado debe :
 
 * Introducir un sistema de puntuación crediticia automatizado que agilice la revisión de solicitudes.
 
@@ -108,9 +121,8 @@ Actividades:
 
 ### **3. Verificar (Check)**
 
-El banco revisa los resultados después de la implementación de las mejoras.
+Después de realizar laa acciones debe:
 
-Actividades:
 
 * Comparar los datos de tiempo y precisión antes y después de la implementación para evaluar si se han logrado los objetivos.
 
@@ -120,20 +132,18 @@ Actividades:
 
 ### **4. Actuar (Act)**
 
-Actividades:
+Basado en los resultados: 
 
-* El banco toma decisiones basadas en los resultados de la fase de Verificación.
+* Toma decisiones basadas en los resultados de la fase de Verificación.
 
 <br/><br/>
 
-Si se ha logrado la reducción del 20% en el tiempo de revisión y se ha mejorado la precisión, se mantienen las nuevas prácticas como parte de los procesos estándar del banco.
-
-Si los resultados son insatisfactorios, se identifican las deficiencias y se ajusta el plan, posiblemente realizando mejoras adicionales.
-
-Se continúa monitoreando y midiendo el rendimiento del proceso de revisión de préstamos de manera regular para asegurarse de que se mantenga en niveles aceptables.
+Despues de realizar el ciclo se evalua si los resultados muestran mejoras en los indicadores como el tiempo de revisión de solicitudes. En caso de presentarse mejoras significativas, las modificaciones implementadas se mantienen. En caso contrario se replantea nuevamente el ciclo 
 
 
-En una entidad financiera, la aplicación del ciclo **PHVA** es esencial para garantizar la calidad de los servicios financieros, la eficiencia de los procesos y la gestión adecuada del riesgo. Además, ayuda a la entidad a adaptarse a las cambiantes regulaciones financieras y a las necesidades cambiantes de los clientes.
+
+
+
 
 
 

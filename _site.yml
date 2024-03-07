@@ -57,7 +57,16 @@ navbar:
         - text: "Análisis de correspondencia"
           href: recurso211.html    
         - text: "Ejemplo"
-          href: recurso212.html    
+          href: recurso212.html  
+    - text: "Introducción al análisis de datos"
+      menu:
+        - text: "Introducción a la Analítica de Datos"
+          href: recurso000.html        
+        - text: "La inspección, depuración y transformación de datos"
+          href: recurso000.html  
+        - text: "Principios de visualización de Datos para Business Intelligence"
+          href: recurso000.html  
+          
 output:
   html_document:
     css: style.css
