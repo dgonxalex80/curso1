@@ -1,8 +1,8 @@
 ---
 title: <span style="color:#004080">**Introducción**</span>
-subtitle: "Estadística Básica"
+subtitle: "Analítica de datos"
 author: "Pontificia Universidad Javeriana Cali"
-date: "2023"
+date: "2024"
 output: html_document
 ---
 
@@ -28,3 +28,53 @@ c7="#B3D9FF"
 ### <span style="color:#B3D9FF">
 
 ```
+
+
+<br/><br/>
+
+# ¿Qué es la Analítica de Datos?
+
+La analítica de datos permite convertir datos sin procesar en información práctica, que permita tomar decisiones informadas. Esta se compone de distintas herramientas, tecnologías y procesos para encontrar tendencias, anomalías y resolver problemas haciendo uso de datos. En las últimas décadas hace parte de los procesos en las instituciones debido a las grandes ventajas que genera.  Por ejemplo, a través de esta se puede optimizar los servicios, identificar nuevas oportunidades de negocio, asegurar la confidencialidad y la calidad de los datos, proponer soluciones a los problemas que puedan surgir y en general, mejorar la productividad
+
+En la analítica de datos, hay varios conceptos, dentro de estos está la minería de datos. En este último, confluyen tres elementos fundamentales:
+
+- Datos: Son observaciones (números, imágenes, señales, ppalabras, etc) crudas que generalmente no tienen mucho significado por sí solas. 
+
+- Información: Se obtiene al organizar, estructurar y contextualizar los datos. Es cuando los datos cobran significado y se vuelven útiles para comprender situaciones o tomar decisiones.
+
+- Conocimiento: Va un paso más allá, implica interpretar la información para comprender las relaciones, patrones o implicaciones detrás de ella. El conocimiento se usa para obtener ideas valiosas o hacer predicciones en los contextos.
+
+<br/><br/>
+
+# Minería de Datos en el Análisis de Datos
+
+Este proceso de la analítica de datos, permite descubrir patrones, relaciones o información oculta dentro de grandes conjuntos de datos, que generan valor para las organizaciones o campos específicos.  
+Es decir, la minería de datos transforma datos sin procesar en información significativa y procesable. 
+Se implementa haciendo uso de técnicas descriptivas y predictivas del análisis multivariado, como el aprendizaje automático (machine learning), la estadística y la inteligencia artificial.
+
+<br/><br/>
+
+## Algunas aplicaciones de la análitica de datos
+
+Debido a que los datos están en todo, podría decirse que la analítica también.  A continuación, listamos, algunos casos de aplicación: 
+
+
+- Marketing y Publicidad: Analizar datos de clientes para comprender sus preferencias, comportamientos de compra y segmentar el mercado para campañas más efectivas.
+
+- Salud: Utilizar datos médicos para identificar patrones de enfermedades, predecir epidemias, personalizar tratamientos y mejorar la gestión hospitalaria.
+
+- Finanzas: Analizar datos financieros para detectar fraudes, predecir tendencias del mercado, optimizar carteras de inversión y evaluar riesgos.
+
+- Ciencia y Investigación: Usar datos científicos para modelar fenómenos naturales, descubrir nuevos medicamentos, entender el cambio climático, entre otros.
+
+- Manufactura y Operaciones: Optimizar la cadena de suministro, predecir fallas en equipos, mejorar la eficiencia de la producción y reducir costos.
+
+- Recursos Humanos: Analizar datos de empleados para mejorar la retención, identificar talentos, hacer predicciones de rotación y crear entornos laborales más productivos.
+
+<br/><br/>
+
+Caso: Empresas como Google, Facebook, Amazon, han basado su estrategia empresarial sobre el concepto del Big Data (Revuelta Bayod, 2018) y por ende de la mineria de datos. 
+Por ejemplo, la empresa Amazon ha aumentado de manera
+importante sus ventas, además, ha logrado reestructurar completamente su estrategia de negocios.
+Mediante esta tecnología, el proceso de estar en contacto con los clientes de para empresa se ha innovado y evolucionado de manera constante, hasta poder indicar que el conocimiento mismo de los consumidores es la clave del éxito de Amazon.
+Gracias a distintos algoritmos complejos, Amazon ha personalizado completamente el proceso de compra, habilitando a cada usuario vea contenidos específicos y adaptados a sus gustos cuando utiliza el sitio. La frase de "los clientes interesados en este producto también compraron esto" es, en efecto, un recurso bien aprovechado por herramientas de Big Data.

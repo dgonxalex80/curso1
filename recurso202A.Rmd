@@ -219,7 +219,7 @@ knitr::include_graphics("img/f12.png")
 knitr::include_graphics("img/DT1.png")
 ```
 
-El proceso de Design Thinking ha permitido a la oficina bancaria abordar de manera efectiva el problema de la falta de colaboración interna, mejorando el ambiente de trabajo y el rendimiento de los empleados. Además, este enfoque ha fomentado una cultura de innovación y mejora continua dentro de la organización.
+El proceso de **Design Thinking** ha permitido a la oficina bancaria abordar de manera efectiva el problema de la falta de colaboración interna, mejorando el ambiente de trabajo y el rendimiento de los empleados. Además, este enfoque ha fomentado una cultura de innovación y mejora continua dentro de la organización.
 
 
 <br/><br/>
