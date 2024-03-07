@@ -1,8 +1,8 @@
 ---
 title: <span style="color:#004080">**Análisis de Conglomerado**</span>
-subtitle: "Estadística Básica"
+subtitle: "Estadística avanzada"
 author: "Pontificia Universidad Javeriana Cali"
-date: "2023"
+date: "2024"
 output: html_document
 ---
 

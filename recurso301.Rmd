@@ -32,7 +32,7 @@ c7="#B3D9FF"
 
 <br/><br/>
 
-# ¿Qué es la Analítica de Datos?
+# **¿Qué es la Analítica de Datos?**
 
 La analítica de datos permite convertir datos sin procesar en información práctica, que permita tomar decisiones informadas. Esta se compone de distintas herramientas, tecnologías y procesos para encontrar tendencias, anomalías y resolver problemas haciendo uso de datos. En las últimas décadas hace parte de los procesos en las instituciones debido a las grandes ventajas que genera.  Por ejemplo, a través de esta se puede optimizar los servicios, identificar nuevas oportunidades de negocio, asegurar la confidencialidad y la calidad de los datos, proponer soluciones a los problemas que puedan surgir y en general, mejorar la productividad
 
@@ -46,7 +46,7 @@ En la analítica de datos, hay varios conceptos, dentro de estos está la miner�
 
 <br/><br/>
 
-# Minería de Datos en el Análisis de Datos
+# **Minería de Datos en el Análisis de Datos**
 
 Este proceso de la analítica de datos, permite descubrir patrones, relaciones o información oculta dentro de grandes conjuntos de datos, que generan valor para las organizaciones o campos específicos.  
 Es decir, la minería de datos transforma datos sin procesar en información significativa y procesable. 
@@ -54,7 +54,7 @@ Se implementa haciendo uso de técnicas descriptivas y predictivas del análisis
 
 <br/><br/>
 
-## Algunas aplicaciones de la análitica de datos
+## **Algunas aplicaciones de la análitica de datos**
 
 Debido a que los datos están en todo, podría decirse que la analítica también.  A continuación, listamos, algunos casos de aplicación: 
 
@@ -74,7 +74,9 @@ Debido a que los datos están en todo, podría decirse que la analítica tambié
 <br/><br/>
 
 Caso: Empresas como Google, Facebook, Amazon, han basado su estrategia empresarial sobre el concepto del Big Data (Revuelta Bayod, 2018) y por ende de la mineria de datos. 
-Por ejemplo, la empresa Amazon ha aumentado de manera
-importante sus ventas, además, ha logrado reestructurar completamente su estrategia de negocios.
+
+Por ejemplo, la empresa Amazon ha aumentado de manera importante sus ventas, además, ha logrado reestructurar completamente su estrategia de negocios.
+
 Mediante esta tecnología, el proceso de estar en contacto con los clientes de para empresa se ha innovado y evolucionado de manera constante, hasta poder indicar que el conocimiento mismo de los consumidores es la clave del éxito de Amazon.
+
 Gracias a distintos algoritmos complejos, Amazon ha personalizado completamente el proceso de compra, habilitando a cada usuario vea contenidos específicos y adaptados a sus gustos cuando utiliza el sitio. La frase de "los clientes interesados en este producto también compraron esto" es, en efecto, un recurso bien aprovechado por herramientas de Big Data.
