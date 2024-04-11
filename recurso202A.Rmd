@@ -153,7 +153,9 @@ El proceso de Design Thinking ha permitido al banco abordar de manera efectiva e
 
 <br/><br/><br/>
 
-## **Ejemplo 2**:
+## **Evaluación** 
+
+**Ordena** las siguientes actividades orientadas a resolver el siguiente problema:
 
 <br/>
 
@@ -164,39 +166,21 @@ El proceso de Design Thinking ha permitido al banco abordar de manera efectiva e
 knitr::include_graphics("img/f12.png")
 ```
 
-* La oficina bancaria ha notado una disminución en la colaboración y comunicación efectiva entre los empleados, lo que ha llevado a un menor rendimiento y una disminución de la moral del equipo.
+La oficina bancaria ha notado una disminución en la colaboración y comunicación efectiva entre los empleados, lo que ha llevado a un menor rendimiento y una disminución de la moral del equipo.
+
+El proceso de **Design Thinking** permitirá a la oficina bancaria abordar de manera efectiva el problema de la falta de colaboración interna, mejorando el ambiente de trabajo y el rendimiento de los empleados. Además, este enfoque ha fomentado una cultura de innovación y mejora continua dentro de la organización.
+
 
 <br/><br/>
 
-### **1. Empatizar:**
-
-* El equipo de Design Thinking realiza entrevistas y encuestas con los empleados de la oficina para comprender sus desafíos y frustraciones en relación con la colaboración y la comunicación.
-
-* Observan cómo los empleados interactúan en el entorno de trabajo y recopilan información sobre los obstáculos a la colaboración efectiva.
-
-* Se reúnen con diferentes equipos y departamentos para obtener perspectivas variadas.
-
-<br/><br/>
-
-### **2. Definir:**
-
-* A partir de la información recopilada en la etapa de empatía, el equipo define el problema central: "La falta de colaboración y comunicación efectiva entre los empleados está afectando negativamente el rendimiento y la moral del equipo en la oficina bancaria".
-
-<br/><br/>
-
-### **3. Idear:**
-
-* En una sesión de ideación, el equipo de Design Thinking genera una serie de ideas creativas para abordar el problema, como la creación de espacios comunes de trabajo, la implementación de reuniones regulares de colaboración interdepartamental, la introducción de herramientas de comunicación interna y la realización de eventos para fomentar el trabajo en equipo.
-
-<br/><br/>
-
-### **4. Prototipar:**
+### **1.**
 
 * El equipo selecciona una de las ideas, por ejemplo, la creación de espacios comunes de trabajo. Luego, crea prototipos de cómo podrían ser estos espacios, considerando la disposición del mobiliario, la tecnología y la comunicación visual.
 
 <br/><br/>
 
-### **5. Probar:**
+
+### **2.**
 
 * Se instalan versiones piloto de los espacios comunes de trabajo en una parte de la oficina.
 
@@ -204,7 +188,31 @@ knitr::include_graphics("img/f12.png")
 
 <br/><br/>
 
-### **6. Implementar:**
+
+### **3.**
+
+* A partir de la información recopilada en la etapa de empatía, el equipo define el problema central: "La falta de colaboración y comunicación efectiva entre los empleados está afectando negativamente el rendimiento y la moral del equipo en la oficina bancaria".
+
+<br/><br/>
+
+
+### **4.**
+
+* En una sesión de ideación, el equipo de Design Thinking genera una serie de ideas creativas para abordar el problema, como la creación de espacios comunes de trabajo, la implementación de reuniones regulares de colaboración interdepartamental, la introducción de herramientas de comunicación interna y la realización de eventos para fomentar el trabajo en equipo.
+
+<br/><br/>
+
+
+## **6.**
+
+* El equipo de Design Thinking realiza entrevistas y encuestas con los empleados de la oficina para comprender sus desafíos y frustraciones en relación con la colaboración y la comunicación.
+
+* Observan cómo los empleados interactúan en el entorno de trabajo y recopilan información sobre los obstáculos a la colaboración efectiva.
+
+* Se reúnen con diferentes equipos y departamentos para obtener perspectivas variadas.
+
+
+### **5**
 
 * Basándose en la retroalimentación de los empleados y los hallazgos de las pruebas, se finaliza el diseño de los espacios comunes de trabajo.
 
@@ -214,12 +222,68 @@ knitr::include_graphics("img/f12.png")
 
 <br/><br/>
 
+**Solución** : 6,3,4,1,2,5
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------
+<!-- ### **1. Empatizar:** -->
+
+<!-- * El equipo de Design Thinking realiza entrevistas y encuestas con los empleados de la oficina para comprender sus desafíos y frustraciones en relación con la colaboración y la comunicación. -->
+
+<!-- * Observan cómo los empleados interactúan en el entorno de trabajo y recopilan información sobre los obstáculos a la colaboración efectiva. -->
+
+<!-- * Se reúnen con diferentes equipos y departamentos para obtener perspectivas variadas. -->
+
+<!-- <br/><br/> -->
+
+<!-- ### **2. Definir:** -->
+
+<!-- * A partir de la información recopilada en la etapa de empatía, el equipo define el problema central: "La falta de colaboración y comunicación efectiva entre los empleados está afectando negativamente el rendimiento y la moral del equipo en la oficina bancaria". -->
+
+<!-- <br/><br/> -->
+
+<!-- ### **3. Idear:** -->
+
+<!-- * En una sesión de ideación, el equipo de Design Thinking genera una serie de ideas creativas para abordar el problema, como la creación de espacios comunes de trabajo, la implementación de reuniones regulares de colaboración interdepartamental, la introducción de herramientas de comunicación interna y la realización de eventos para fomentar el trabajo en equipo. -->
+
+<!-- <br/><br/> -->
+
+<!-- ### **4. Prototipar:** -->
+
+<!-- * El equipo selecciona una de las ideas, por ejemplo, la creación de espacios comunes de trabajo. Luego, crea prototipos de cómo podrían ser estos espacios, considerando la disposición del mobiliario, la tecnología y la comunicación visual. -->
+
+<!-- <br/><br/> -->
+
+<!-- ### **5. Probar:** -->
+
+<!-- * Se instalan versiones piloto de los espacios comunes de trabajo en una parte de la oficina. -->
+
+<!-- * Los empleados tienen la oportunidad de utilizar estos espacios y proporcionar retroalimentación sobre su utilidad y comodidad. -->
+
+<!-- <br/><br/> -->
+
+<!-- ### **6. Implementar:** -->
+
+<!-- * Basándose en la retroalimentación de los empleados y los hallazgos de las pruebas, se finaliza el diseño de los espacios comunes de trabajo. -->
+
+<!-- * Se implementan estos espacios en toda la oficina bancaria y se comunican los cambios a los empleados. -->
+
+<!-- * Se establece un plan de seguimiento para evaluar continuamente el impacto de los nuevos espacios en la colaboración y la moral del equipo. -->
+
+<!-- <br/><br/> -->
+
 
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/DT1.png")
 ```
 
-El proceso de **Design Thinking** ha permitido a la oficina bancaria abordar de manera efectiva el problema de la falta de colaboración interna, mejorando el ambiente de trabajo y el rendimiento de los empleados. Además, este enfoque ha fomentado una cultura de innovación y mejora continua dentro de la organización.
+
 
 
 <br/><br/>

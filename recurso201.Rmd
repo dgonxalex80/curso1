@@ -141,8 +141,57 @@ Basado en los resultados:
 Despues de realizar el ciclo se evalua si los resultados muestran mejoras en los indicadores como el tiempo de revisión de solicitudes. En caso de presentarse mejoras significativas, las modificaciones implementadas se mantienen. En caso contrario se replantea nuevamente el ciclo 
 
 
+<br/><br/>
+
+# **Evaluación**
+
+En una entidad financiera con presencia en varios países de Latinoamérica, ha detectado un aumento en la tasa de morosidad de los créditos hipotecarios en Colombia durante el último trimestre.
+
+De acuerdo con el ciclo PHVA, ¿en qué etapa se encuentra el banco al realizar las siguientes acciones?
+
+**1.** Se reúne un equipo de expertos para analizar las causas del aumento en la morosidad de los créditos hipotecarios en Colombia.
+
+a. Planificar
+b. Hacer
+c. Verificar
+d. Actuar
+
+**2.** Se implementa un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios en Colombia.
+
+a. Planificar
+b. Hacer
+c. Verificar
+d. Actuar
+
+**3.** Se monitorea la tasa de morosidad de los créditos hipotecarios en Colombia durante los próximos seis meses para evaluar la efectividad del nuevo programa de educación financiera.
+
+a. Planificar
+b. Hacer
+c. Verificar
+d. Actuar
+
+**4.** Se decide modificar el programa de educación financiera para hacerlo más efectivo en la reducción de la morosidad de los créditos hipotecarios en Colombia.
+
+a. Planificar
+b. Hacer
+c. Verificar
+d. Actuar
 
 
+**Respuestas:**
+1. a. Planificar
+2. b. Hacer
+3. c. Verificar
+4. d. Actuar
+
+
+1. Planificar: El banco se encuentra en la etapa de planificación al reunir un equipo de expertos para analizar las causas del aumento en la morosidad. En esta etapa se definen los objetivos, se identifican las causas del problema y se diseñan las soluciones.
+
+2. Hacer: El banco se encuentra en la etapa de hacer al implementar un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios. En esta etapa se ponen en práctica las soluciones que se han diseñado.
+
+3. Verificar: El banco se encuentra en la etapa de verificación al monitorear la tasa de morosidad de los créditos hipotecarios durante los próximos seis meses. En esta etapa se evalúa la efectividad de las soluciones que se han implementado.
+
+4. Actuar: El banco se encuentra en la etapa de actuar al decidir modificar el programa de educación financiera para hacerlo más efectivo. En esta etapa se toman medidas correctivas para mejorar los resultados.
 
 
 
