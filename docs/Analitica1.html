@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Isabel G" />
+
+
+<title>Introducción a la Analítica de Datos</title>
+
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Estadística básica</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Inicio
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Estadística básica
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso101.html">Definiciones</a>
+    </li>
+    <li>
+      <a href="recurso102.html">Los datos</a>
+    </li>
+    <li>
+      <a href="recurso105.html">Indicadores de centro</a>
+    </li>
+    <li>
+      <a href="recurso106.html">Medidas de dispersión</a>
+    </li>
+    <li>
+      <a href="recurso107.html">Medidas de forma</a>
+    </li>
+    <li>
+      <a href="recurso108.html">Medidas de posición</a>
+    </li>
+    <li>
+      <a href="recurso109.html">Curva normal</a>
+    </li>
+    <li>
+      <a href="recurso110.html">Visualización de datos</a>
+    </li>
+    <li>
+      <a href="recurso111.html">Correlación entre variables</a>
+    </li>
+    <li>
+      <a href="recurso112.html">Informe estadístico</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Estadística avanzada
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso201.html">Ciclo de mejoramiento y de control</a>
+    </li>
+    <li>
+      <a href="recurso202.html">Problemas y proyectos</a>
+    </li>
+    <li>
+      <a href="recurso202A.html">___Design Thinking</a>
+    </li>
+    <li>
+      <a href="recurso203.html">Cómo lograr la participación</a>
+    </li>
+    <li>
+      <a href="recurso204.html">Como registrar la información</a>
+    </li>
+    <li>
+      <a href="recurso205.html">Cómo identificar causas de problemas</a>
+    </li>
+    <li>
+      <a href="recurso206.html">Cómo organizar prioridades </a>
+    </li>
+    <li>
+      <a href="recurso207.html">Análisis de regresión</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Tecnicas descriptivas multivariadas</li>
+    <li>
+      <a href="recurso208.html">Introducción</a>
+    </li>
+    <li>
+      <a href="recurso209.html">Análisis de componentes principales</a>
+    </li>
+    <li>
+      <a href="recurso2010.html">Análisis de conglomerados</a>
+    </li>
+    <li>
+      <a href="recurso211.html">Análisis de correspondencia</a>
+    </li>
+    <li>
+      <a href="recurso212.html">Ejemplo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Introducción al análisis de datos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Analitica1.html">Introducción a la Analítica de Datos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">La inspección, depuración y transformación de datos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Principios de visualización de Datos para Business Intelligence</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Introducción a la Analítica de Datos</h1>
+<h4 class="author">Isabel G</h4>
+
+</div>
+
+
+<div id="qué-es-la-analítica-de-datos" class="section level1">
+<h1>¿Qué es la Analítica de Datos?</h1>
+<p>La analítica de datos permite convertir datos sin procesar en
+información práctica, que permita tomar decisiones informadas. Esta se
+compone de distintas herramientas, tecnologías y procesos para encontrar
+tendencias, anomalías y resolver problemas haciendo uso de datos. En las
+últimas décadas hace parte de los procesos en las instituciones debido a
+las grandes ventajas que genera. Por ejemplo, a través de esta se puede
+optimizar los servicios, identificar nuevas oportunidades de negocio,
+asegurar la confidencialidad y la calidad de los datos, proponer
+soluciones a los problemas que puedan surgir y en general, mejorar la
+productividad</p>
+<p>En la analítica de datos, hay varios conceptos, dentro de estos está
+la minería de datos. En este último, confluyen tres elementos
+fundamentales:</p>
+<ul>
+<li><p>Datos: Son observaciones (números, imágenes, señales, ppalabras,
+etc) crudas que generalmente no tienen mucho significado por sí
+solas.</p></li>
+<li><p>Información: Se obtiene al organizar, estructurar y
+contextualizar los datos. Es cuando los datos cobran significado y se
+vuelven útiles para comprender situaciones o tomar decisiones.</p></li>
+<li><p>Conocimiento: Va un paso más allá, implica interpretar la
+información para comprender las relaciones, patrones o implicaciones
+detrás de ella. El conocimiento se usa para obtener ideas valiosas o
+hacer predicciones en los contextos.</p></li>
+</ul>
+</div>
+<div id="minería-de-datos-en-el-análisis-de-datos"
+class="section level1">
+<h1>Minería de Datos en el Análisis de Datos</h1>
+<p>Este proceso de la analítica de datos, permite descubrir patrones,
+relaciones o información oculta dentro de grandes conjuntos de datos,
+que generan valor para las organizaciones o campos específicos.<br />
+Es decir, la minería de datos transforma datos sin procesar en
+información significativa y procesable. Se implementa haciendo uso de
+técnicas descriptivas y predictivas del análisis multivariado, como el
+aprendizaje automático (machine learning), la estadística y la
+inteligencia artificial.</p>
+<div id="algunas-aplicaciones-de-la-análitica-de-datos"
+class="section level2">
+<h2>Algunas aplicaciones de la análitica de datos</h2>
+<p>Debido a que los datos están en todo, podría decirse que la analítica
+también. A continuación, listamos, algunos casos de aplicación:</p>
+<ul>
+<li><p><strong>Marketing y Publicidad</strong>: Analizar datos de
+clientes para comprender sus preferencias, comportamientos de compra y
+segmentar el mercado para campañas más efectivas.</p></li>
+<li><p><strong>Salud</strong>: Utilizar datos médicos para identificar
+patrones de enfermedades, predecir epidemias, personalizar tratamientos
+y mejorar la gestión hospitalaria.</p></li>
+<li><p><strong>Finanzas</strong>: Analizar datos financieros para
+detectar fraudes, predecir tendencias del mercado, optimizar carteras de
+inversión y evaluar riesgos.</p></li>
+<li><p><strong>Ciencia e Investigación</strong>: Usar datos científicos
+para modelar fenómenos naturales, descubrir nuevos medicamentos,
+entender el cambio climático, entre otros.</p></li>
+<li><p><strong>Manufactura y Operaciones</strong>: Optimizar la cadena
+de suministro, predecir fallas en equipos, mejorar la eficiencia de la
+producción y reducir costos.</p></li>
+<li><p><strong>Recursos Humanos</strong>: Analizar datos de empleados
+para mejorar la retención, identificar talentos, hacer predicciones de
+rotación y crear entornos laborales más productivos.</p></li>
+</ul>
+<p>Empresas como Google, Facebook, Amazon, han basado su estrategia
+empresarial sobre el concepto del Big Data (Revuelta Bayod, 2018) y por
+ende de la mineria de datos.</p>
+<p>Por ejemplo, la empresa Amazon ha aumentado de manera importante sus
+ventas, además, ha logrado reestructurar completamente su estrategia de
+negocios. Mediante esta tecnología, el proceso de estar en contacto con
+los clientes la empresa se ha innovado y evolucionado de manera
+constante, hasta poder indicar que el conocimiento mismo de los
+consumidores es la clave del éxito de Amazon. Gracias a distintos
+algoritmos complejos, Amazon ha personalizado completamente el proceso
+de compra, habilitando a cada usuario vea contenidos específicos y
+adaptados a sus gustos cuando utiliza el sitio. La frase de “los
+clientes interesados en este producto también compraron esto” es, en
+efecto, un recurso bien aprovechado por herramientas de Big Data.</p>
+</div>
+<div id="qué-es-y-qué-no-es-la-analítica-de-datos"
+class="section level2">
+<h2>¿Qué es y qué no es la analítica de datos?</h2>
+<p>Como enfatizamos anteriormente, la analítica de datos es el proceso
+de examinar datos para encontrar patrones, tendencias, correlaciones o
+cualquier otra información significativa que pueda ayudar a las
+organizaciones a tomar decisiones, cuyo objetivo principal es obtener
+información valiosa a partir de los datos para ayudar a las empresas y
+organizaciones a tomar decisiones informadas y estratégicas. En esta se
+hace uso de herramientas y técnicas estadísticas, matemáticae y de
+análisis de datos. Dependiendo del problema en el ciclo de los datos,
+esta podría clasificarse como descriptiva, diagnóstica, predictiva y
+prescriptiva. A continuación, presentamos una imagen de la
+clasificación, sin emabrgo, no ahondaremos en cada una de ellas. A lo
+largo de este curso, estaremos abordandolas.</p>
+<p style = 'text-align:center;'>
+<p><img src="img/imagen_1.png" /> Tomado de: <a
+href="https://www.issa.int/es/analysis/use-analytical-technology-social-security-systems-during-pandemic"
+class="uri">https://www.issa.int/es/analysis/use-analytical-technology-social-security-systems-during-pandemic</a></p>
+<p>Sin embargo, la analítica de datos, no es sólo la recolección de
+datos, ni está limitada a un sólo campo o sector empresarial. Tampoco es
+una solución mágica y no sólo es aplicable para grandes empresas.</p>
+<p>A continuación, se presentan una serie de situaciones, en las cuales,
+se busca que identifiquemos el impacto de la analítica de datos.</p>
+</div>
+<div id="caso-1" class="section level2">
+<h2>Caso 1</h2>
+<p>En las redes sociales, una empresa decide examinar las publicaciones
+de sus usuarios para determinar si hay favoristismo por cierta marca,
+producto o servicio.</p>
+<div id="pregunta" class="section level3">
+<h3>Pregunta</h3>
+<p>¿corresponde esto a un modelo dentro de la analítica de datos?
+Verdadero/falso</p>
+<p>Verdadero, porque la empresa puede usar análisis de sentimientos para
+cuantificar dentro de cada comentario el sentimiento de preferencia.
+(esta es la correcta)</p>
+<p>Verdadero, porque la emporesa puede contar el número de menciones en
+redes sociales sin comprender el sentimiento detrás de esas
+menciones.</p>
+<p>Falso, los sentimientos y las preferencias con una emoción que no se
+puede medir.</p>
+</div>
+</div>
+<div id="caso-2" class="section level2">
+<h2>Caso 2</h2>
+<p>Una entidad financiera, quiere ofrecer una nueva campaña ofreciendo
+su nuevo producto crediticio “Seguro max” y decide no considerar sus
+preferencias, estilos de vida y diferencias en el nivel de ingreso.</p>
+<div id="pregunta-1" class="section level3">
+<h3>Pregunta</h3>
+<p>¿Cree que esto corresponde a una metodología apropiada de la
+analítica de datos? (sí/no)</p>
+<p>sí, porque la entidad financiera debe dividir la base de clientes en
+grupos más pequeños basados en comportamientos de compra, preferencias,
+historial de transacciones, y características demográficas.</p>
+<p>Sí, porque es necesario tratar a todos los clientes de la misma
+manera sin considerar sus diferencias y preferencias individuales.</p>
+<p>No, porque las variables pueden ayudar a segmentar los clientes y así
+ofrecer un producto adecuado a cada segmento. (esta es la correcta)</p>
+</div>
+</div>
+<div id="conclusión" class="section level2">
+<h2>Conclusión</h2>
+<p>Existen una gran gama de aplicaciones donde la analítica de datos
+tiene un papel fundamental. No olvidemos que cada problema puede tener
+un herramenta o juego de herramientas para aproximarlo, y hay que tener
+claro que la analítica de datos involucra una metología más completa que
+no es única. No sólo es almacenar grandes cantidades de datos sin ningún
+plan o intención de analizarlos para obtener información. Ni con esta se
+pretende crear informes estáticos que muestran datos históricos sin
+profundizar en las tendencias, causas subyacentes o implicaciones para
+el futuro. Ni consiste en especulación o toma de deiciones intuitiva en
+creencias personales o corazonadas. Tampoco es útil utilizar datos
+desactualizados o incompletos que no reflejan la situación actual de la
+empresa o del mercado. No es es una solución universal ni única para
+todos los problemas de la emperesa sin considerar el contexto y la
+aplicación específica.</p>
+</div>
+</div>
+<div id="qué-es-biba" class="section level1">
+<h1>¿Qué es BIBA?</h1>
+<p>En la analítica de datos, este término significa Business
+Intelligence Business Analytics (BIBA). Este concepto abarca tanto la
+visualización como la analítica avanzada de datos. A continuación, vamos
+a describir más detalladamente este concepto:</p>
+<div id="inteligencia-de-negocios-bi---business-intelligence"
+class="section level2">
+<h2>Inteligencia de Negocios (BI - Business Intelligence)</h2>
+<p>Son las tecnologías, aplicaciones y prácticas para la recopilación,
+integración, análisis y presentación de datos empresariales. Su objetivo
+principal es respaldar las decisiones de negocio basada en datos. Es
+decir, esta se centra en transformar datos complejos en representaciones
+visuales claras y comprensibles.</p>
+<p>Entre sus características básicas se encuentran la accesibilidad a la
+información, el apoyo a la toma de decisiones y orientación al usuario
+final. A través de herramientas inteligentes es posible analizar datos,
+crear informes, mapas gráficos y resúmenes para proporcionar información
+de valor en tiempo real. Algunos ejemplos son:</p>
+<p><strong>Dashboards Interactivos</strong> Los paneles de control o
+dashboards son una herramienta común en BI. Permiten a los usuarios ver
+de un vistazo el rendimiento clave de una empresa. Pueden incluir
+gráficos, tablas, indicadores de desempeño y más.</p>
+<p><strong>Gráficos y Diagramas</strong> Se utilizan para representar
+tendencias, patrones y relaciones en los datos. Ejemplos comunes
+incluyen gráficos de barras, gráficos circulares, gráficos de líneas,
+mapas de calor, entre otros.</p>
+<p><strong>Mapas Interactivos</strong> Muestra datos geoespaciales, lo
+que es útil para empresas con operaciones dispersas geográficamente.
+Puede ayudar a identificar áreas de alto rendimiento, mercados
+potenciales, etc.</p>
+<p><strong>Análisis de Cohortes</strong> Ayuda a comprender el
+comportamiento de grupos específicos de clientes o usuarios a lo largo
+del tiempo. Esto es valioso para mejorar la retención y la lealtad del
+cliente.</p>
+<p>Incluir estos tableros interactivos. <a
+href="https://www.datdata.com/ejemplos"
+class="uri">https://www.datdata.com/ejemplos</a></p>
+</div>
+<div id="cómo-funciona-el-business-intelligence" class="section level2">
+<h2>¿Cómo funciona el business intelligence?</h2>
+<p>Antes de adentrarte en su proceso y funcionamiento, es importante que
+conocer cuáles son los componentes de la business intelligence.</p>
+<p>Multidimensionalidad: la información proviene de diferentes fuentes,
+como hojas de cálculo o bases de datos, para que la herramienta pueda
+reunir información completa de bases sólidas y actualizadas.</p>
+<p>Minería de datos: para una adecuada clasificación de acuerdo con las
+actividades que le competen a tu empresa. Además, permite observar
+tendencias nuevas como comportamientos o cambios relevantes.</p>
+<p>Agentes: los softwares analizan los datos y necesidades de los
+usuarios y están programados para interpretar esa información. Date
+Warehouse: ayuda a centralizar la información para aquellos que se
+encargan de la toma de decisiones.</p>
+<p>El proceso de la business intelligence puede dividirse en diferentes
+fases:</p>
+<ul>
+<li><p>Dirigir y planear: en primer lugar, se debe definir los
+requerimientos de la empresa. Para ello se solicita a un grupo de
+analistas formular preguntas e hipótesis que ayuden a alcanzar los
+objetivos y necesidades de la compañía, de acuerdo con un plan
+estratégico o plan operativo anual.</p></li>
+<li><p>Recolectar información: esta se debe almacenar en bases de datos,
+sin importar de qué fuente provengan. Esto tiene la finalidad de obtener
+los resultados esperados.</p></li>
+<li><p>Procesar datos: los datos recolectados deben integrarse en un
+mismo formato para que puedan ser analizados.</p></li>
+<li><p>Analizar y producir: en esta fase se crean reportes
+personalizados para saber cuáles son las opciones o acciones a seguir.
+En este mismo paso, podrán obtenerse indicadores relevantes para la toma
+de decisiones.</p></li>
+<li><p>Difundir información: se generan los reportes de los datos
+analizados y procesados para que puedan ser interpretados. Una vez
+culminada dicha interpretación, se trazan las acciones a seguir y
+empiezan a llevarse a cabo.</p></li>
+</ul>
+<p>La inteligencia de negocios debe ser vista como un proceso lineal en
+el que, con base en los objetivos de la empresa, las preguntas sean
+respondidas a través de las acciones u opciones a seguir considerando
+los datos que se vayan obteniendo.</p>
+<div id="business-intelligence-es-big-data" class="section level3">
+<h3>¿business intelligence es big data?</h3>
+<p>A pesar de la popularidad del tema de la inteligencia de negocios,
+aún genera dudas y confusiones. En particualr se confunde con el término
+big data. Si bien la business intelligence y big data tienen ciertas
+similitudes, como el análisis de datos para su aprovechamiento, también
+cuentan con diferencias relacionadas con la función y
+almacenamiento.</p>
+<p>A continuación, planteamos algunas preguntas que nos ayudanrán a
+diferenciar ambos términos.</p>
+<p><strong>¿Qué datos analiza?</strong> La inteligencia de negocios
+analiza datos ya estructurados, orientados hacia el pasado; mientras que
+la big data puede hacer este mismo análisis, pero también de aquellos
+datos que no han sido estructurados.</p>
+<p><strong>¿Dónde almacena los datos?</strong> La inteligencia de
+negocios almacena los datos recolectados en un servidor central; la big
+data en diferentes archivos distribuidos.</p>
+<p><strong>¿Qué hace con los datos que recolecta?</strong> La
+inteligencia de negocios estudia las estadísticas internas de una
+organización y corrige errores operativos; la big data únicamente
+captura y procesa información.</p>
+<p><strong>¿Quién trabaja con los datos analizados?</strong> En el caso
+de los datos recolectados por la inteligencia de negocios, estos son
+trabajados directamente por el director de la empresa o líderes de
+proyectos y estrategias, como economistas o técnicos; la big data es
+atendida por matemáticos o ingenieros.</p>
+<p>En pocas palabras, la inteligencia de negocios ayuda directamente a
+la toma de decisiones y el big data para la identificación de patrones
+de los datos.</p>
+</div>
+</div>
+<div id="analítica-avanzada-ba---business-analytics"
+class="section level2">
+<h2>Analítica Avanzada (BA - Business Analytics)</h2>
+<p>La analítica avanzada va más allá de simplemente visualizar datos;
+implica el uso de modelos y algoritmos para obtener información
+predictiva y prescriptiva.</p>
+<p>El propósito del BA es aumentar la eficiencia y productividad del
+negocio al contextualizar los datos del mercado y darles un significado
+concreto. Por ello, con el Business Analytics se tiene ventajas y
+beneficios tales como:</p>
+<ul>
+<li>Tomar decisiones basadas en datos económicos, sociales,
+tecnológicos, de mercado, etc.</li>
+<li>Planear un mejor marketing digital en ventas.</li>
+<li>Reducir errores y costos operativos/de producción.</li>
+<li>Predecir posibles fallas en las maquinarias que se usen.</li>
+<li>Controllar totalmente un proceso de producción.</li>
+</ul>
+<p>Aquí hay algunos enfoques comunes dependiendo de la gestión de
+datos.</p>
+<p><strong>Análisis descriptivo</strong></p>
+<p>Se refiere al resumen o interpretación de los datos históricos de un
+negocio de modo que se tenga un panorama general que permita identificar
+patrones o tendencias internas.</p>
+<p><strong>Análisis de diagnóstico</strong></p>
+<p>Se centra en los datos pasados, para definir el porqué del
+rendimiento obtenido hasta el momento, pero sin analizar la situación
+actual.</p>
+<p><strong>Análisis predictivo</strong></p>
+<p>Este análisis toma como base los resultados del análisis descriptivo
+para predecir resultados futuros usando estadística y machine
+learning.</p>
+<p><strong>Análisis prescriptivo</strong></p>
+<p>Su base son los datos de rendimiento y tiene como objetivo hacer
+recomendaciones mejorar resultados futuros. Es especialmente útil para
+resolver necesidades de los consumidores en tiempo real.</p>
+<p>En resumen, la BIBA combina la visualización de datos para comprender
+el presente con la analítica avanzada para predecir el futuro y tomar
+decisiones estratégicas basadas en datos.</p>
+<p>– El BI se centra en datos pasado y actuales (descriptivo), mientras
+que el BA busca predecir comportamientos o resultados futuros
+(predictivo).</p>
+<p>–El BI aporta a las estrategias de marketing digital en el presente;
+el BA ayuda a establecer un objetivo de marketing digital a futuro.</p>
+<p>– El BI transforma la información del BA en decisiones comerciales
+estratégicas.</p>
+<p>Los expertos en BI deben comprender el detalle interno del negocio,
+mientras que los expertos en BA deben, además de entender el negocio,
+tener la capacidad de analizar todas las proyecciones y variables del
+mercado.</p>
+<p>Finalmente, ambos procesos se sustentan en el análisis de datos y
+buscan ayudar a mejorar la toma de decisiones, para que el negocio se
+base en datos y no conjeturas. Al utilizar el Business Intelligence y el
+Business Analytics como complementos se logra tener un panorama
+completo, tanto de cómo funciona tu empresa al interior, como inserta en
+su propio contexto.</p>
+</div>
+</div>
+<div id="actividad" class="section level1">
+<h1><strong>ACTIVIDAD</strong></h1>
+<p>Analítica de negocios -BI-</p>
+<ul>
+<li>Interpretación de Gráficos Observa el siguiente gráfico de barras
+que muestra las ventas trimestrales de una tienda de ropa durante el
+último año.</li>
+</ul>
+<p>Preguntas:</p>
+<p>¿Cuál fue el trimestre con las ventas más altas? ¿Hay algún trimestre
+que muestre una disminución en las ventas respecto al trimestre
+anterior? ¿Qué conclusiones puedes sacar de este gráfico en relación con
+las temporadas de venta?</p>
+<ul>
+<li>Comparación de Indicadores Clave</li>
+</ul>
+<p>Observa los siguientes dos dashboards:</p>
+<p>Dashboard A: Rendimiento de ventas por región. Dashboard B: Tasa de
+conversión de ventas por canal de marketing.</p>
+<p>Preguntas:</p>
+<p>¿En qué región se registraron las mayores ventas según el Dashboard
+A? ¿Qué canal de marketing tuvo la tasa de conversión más alta según el
+Dashboard B? ¿Puedes identificar alguna correlación entre los datos de
+ambos dashboards?</p>
+<ul>
+<li>Análisis de Tendencias</li>
+</ul>
+<p>Observa el siguiente gráfico de líneas que muestra el tráfico mensual
+de un sitio web durante el último año.</p>
+<p>Preguntas:</p>
+<p>¿Qué meses muestran picos de tráfico en el sitio web? ¿Hay alguna
+tendencia de crecimiento o decrecimiento en el tráfico a lo largo del
+año? ¿Cómo podrían utilizar esta información para planificar campañas de
+marketing?</p>
+<p>Analítica Avanzada -BA-</p>
+<ul>
+<li>Predicción de Ventas</li>
+</ul>
+<p>Observa los siguientes datos de ventas trimestrales y utiliza la
+tendencia para predecir las ventas del próximo trimestre.</p>
+<p>Trimestre Ventas ($) T1 5000 T2 6000 T3 7000 T4 8000</p>
+<p>Pregunta:</p>
+<p>Basándote en la tendencia, ¿cuál sería tu predicción para las ventas
+del próximo trimestre (T5)?</p>
+<ul>
+<li>Segmentación de Clientes</li>
+</ul>
+<p>Observa los siguientes datos de clientes y agrúpalos en segmentos
+basados en sus preferencias de productos y ubicación.</p>
+<p>Cliente Edad Producto Preferido Ubicación Cliente 1 35 Ropa Ciudad A
+Cliente 2 28 Electrónica Ciudad B Cliente 3 45 Ropa Ciudad A Cliente 4
+30 Ropa Ciudad B Cliente 5 40 Electrónica Ciudad A</p>
+<p>Pregunta:</p>
+<p>¿Cómo podrías segmentar a estos clientes en grupos para personalizar
+las ofertas?</p>
+<ul>
+<li>Análisis de Series Temporales</li>
+</ul>
+<p>Observa el siguiente gráfico de series temporales que muestra la
+evolución del precio de una acción durante los últimos 6 meses.</p>
+<p>Preguntas:</p>
+<p>¿Qué patrones puedes identificar en la evolución del precio de la
+acción? Basándote en estos patrones, ¿crees que el precio de la acción
+aumentará o disminuirá en el próximo mes?</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
