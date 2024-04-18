@@ -149,12 +149,33 @@ En una entidad financiera con presencia en varios países de Latinoamérica, ha 
 
 De acuerdo con el ciclo PHVA, ¿en qué etapa se encuentra el banco al realizar las siguientes acciones?
 
+<br/>
+
 **1.** Se reúne un equipo de expertos para analizar las causas del aumento en la morosidad de los créditos hipotecarios en Colombia.
 
 a. Planificar
 b. Hacer
 c. Verificar
 d. Actuar
+
+<br/><br/>
+
+-------------------------------------------------------------------------------
+
+Respuesta : 
+
+ * a.(V) **Planificar**: El banco se encuentra en la etapa de planificación al reunir un equipo de expertos para analizar las causas del aumento en la morosidad. En esta etapa se definen los objetivos, se identifican las causas del problema y se diseñan las soluciones.
+
+* b.(F). La entidad "ha detectado"... , indica que se encuentra en una etapa preliminar a la acción
+
+* c.(F). Esta etapa (Verificar) ocurre despues de haber realizado una acción
+
+* d.(F). Se considera esta etapa (Actuar) como el cierre del proceso y no como el inicio.
+
+
+-------------------------------------------------------------------------------
+
+<br/><br/>
 
 **2.** Se implementa un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios en Colombia.
 
@@ -163,6 +184,22 @@ b. Hacer
 c. Verificar
 d. Actuar
 
+--------------------------------------------------------------------------------
+
+Respuesta:
+
+* a. Planificar (F) : El "implentar" indica una acción que se realiza, por tanto no corresponde a esta etapa  
+
+* b. **Hacer** (V): El banco se encuentra en la etapa de hacer al implementar un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios. En esta etapa se ponen en práctica las soluciones que se han diseñado.
+
+* c. Verificar (F): El "implentar" indica una acción que se realiza, por tanto no corresponde a esta etapa  
+
+* d. Actuar (F): El "implentar" indica una acción que se realiza, por tanto no corresponde a esta etapa  
+
+--------------------------------------------------------------------------------
+
+<br/><br/>
+
 **3.** Se monitorea la tasa de morosidad de los créditos hipotecarios en Colombia durante los próximos seis meses para evaluar la efectividad del nuevo programa de educación financiera.
 
 a. Planificar
@@ -170,31 +207,38 @@ b. Hacer
 c. Verificar
 d. Actuar
 
+--------------------------------------------------------------------------------
+
+Respuesta :
+
+* a. Planificar (F) : El monitoreo corresponde a una acción de verificación, por tal razón no corresponde a esta etapa.
+
+* b. Hacer (F) : El monitoreo corresponde a una acción de verificación, por tal razón no corresponde a esta etapa.
+
+* c. **Verificar** (V): El banco se encuentra en la etapa de verificación al monitorear la tasa de morosidad de los créditos hipotecarios durante los próximos seis meses. En esta etapa se evalúa la efectividad de las soluciones que se han implementado.
+
+* d. Actuar. (F) : El monitoreo corresponde a una acción de verificación, por tal razón no corresponde a esta etapa.
+
+--------------------------------------------------------------------------------
+
+<br/><br/>
+
 **4.** Se decide modificar el programa de educación financiera para hacerlo más efectivo en la reducción de la morosidad de los créditos hipotecarios en Colombia.
+
 
 a. Planificar
 b. Hacer
 c. Verificar
 d. Actuar
 
+--------------------------------------------------------------------------------
 
-**Respuestas:**
-1. a. Planificar
-2. b. Hacer
-3. c. Verificar
-4. d. Actuar
+Solución:
 
+* a. Planificar: (F): La acción de implementar o modificar corresponde a la etapa de actuar, formado parte de el final del proceso y no de esta etapa.
 
-1. Planificar: El banco se encuentra en la etapa de planificación al reunir un equipo de expertos para analizar las causas del aumento en la morosidad. En esta etapa se definen los objetivos, se identifican las causas del problema y se diseñan las soluciones.
+* b. Hacer(F): La acción de implementar o modificar corresponde a la etapa de actuar, formado parte de el final del proceso y no de esta etapa.
+* c. Verificar (F): La acción de implementar o modificar corresponde a la etapa de actuar, formado parte de el final del proceso y no de esta etapa.
 
-2. Hacer: El banco se encuentra en la etapa de hacer al implementar un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios. En esta etapa se ponen en práctica las soluciones que se han diseñado.
-
-3. Verificar: El banco se encuentra en la etapa de verificación al monitorear la tasa de morosidad de los créditos hipotecarios durante los próximos seis meses. En esta etapa se evalúa la efectividad de las soluciones que se han implementado.
-
-4. Actuar: El banco se encuentra en la etapa de actuar al decidir modificar el programa de educación financiera para hacerlo más efectivo. En esta etapa se toman medidas correctivas para mejorar los resultados.
-
-
-
-
-
+* d. **Actuar** (V) : El banco se encuentra en la etapa de actuar al decidir modificar el programa de educación financiera para hacerlo más efectivo. En esta etapa se toman medidas correctivas para mejorar los resultados.
 
