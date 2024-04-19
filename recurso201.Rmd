@@ -54,38 +54,40 @@ William Edwards Deming (1900-1993), Walter Andrew Shewhart (1891-1967)
 
 <br/><br/>
 
+<!-------------------------------------------------------------------------- -->
+
+El ciclo PHVA es fundamental para la mejora continua de la calidad, conformaqndo un método cíclico que se utiliza para identificar problemas, implementar soluciones, medir los resultados y realizar ajustes según sea necesario. También se conoce como ciclo Deming, en honor a W. Edwards Deming, quien lo popularizó en la década de 1950.
+
+Las cuatro fases que componen el ciclo PHVA son:
+
+**Planificar**: En esta fase, se identifican los problemas o áreas de oportunidad para la mejora. Se establecen objetivos específicos, medibles, alcanzables, relevantes y con un plazo determinado (SMART). Se desarrollan planes de acción detallados que describen las actividades que se llevarán a cabo para lograr los objetivos.
+
+**Hacer**: En esta fase, se ponen en práctica los planes de acción desarrollados en la fase de planificación. Se recopilan datos e información necesaria y se monitorea el progreso.
+
+**Verificar**: En esta fase, se analizan los datos recopilados durante la fase de ejecución para evaluar si se han logrado los objetivos. Se comparan los resultados reales con los resultados esperados.
+
+**Actuar**: En esta fase, se toman medidas en función de los resultados de la fase de verificación. Si se han logrado los objetivos, se estandarizan los procesos exitosos y se documentan las lecciones aprendidas. Si no se han logrado los objetivos, se identifican las causas de los problemas y se realizan ajustes a los planes de acción.
+
+
+Algunos beneficios del ciclo PHVA son :
+
+* **Mejora continua de la calidad**: Ayuda a identificar y eliminar problemas de manera continua, lo que conduce a una mejor calidad de productos y servicios.
+
+* **Reducción de costos**: La identificación y eliminación de problemas de manera temprana,  ayuda a reducir los costos del proceos o servicio.
+
+* **Mayor eficiencia**: Ayuda  a mejorar la eficiencia de los procesos e identificar y eliminar cuellos de botella.
+
+* **Mayor satisfacción del cliente** : Al mejorar la calidad de los productos o servicios,  mejora la satisfacción de los clientes.
+
+* **Cultura de mejora continua**: Ayuda a crear una cultura de mejora continua en la organización.
+
+
+
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/ciclo_PHVA.png")
 ```
 <br/><br/>
 
-## **Planificar (Plan):** 
-
-En esta etapa, se establecen los objetivos y metas a alcanzar, se identifican los procesos a mejorar y se diseñan planes de acción. Se definen los indicadores de rendimiento clave (KPIs) y se establecen las estrategias para lograr mejoras.
-
-<br/><br/>
-
-## **Hacer (Do):** 
-
-En esta etapa, se implementan los planes y se ejecutan las acciones definidas en la etapa de planificación. Es importante seguir los procedimientos y protocolos establecidos, recopilar datos y llevar a cabo las actividades planificadas.
-
-<br/><br/>
-
-## **Verificar (Check):** 
-
-En esta etapa, se realiza un seguimiento y una evaluación de los resultados obtenidos. Se recopilan datos, se comparan con los KPIs (Key Performance Indicators - indicadores clave de rendimiento) y se analizan para determinar si se han alcanzado los objetivos establecidos. Se identifican desviaciones o problemas.
-
-<br/><br/>
-
-## **Actuar (Act):** 
-
-En función de los resultados y el análisis en la etapa de verificación, se toman medidas para corregir, mejorar y optimizar los procesos. Esto puede implicar ajustar los planes, realizar cambios en los procedimientos y tomar decisiones para prevenir problemas futuros.
-
-<br/><br/>
-
-Este ciclo PHVA no es lineal, lo que significa que una vez que se completa la etapa de "Actuar", se puede volver a la etapa de "Planificar" para iniciar un nuevo ciclo de mejora continua. Esto permite a las organizaciones adaptarse constantemente a las cambiantes condiciones y necesidades del entorno.
-
-<br/><br/>
 
 El **PHVA** se utiliza ampliamente en la gestión de la calidad y se aplica en muchas áreas, incluyendo la gestión de proyectos, la gestión ambiental, la gestión de la seguridad, la gestión de la seguridad alimentaria y la gestión de la calidad en general. Es una herramienta efectiva para impulsar mejoras constantes en los procesos y productos, lo que conduce a una mayor eficiencia y satisfacción del cliente.
 
@@ -150,6 +152,7 @@ En una entidad financiera con presencia en varios países de Latinoamérica, ha 
 De acuerdo con el ciclo PHVA, ¿en qué etapa se encuentra el banco al realizar las siguientes acciones?
 
 <br/>
+<div class="content-box-blue">
 
 **1.** Se reúne un equipo de expertos para analizar las causas del aumento en la morosidad de los créditos hipotecarios en Colombia.
 
@@ -157,6 +160,8 @@ a. Planificar
 b. Hacer
 c. Verificar
 d. Actuar
+
+</div>
 
 <br/><br/>
 
@@ -176,6 +181,7 @@ Respuesta :
 -------------------------------------------------------------------------------
 
 <br/><br/>
+<div class="content-box-blue">
 
 **2.** Se implementa un nuevo programa de educación financiera para los clientes que tienen créditos hipotecarios en Colombia.
 
@@ -183,7 +189,7 @@ a. Planificar
 b. Hacer
 c. Verificar
 d. Actuar
-
+</div>
 --------------------------------------------------------------------------------
 
 Respuesta:
@@ -199,7 +205,7 @@ Respuesta:
 --------------------------------------------------------------------------------
 
 <br/><br/>
-
+<div class="content-box-blue">
 **3.** Se monitorea la tasa de morosidad de los créditos hipotecarios en Colombia durante los próximos seis meses para evaluar la efectividad del nuevo programa de educación financiera.
 
 a. Planificar
@@ -207,6 +213,7 @@ b. Hacer
 c. Verificar
 d. Actuar
 
+</div>
 --------------------------------------------------------------------------------
 
 Respuesta :
@@ -222,7 +229,7 @@ Respuesta :
 --------------------------------------------------------------------------------
 
 <br/><br/>
-
+<div class="content-box-blue">
 **4.** Se decide modificar el programa de educación financiera para hacerlo más efectivo en la reducción de la morosidad de los créditos hipotecarios en Colombia.
 
 
@@ -230,7 +237,7 @@ a. Planificar
 b. Hacer
 c. Verificar
 d. Actuar
-
+</div>
 --------------------------------------------------------------------------------
 
 Solución:
