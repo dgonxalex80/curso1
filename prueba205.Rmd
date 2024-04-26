@@ -169,11 +169,10 @@ La entidad financiera tiene una base sólida con una amplia gama de productos y 
 
 <br/><br/><br/><br/>
 
-### **Matriz Causa-Efecto (Matriz de relaciones interfuncionales): **
+
+# Matriz Causa-Efecto (Matriz de relaciones interfuncionales): 
 
 Esta técnica involucra la creación de una matriz que muestra las relaciones entre diversas variables. Ayuda a identificar las interacciones entre factores y sus efectos en un problema.
-
-
 
 ### Evaluación
 
@@ -181,72 +180,73 @@ En la siguiente Matriz marca las relaciones que consideres puedan existir entre 
 
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/matriz0.png")
 ```
 
 
 Solución
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/matriz1.png")
 ```
 
 <br/><br/>
 
-### **Método de Pareto:** 
+
+
+
+## **Método de Pareto:** 
 
 El principio de Pareto establece que un pequeño número de causas (20%) suele ser responsable del mayor porcentaje de problemas (80%). Esta técnica te ayuda a identificar y priorizar las causas más significativas.
 
-El método de Pareto podría aplicarse para identificar y priorizar los problemas o áreas de mejora que tienen el mayor impacto en la satisfacción del cliente o en la eficiencia operativa. 
-
-### Ejemplo
-
-Una entidad bancaria podría utilizar el método de Pareto para identificar los problemas más comunes que enfrentan los clientes al utilizar sus servicios, como largos tiempos de espera en las sucursales o dificultades con los servicios en línea. Para identificar y priorizar los problemas de satisfacción del cliente, se recopila información, se genera el diagrama de Pareto
-
-```{r, echo=FALSE}
-# Instalar y cargar la librería qcc
-# install.packages("qcc")
-library(qcc)
-
-# Datos de ejemplo (quejas de clientes)
-quejas <- c("Tiempo de espera", "Problemas con el sistema en línea", "Cargos inesperados", "Servicio al cliente insatisfactorio", "Problemas de seguridad")
-frecuencia <- c(150, 80, 25, 10, 5)
-datos_quejas <- data.frame(quejas, frecuencia)
-
-# Crear el gráfico de Pareto
-pareto.chart(datos_quejas$frecuencia, main = "Análisis de Pareto de quejas de clientes en un banco", ylab = "Frecuencia", col = "skyblue", las=1)
-
-```
-
-A : Tiempo de espera 
-B : Problemas con el sistema en línea 
-C : Cargos inesperados 
-D : Servicio al cliente insatisfactorio 
-E : Problemas de seguridad
-
-El 85% de las quejas se concentra en los dos primeros items ( A:Tiempo de espera y  
-B : Problemas con el sistema en línea).   
+<br/><br/>
 
 
-<br/><br/><br/><br/>
+## **Entrevistas y Encuestas:** 
+
+La comunicación con expertos y partes interesadas puede proporcionar información valiosa sobre las causas de un problema. Las entrevistas estructuradas y las encuestas son útiles para recopilar datos.
+
+<br/><br/>
+
+## **Análisis de Datos y Estadísticas:** 
+
+El análisis de datos cuantitativos puede ayudar a identificar correlaciones y relaciones entre variables que podrían ser causas de un problema. El uso de herramientas estadísticas como análisis de regresión y análisis de tendencias puede ser útil.
+
+<br/><br/>
+
+## **Análisis de Procesos:** 
+
+En problemas relacionados con procesos, el análisis de flujo de trabajo y la identificación de cuellos de botella pueden revelar causas subyacentes.
+
+<br/><br/>
 
 
-### **Brainstorming:** 
+## **Brainstorming:** 
 
 La lluvia de ideas puede ser utilizada no solo para la generación de soluciones, sino también para la identificación de posibles causas de un problema.
 
+<br/><br/>
 
+## **Mapeo de Ruta de Valor (Value Stream Mapping):** 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/lluvia_ideas.png")
-```
+Es una técnica que se utiliza comúnmente en la gestión Lean para identificar ineficiencias y desperdicios en procesos, ayudando a identificar las causas subyacentes.
 
-<br/><br/><br/>
+<br/><br/>
+
+## **Diagramas de Árbol de Problemas:** 
+
+Esta técnica se utiliza en la metodología del Marco Lógico y se enfoca en identificar las causas y efectos de un problema a través de la construcción de un diagrama jerárquico.
+
+<br/><br/>
+
+## **Diagrama de Flechas (Arrow Diagramming Method - ADM):** 
+
+Utilizado en la gestión de proyectos, el ADM ayuda a identificar las relaciones entre tareas y eventos en un proyecto, lo que puede revelar causas de retrasos o problemas.
+
+<br/><br/>
 
 
 La elección de la técnica adecuada depende del tipo de problema que estás abordando y de tus recursos disponibles. A menudo, es útil combinar varias de estas técnicas para obtener una visión más completa de las causas subyacentes de un problema.
 
 
-
-#

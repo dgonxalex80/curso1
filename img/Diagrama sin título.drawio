@@ -1,0 +1,28 @@
+<mxfile host="Electron" modified="2024-04-26T15:46:30.163Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="LKF8rzYzUgii_bKOcAsA" version="24.2.5" type="device">
+  <diagram name="Página-1" id="usg5oj53Ln5HNrjLIZJn">
+    <mxGraphModel dx="1382" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8J2e2soJEMrq7Sb571QC-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BBDFFB;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8J2e2soJEMrq7Sb571QC-3" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#90CBF9;" vertex="1" parent="1">
+          <mxGeometry x="450" y="360" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8J2e2soJEMrq7Sb571QC-4" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E97F3;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="480" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8J2e2soJEMrq7Sb571QC-5" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#41A7F5;" vertex="1" parent="1">
+          <mxGeometry x="870" y="440" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8J2e2soJEMrq7Sb571QC-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A8AE5;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="520" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8J2e2soJEMrq7Sb571QC-7" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;¿por que?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#64B7F6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="400" width="200" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
