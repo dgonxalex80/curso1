@@ -180,3 +180,62 @@ Las entidades bancarias pueden beneficiarse de la automatización de procesos pa
 
 
 La elección de las técnicas y herramientas dependerá de las necesidades específicas de la entidad bancaria, el tamaño de la organización y los procesos internos. Por lo general, es aconsejable utilizar una combinación de estas herramientas para abordar las diversas necesidades de registro de información en una entidad bancaria. Además, es importante cumplir con las regulaciones y políticas de seguridad de datos en la industria bancaria para garantizar la protección y la confidencialidad de la información.
+
+<br/><br/><br/><br/>
+
+### **Evaluacion**
+
+
+<div class="content-box-blue">
+1. ¿Cuál de las siguientes herramientas es fundamental para gestionar grandes cantidades de documentos de manera eficiente en una entidad bancaria?
+
+a. Hojas de Registro o Bitácoras (No, las grandes cantidades de documentación requieren la estrucuturación y construcción de Bases de Datos)
+b. Bases de Datos(Correcto !. Las bases de datos son esenciales para gestionar información crítica de una entidad bancaria.)
+c. Notas Adhesivas (No, las grandes cantidades de documentación requieren la estrucuturación y construcción de Bases de Datos)
+d. Sistemas de Grabación de Llamadas (No, las grandes cantidades de documentación requieren la estrucuturación y construcción de Bases de Datos)
+</div>
+
+<br/><br/>
+
+<div class="content-box-blue">
+2. ¿Qué herramientas son útiles para mantener un seguimiento detallado de eventos y actividades como auditorías y movimientos de efectivo?
+
+a. Hojas de Registro o Bitácoras (Correcto!. Las hojas de registro son útiles para mantener un seguimiento detallado de eventos y actividades.)
+b. Sistemas de CRM (No. para realizar seguiento es recomendable llevar una Hoja de Registros o Bitácora)
+c. Notas Adhesivas (No. para realizar seguiento es recomendable llevar una Hoja de Registros o Bitácora)
+d. Software de Automatización de Procesos (No. para realizar seguiento es recomendable llevar una Hoja de Registros o Bitácora)
+</div>
+
+ 
+<br/><br/>
+
+<div class="content-box-blue">
+3. ¿Qué herramientas son ideales para capturar ideas y conceptos clave de manera rápida y visual en reuniones y sesiones de lluvia de ideas?
+a. Sistemas de CRM (No, en este caso es recomendable plasmar las ideas y conceptos claves en Notas Adhsivas y Pizzarras Blancas)
+b. Documentación Escrita
+c. Notas Adhesivas y Pizarras Blancas (Correcto. Estas herramientas son ideales para reuniones y sesiones de lluvia de ideas.)
+d. Sistemas de Grabación de Llamadas. (No, en este caso es recomendable plasmar las ideas y conceptos claves en Notas Adhsivas y Pizzarras Blancas)
+</div>
+
+<br/><br/>
+
+<div class="content-box-blue">
+4. ¿Cuál de las siguientes herramientas es importante para garantizar la precisión y seguridad de las transacciones telefónicas en una entidad bancaria?
+a. Software de Automatización de Procesos (No, Para grantizar la precisión y seguridad del audio se recomienda un Sistema de Grabación de llamadas)
+b. Sistemas de CRM. (No, Para grantizar la precisión y seguridad del audio se recomienda un Sistema de Grabación de llamadas)
+c. Sistemas de Grabación de Llamadas (Correcto. La grabación de llamadas es importante para garantizar la precisión y seguridad de las transacciones telefónicas.)
+d. Documentación Escrita . (No, Para grantizar la precisión y seguridad del audio se recomienda un Sistema de Grabación de llamadas)
+</div>
+
+<br/><br/>
+
+<div class="content-box-blue">
+5. ¿Qué herramienta es fundamental para gestionar la información de los clientes, incluyendo detalles de contacto, interacciones y transacciones?
+a. Documentación Escrita (No, el sistema apropiado para gestionar información de los clientes es un Sistema CRM)
+b. Hojas de Registro o Bitácoras. (No, el sistema apropiado para gestionar información de los clientes es un Sistema CRM)
+c. Sistemas de CRM (Correcto. Los sistemas de CRM son utilizados para gestionar la información de los clientes.)
+d. Sistemas de Gestión de Documentos (DMS). (No, el sistema apropiado para gestionar información de los clientes es un Sistema CRM)
+</div>
+
+<br/><br/>
+
