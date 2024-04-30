@@ -248,5 +248,61 @@ knitr::include_graphics("img/lluvia_ideas.png")
 La elección de la técnica adecuada depende del tipo de problema que estás abordando y de tus recursos disponibles. A menudo, es útil combinar varias de estas técnicas para obtener una visión más completa de las causas subyacentes de un problema.
 
 
+### **Evaluación**
 
-#
+
+#### **Situación 1** :
+
+Una entidad financiera está experimentando un aumento en las quejas de los clientes debido a errores en los registros contables. ¿Qué metodología sería más adecuada para identificar las causas de estos errores?
+
+- a) Análisis DOFA  (No,  La metodología permite identificar las posibles causas de un problema es el Diagrama de Ishikawa)
+- b) Diagrama de Ishikawa (Correcto, Esta metodología permite identificar las posibles causas de un problema)
+- c) Método de Pareto (No,  La metodología permite identificar las posibles causas de un problema es el Diagrama de Ishikawa)
+- d) Brainstorming  (No,  La metodología permite identificar las posibles causas de un problema es el Diagrama de Ishikawa)
+- (Respuesta correcta: b)
+
+#### **Situación 2 **:
+
+Un banco ha identificado una disminución en la satisfacción de los clientes y desea analizar las causas subyacentes. ¿Qué metodología podría ayudar en este análisis?
+
+- a) Análisis DOFA (No, La metodología que permite profundizar en las causas de un problema es la metodología de 5 Por qué)
+- b) Diagrama de Ishikawa (No, La metodología que permite profundizar en las causas de un problema es la metodología de 5 Por qué)
+- c) 5 Por Qué (Correcto, La metodología que permite profundizar en las causas de un problema es la metodología de 5 Por qué))
+- d) Método de Pareto (No, La metodología que permite profundizar en las causas de un problema es la metodología de 5 Por qué)
+- (Respuesta correcta: c)
+
+#### **Situación 3** :
+
+Una institución financiera está evaluando su posición en el mercado y las posibles amenazas y oportunidades. ¿Qué metodología podría utilizar para este análisis?
+
+- a) Análisis DOFA (Correcto, El Análisis DOFA es la metodología apropiada para la evaluación posición el mercado y las posibilidades, amenazas y oportunidades)
+- b) Diagrama de Ishikawa (No, Es el Análisis DOFA  la metodología apropiada para la evaluación posición el mercado y las posibilidades, amenazas y oportunidades)
+- c) Método de Pareto (No, Es el Análisis DOFA  la metodología apropiada para la evaluación posición el mercado y las posibilidades, amenazas y oportunidades)
+- d) Brainstorming (No, Es el Análisis DOFA  la metodología apropiada para la evaluación posición el mercado y las posibilidades, amenazas y oportunidades)
+- (Respuesta correcta: a)
+
+#### **Situación 4** :
+
+Un banco desea identificar las principales áreas de mejora en sus procesos internos. ¿Qué metodología podría ayudar en este análisis?
+
+- a) Análisis DOFA (No, la metodogía que nos permite identificar las principales áreas de mejora es el Método de Pareto)
+- b) Diagrama de Ishikawa (No, la metodogía que nos permite identificar las principales áreas de mejora es el Método de Pareto)
+- c) Método de Pareto (Correcto, la metodología de Pareto permite detectar las principales áreas de mejora con mayor impacto)
+- d) Brainstorming (No, la metodogía que nos permite identificar las principales áreas de mejora es el Método de Pareto)
+- (Respuesta correcta: c)
+
+#### **Situación 5** : 
+
+Una entidad financiera está buscando nuevas ideas para mejorar la satisfacción del cliente. ¿Qué metodología podría utilizar para generar estas ideas?
+
+- a) Análisis DOFA (No, la metodología que prioriza la lluvia de ideas para la generación de soluciones al rededor de un problema es Brainstorming)
+- b) Diagrama de Ishikawa (No, la metodología que prioriza la lluvia de ideas para la generación de soluciones al rededor de un problema es Brainstorming)
+- c) Método de Pareto (No, la metodología que prioriza la lluvia de ideas para la generación de soluciones al rededor de un problema es Brainstorming)
+- d) Brainstorming (Correcto,  esta metodología propicia la generación de lluvia de ideas para la solución de problemas )
+- (Respuesta correcta: d)
+
+
+
+
+
+
