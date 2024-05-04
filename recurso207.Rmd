@@ -29,3 +29,29 @@ c7="#B3D9FF"
 
 ```
 
+
+El modelo de regresión lineal es una herramienta estadística que permite modelar la relación que puede exitir entre una variables dependiente (Y)  y una o varias variables independientes ($X_1, X_2, X_3, \dots, X_k$). Pero tambien  el de estimar el valor de variable dependiente a partir de los valores de las variables independientes.
+
+$$ Y = \beta_{0} + \beta_{1} X_{1} + \beta_{2} X_2 + \dots + \beta_{k} X_{k} + u 
+$$
+
+Donde : 
+
+* Y : es una variable dependiente o variable respuesta
+* $X_1,X_2, \dots, X_k$  : son variables independientes o regresoras
+* $\beta_{0}$ : coeficiente constante llamado intercepto
+* $\beta_{1}, \beta_{2}, \dots, \beta_{k}$ : coeficientes constantes llamados pendientes
+* $u$ : variables aleatoria no observable llamada error
+
+Para encontrar los valores de los coeficientes se emplea el métodos de optimización matemática **Mínomos Cuadrados Ordinarios** MCO. Este metodo encuentra los valores de los coeficientes que minimiza la suma de cuadrado de los errores :
+
+$$ \min \sum_{i=1}^{n} u^{2}_{i} 
+$$
+
+
+
+
+
+
+
+

@@ -50,7 +50,12 @@ Popularizada por el ex presidente de los Estados Unidos, Dwight D. Eisenhower, e
 
 
 
-### Ejemplo
+### **Ejemplo**
+
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/matriz4.png")
+```
 
 
 
@@ -62,12 +67,16 @@ Desarrollado por David Allen, GTD es una metodología de gestión del tiempo que
 
 <br/>
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("img/GTD.png")
 ```
 
+<br/>
 
 ### Ejemplo
+
+Al inicio del dia un empleado revisa todas las solicitudes enviadas a la oficina via email. Si la atención de la solicitud requiere mas de dos minutos las pasa al siguiente nivel. Si por el contrario evalua que se pueden realizar en menos de dos minutos, la gestiona inmediatamente. Organiza las acciones a ejecutar como analisis de prestamos. Evalua las solicitudes realizadas y realiza los procesos establecidos paara el otorgamiento de los creditos. Finalmente realiza la comunicación de las aprobaciones 
+
 
 <br/><br/>
 
@@ -77,11 +86,20 @@ Utilizado comúnmente en la gestión de proyectos, MoSCoW se refiere a Must (Deb
 
 <br/>
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/MoSCoW.png")
 ```
-### Ejemplo
 
+<br/>
+
+### **Ejemplo**
+
+Se requiere construir una web para un nuevo producto
+
+Debe tener : Programa solido sin errores, seguro y funcional
+Debería tener : Rapidez, diseño atractivo, notificaciones por e-mail
+Pdría tener : Menú funcional, buzon de sugerencias, sección de blogs
+No tendrá : forma de pagos, anuncios
 
 <br/><br/>
 
@@ -92,16 +110,13 @@ knitr::include_graphics("img/MoSCoW.png")
 
 Consiste en seleccionar una tarea importante, tres tareas medianamente importantes y cinco tareas menos importantes para abordar en un día determinado. Esto ayuda a priorizar y limitar el número de tareas diarias.
 
-<br/><br/>
+<br/>
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/m135.png")
+```
 
 
-
-
-## **Método ABCD:** 
-
-Las tareas se dividen en cuatro categorías: A (urgente e importante), B (importante pero no urgente), C (urgente pero no importante) y D (ni urgente ni importante). Las tareas se priorizan en función de su categoría.
-
-<br/><br/>
 
 
 

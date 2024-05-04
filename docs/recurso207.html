@@ -379,7 +379,33 @@ de regresión lineal</strong></span></h1>
 </div>
 
 
-
+<p>El modelo de regresión lineal es una herramienta estadística que
+permite modelar la relación que puede exitir entre una variables
+dependiente (Y) y una o varias variables independientes (<span
+class="math inline">\(X_1, X_2, X_3, \dots, X_k\)</span>). Pero tambien
+el de estimar el valor de variable dependiente a partir de los valores
+de las variables independientes.</p>
+<p><span class="math display">\[ Y = \beta_{0} + \beta_{1} X_{1} +
+\beta_{2} X_2 + \dots + \beta_{k} X_{k} + u
+\]</span></p>
+<p>Donde :</p>
+<ul>
+<li>Y : es una variable dependiente o variable respuesta</li>
+<li><span class="math inline">\(X_1,X_2, \dots, X_k\)</span> : son
+variables independientes o regresoras</li>
+<li><span class="math inline">\(\beta_{0}\)</span> : coeficiente
+constante llamado intercepto</li>
+<li><span class="math inline">\(\beta_{1}, \beta_{2}, \dots,
+\beta_{k}\)</span> : coeficientes constantes llamados pendientes</li>
+<li><span class="math inline">\(u\)</span> : variables aleatoria no
+observable llamada error</li>
+</ul>
+<p>Para encontrar los valores de los coeficientes se emplea el métodos
+de optimización matemática <strong>Mínomos Cuadrados Ordinarios</strong>
+MCO. Este metodo encuentra los valores de los coeficientes que minimiza
+la suma de cuadrado de los errores :</p>
+<p><span class="math display">\[ \min \sum_{i=1}^{n} u^{2}_{i}
+\]</span></p>
 
 
 
