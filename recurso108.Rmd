@@ -34,6 +34,10 @@ library(ggplot2)
 set.seed(123)  # Para que los datos generados sean reproducibles
 datos <- rnorm(30, mean = 42, sd = 6)
 #round(datos,0)
+# install.packages("learnr") # solo una vez
+# install.packages("devtools") # solo una vez
+# devtools::install_github("dgonxalex80/paqueteMODELOS")
+
 
 library(paqueteMODELOS)
 data(creditos)

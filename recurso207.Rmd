@@ -7,7 +7,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 # Colores - paleta de azules
 c1="#001A33"
 c2="#003366"
@@ -48,10 +48,246 @@ Para encontrar los valores de los coeficientes se emplea el métodos de optimiza
 $$ \min \sum_{i=1}^{n} u^{2}_{i} 
 $$
 
+Objetivos:
+
+* Estimar mediante una función lineal de variables independientes el valor medio de una variable dependiente (estimación, pronostico)
+• Estimar los efectos producidos por el cambio en una variable independiente sobre el valor medio la variable dependiente (efecto del cambio)
+
+### Modelo de Regresión Lineal Simple
+
+$$ Y = \beta_{0} + \beta_{1} X_{1}  + u 
+$$
+
+Se denomina simple al tener solo una variable independiente y requiere del cumplimiento de supuestos sobre la variable no observable $u$
+
+* La media de los errores es cero ($E[u] = 0$)
+* La varianza de los errores es constante ($V[u] = \sigma^2$)
+* Los errores son independientes entre ellos ($E[u_i, u_j] =0$)
+* Los errores se distribuyen normal
+
+En caso del incumplimiento de los anteriores supuestos se pueden realizar transformaciones en las metricas de las variables (ej. log(X)) para reducir su efecto sobre la estimación de los coeficientes.
+
+<br/><br/>
+
+### **Ejemplo**
+
+Con el fin de estimar la relación que existe entre el nivel de ingresos de una persona y el nivel de su consumo un investigador recolecto el siguiente grupo de datos.
+
+<br/><br/>
 
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(kableExtra)
+
+x=1/4
+# Crear el data frame
+base <- data.frame(
+  hogar = 1:12, 
+  ingreso = c(243, 125, 312, 280, 351, 105, 232, 100, 85, 159, 147, 150)*x+1.5,
+  consumo = c(162, 85, 150, 170, 242, 112, 150, 71, 35, 115, 107, 92)*x+1.5
+)
+
+# Usar kable y kableExtra para crear una tabla estilizada
+kable(base, format = "html", caption = "Datos de Ingreso y Consumo por Hogar") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  column_spec(1, bold = TRUE, color = "white", background = "#6C8EBF") %>%
+  column_spec(2, width = "100px") %>%
+  column_spec(3, width = "100px")
+
+#
+```
 
 
+<br/><br/>
+
+Una representación gráfica de los valores indica una relación lineal entre las variables, es decir que la relación se puede representar por una linea recta
 
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Instalar ggplot2 si aún no está instalado
+if (!require(ggplot2)) install.packages("ggplot2")
+
+# Cargar el paquete ggplot2
+library(ggplot2)
+
+# Crear un data frame con tus datos
+# Crear el data frame
+x=1/4
+base <- data.frame(
+  ingreso = c(24.3, 12.5, 31.2, 28.0, 35.1, 10.5, 23.2, 10.0, 8.5, 15.9, 14.7, 15.0)*x+1.5,
+  consumo = c(16.2, 8.5, 15.0, 17.0, 24.2, 11.2, 15.0, 7.1, 3.5, 11.5, 10.7, 9.2)*x+1.5
+)
+
+# Crear una gráfica de dispersión con ggplot2
+ggplot(base, aes(x = ingreso, y = consumo)) +
+  geom_point(color = "blue") +  # Puntos en color azul
+  labs(title = "Relación entre Ingreso y Consumo",
+       x = "Ingreso - $MM",
+       y = "Consumo - $MM") +
+  theme_minimal()  # Aplicar un tema minimalista
+
+```
+
+<br/><br/>
+
+Para estimar los valores del intercepto y la pendiente ($y = b_{0} + b_{1} x$) se emplea el método de Mínimos Cuadrados Ordinarios.  El resultado se presenta en la siguiente tabla
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+modelo1 = lm(consumo ~ ingreso, data= base)
+
+# Obtener el resumen del modelo y extraer los coeficientes
+coeficientes <- summary(modelo1)$coefficients
+
+# Crear nombres en español para las columnas
+nombres_columnas <- c("Estimador", "Error Estándar", "Valor-t", "Valor-p")
+
+# Usar kable para crear una tabla estilizada con nombres en español
+kable(coeficientes, col.names = nombres_columnas, caption = "Resumen del Modelo Lineal", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+El resultado de la estimación indica que el modelo es:
+
+$$ \text{Consumo} = 1.1072130	 + 0.5581714 \hspace{.3cm} \text{ingreso}
+$$
+
+La ecuación indicaría que :
+
+* Un hogar con un ingreso promedio de 7.0 millones de pesos, tendría un consumo promedio de  $17.7788031 +0.5581714 \times 7.0 = 5.014413 $
+* El consumo autonomo, es decir que no depende de los ingresos es de \$ $1.1$ millones
+* Por cada millon de pesos que aumenten los ingresos, el consumo se incrementa en \$ $558$ mil pesos
+
+<br/><br/>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Extraer estadísticos del modelo
+modelo_summary <- summary(modelo1)
+r_squared <- modelo_summary$r.squared
+adjusted_r_squared <- modelo_summary$adj.r.squared
+f_statistic <- modelo_summary$fstatistic[1]  # F-statistic value
+
+# Crear un data frame con los estadísticos del modelo
+estadisticos_modelo <- data.frame(
+  `R Cuadrado` = r_squared,
+  `R Cuadrado Ajustado` = adjusted_r_squared,
+  `Estadístico F` = f_statistic
+)
+
+# Usar kable para crear una tabla estilizada
+kable(estadisticos_modelo, caption = "Estadísticos del Modelo Lineal", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+<br/>
+
+El resultado indica que el modelo explica el 84.4% de la variación del consumo. Valor que puede ser considerado como bueno en el objetivo de estimar el valor del consumo a partir de conocer el valor de los ingresos.
+
+<br/><br/>
+
+Para el caso del modelo de regresión lineal múltiple el proceso es similar
+
+<br/><br/>
+
+### **Ejemplo**:
+
+Se requiere estimar el número de dias en que se ausenta un empleado durante un año (ausentismo) para lo cual se cuenta con información sobre:
+
+ausen : número de dias de ausencia durante el año pasado
+sexo : 1  si es hombre . 0 si es mujer
+antg : antiguedad del empleado en la empresa
+sala :  salario actual del empleado
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(paqueteDEG)
+data("ausentismo")
+modelo2 = lm (ausen  ~ antg + sala + sexo, data = ausentismo )
+summary(modelo2)
+```
+
+
+El resultado nos indica :
+
+* El modelo obtenido es :  $\text{ausentismo} = 12.41 - 0.2 \hspace{.2cm} \text{antiguedad} + -0.0045 \hspace{.2cm} \text{salario} + 2.40 \hspace{.2cm} \text{sexo}$
+* En promedio un empleado falta al trabajo en promedio 12.4 dias al año
+* La antiguedad tienen un efecto negativo y significativo sobre el ausentismo. A mas antiguedad menos dias de usencia
+* El salario tiene un efecto negativo y significativo sobre el ausentismo. A mayor salario, mejos dias de ausencia
+* Los hombres presentan en promedio 2.4 dias de ausencia  mas que las mujeres 
+* El modelo tiene un ajuste del 74.3% para estimar el número de dias que un empleado se ausenta al año.
+
+
+### **Evaluación**
+
+A partir del siguiente resultado responda los siguientes interrogantes : 
+
+<pre>
+lm(formula = ausen ~ antg + sala + sexo, data = ausentismo)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.8757 -0.9888  0.2701  1.3332  4.0126 
+
+Coefficients:
+              Estimate      Std. Error   t value    Pr(>|t|)    
+(Intercept)   12.4172771    0.9559277    12.990     < 2e-16 ***
+antg          -0.2000174    0.0314808    -6.354    1.02e-07 ***
+sala          -0.0045732    0.0007366    -6.208    1.67e-07 ***
+sexo           2.4035082    0.6618691     3.631    0.000732 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.983 on 44 degrees of freedom
+Multiple R-squared:  0.7432,	Adjusted R-squared:  0.7257 
+F-statistic: 42.44 on 3 and 44 DF,  p-value: 4.805e-13
+
+
+</pre>
+
+`lm(formula = ausentismo ~ antiguedad + salario + sexo, data = ausentismo)`:
+
+
+### Pregunta 1
+
+La interpretación correcta para la pendiente correspondiente a la variable 'antiguedad' es:
+
+A) Por cada unidad que aumenta 'antiguedad', el 'ausentismo' aumenta en promedio 0.2 días.  
+B) Por cada unidad que aumenta 'antiguedad', el 'ausentismo' disminuye en promedio 0.2 días.  
+C) Por cada unidad que aumenta 'antiguedad', el 'ausentismo' se mantiene constante.  
+D) La variable 'antiguedad' no tiene impacto significativo sobre eñ 'ausentismo'.  
+
+**Respuesta Correcta: B** (Por cada unidad que aumenta 'antiguedad', el numero de dias 'ausentes' disminuye en promedio 0.2 días.)
+
+### Pregunta 2
+¿Qué indica el p-value asociado con la variable 'sexo' en el modelo?
+
+A) La variable 'sexo' no tiene efecto sobre 'ausentismo'.  
+B) La variable 'sexo' tiene un efecto positivo significativo sobre 'ausentismo' al nivel de 0.05.  
+C) La variable 'sexo' tiene un efecto negativo significativo sobre 'ausentismo'.  
+D) No se puede determinar ningún efecto basado en el p-value.  
+
+**Respuesta Correcta: B** ('sexo' tiene un efecto positivo significativo sobre 'ausentismo' al nivel de 0.05.)
+
+### Pregunta 3
+Basándose en el R-cuadrado ajustado, ¿cómo evaluarías el ajuste del modelo?
+
+A) El modelo no ajusta bien los datos.  
+B) El modelo ajusta moderadamente bien los datos.  
+C) El modelo ajusta los datos excepcionalmente bien.  
+D) No se puede determinar el ajuste del modelo a partir del R-cuadrado ajustado.  
+
+**Respuesta Correcta: B** (El modelo ajusta moderadamente bien los datos con un R-cuadrado ajustado de 0.7257.)
+
+
+### Pregunta 5
+Considerando el F-estadístico y su correspondiente p-value, ¿qué se puede inferir sobre el modelo?
+
+A) Las variables independientes conjuntamente  no tienen un efecto significativo en 'ausentismo'.  
+B) Al menos una de las variables independientes tiene un efecto significativo en 'ausentismo'.  
+C) Ninguna de las variables independientes tiene un efecto significativo en 'ausentismo'.  
+D) Las variables independientes son todas no significativas.  
+
+**Respuesta Correcta: B** (Al menos una de las variables independientes tiene un efecto significativo en 'ausentismo', como lo indica el F-estadístico significativo y su p-value.)
 

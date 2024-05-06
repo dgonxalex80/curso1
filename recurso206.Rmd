@@ -116,6 +116,15 @@ Consiste en seleccionar una tarea importante, tres tareas medianamente important
 knitr::include_graphics("img/m135.png")
 ```
 
+### **Evaluación**
+
+* Al inicio de la jornada laboral utilizas algún método para priorizar las tareas que tienes pendientes?
+
+
+* Cuál de los métodos descritos se ajusta más a las labores que realizas?
+
+
+
 
 
 

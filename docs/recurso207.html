@@ -34,6 +34,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -406,6 +408,472 @@ MCO. Este metodo encuentra los valores de los coeficientes que minimiza
 la suma de cuadrado de los errores :</p>
 <p><span class="math display">\[ \min \sum_{i=1}^{n} u^{2}_{i}
 \]</span></p>
+<p>Objetivos:</p>
+<ul>
+<li>Estimar mediante una función lineal de variables independientes el
+valor medio de una variable dependiente (estimación, pronostico) •
+Estimar los efectos producidos por el cambio en una variable
+independiente sobre el valor medio la variable dependiente (efecto del
+cambio)</li>
+</ul>
+<div id="modelo-de-regresión-lineal-simple" class="section level3">
+<h3>Modelo de Regresión Lineal Simple</h3>
+<p><span class="math display">\[ Y = \beta_{0} + \beta_{1} X_{1}  + u
+\]</span></p>
+<p>Se denomina simple al tener solo una variable independiente y
+requiere del cumplimiento de supuestos sobre la variable no observable
+<span class="math inline">\(u\)</span></p>
+<ul>
+<li>La media de los errores es cero (<span class="math inline">\(E[u] =
+0\)</span>)</li>
+<li>La varianza de los errores es constante (<span
+class="math inline">\(V[u] = \sigma^2\)</span>)</li>
+<li>Los errores son independientes entre ellos (<span
+class="math inline">\(E[u_i, u_j] =0\)</span>)</li>
+<li>Los errores se distribuyen normal</li>
+</ul>
+<p>En caso del incumplimiento de los anteriores supuestos se pueden
+realizar transformaciones en las metricas de las variables (ej. log(X))
+para reducir su efecto sobre la estimación de los coeficientes.</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<p>Con el fin de estimar la relación que existe entre el nivel de
+ingresos de una persona y el nivel de su consumo un investigador
+recolecto el siguiente grupo de datos.</p>
+<p><br/><br/></p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Datos de Ingreso y Consumo por Hogar
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+hogar
+</th>
+<th style="text-align:right;">
+ingreso
+</th>
+<th style="text-align:right;">
+consumo
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+1
+</td>
+<td style="text-align:right;width: 100px; ">
+62.25
+</td>
+<td style="text-align:right;width: 100px; ">
+42.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+2
+</td>
+<td style="text-align:right;width: 100px; ">
+32.75
+</td>
+<td style="text-align:right;width: 100px; ">
+22.75
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+3
+</td>
+<td style="text-align:right;width: 100px; ">
+79.50
+</td>
+<td style="text-align:right;width: 100px; ">
+39.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+4
+</td>
+<td style="text-align:right;width: 100px; ">
+71.50
+</td>
+<td style="text-align:right;width: 100px; ">
+44.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+5
+</td>
+<td style="text-align:right;width: 100px; ">
+89.25
+</td>
+<td style="text-align:right;width: 100px; ">
+62.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+6
+</td>
+<td style="text-align:right;width: 100px; ">
+27.75
+</td>
+<td style="text-align:right;width: 100px; ">
+29.50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+7
+</td>
+<td style="text-align:right;width: 100px; ">
+59.50
+</td>
+<td style="text-align:right;width: 100px; ">
+39.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+8
+</td>
+<td style="text-align:right;width: 100px; ">
+26.50
+</td>
+<td style="text-align:right;width: 100px; ">
+19.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+9
+</td>
+<td style="text-align:right;width: 100px; ">
+22.75
+</td>
+<td style="text-align:right;width: 100px; ">
+10.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+10
+</td>
+<td style="text-align:right;width: 100px; ">
+41.25
+</td>
+<td style="text-align:right;width: 100px; ">
+30.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+11
+</td>
+<td style="text-align:right;width: 100px; ">
+38.25
+</td>
+<td style="text-align:right;width: 100px; ">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: rgba(108, 142, 191, 255) !important;">
+12
+</td>
+<td style="text-align:right;width: 100px; ">
+39.00
+</td>
+<td style="text-align:right;width: 100px; ">
+24.50
+</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<p>Una representación gráfica de los valores indica una relación lineal
+entre las variables, es decir que la relación se puede representar por
+una linea recta</p>
+<p><img src="recurso207_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p>Para estimar los valores del intercepto y la pendiente (<span
+class="math inline">\(y = b_{0} + b_{1} x\)</span>) se emplea el método
+de Mínimos Cuadrados Ordinarios. El resultado se presenta en la
+siguiente tabla</p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Resumen del Modelo Lineal
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Estimador
+</th>
+<th style="text-align:right;">
+Error Estándar
+</th>
+<th style="text-align:right;">
+Valor-t
+</th>
+<th style="text-align:right;">
+Valor-p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+1.1072130
+</td>
+<td style="text-align:right;">
+0.5014056
+</td>
+<td style="text-align:right;">
+2.208218
+</td>
+<td style="text-align:right;">
+0.0517165
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ingreso
+</td>
+<td style="text-align:right;">
+0.5581714
+</td>
+<td style="text-align:right;">
+0.0756721
+</td>
+<td style="text-align:right;">
+7.376190
+</td>
+<td style="text-align:right;">
+0.0000238
+</td>
+</tr>
+</tbody>
+</table>
+<p>El resultado de la estimación indica que el modelo es:</p>
+<p><span class="math display">\[ \text{Consumo} = 1.1072130    +
+0.5581714 \hspace{.3cm} \text{ingreso}
+\]</span></p>
+<p>La ecuación indicaría que :</p>
+<ul>
+<li>Un hogar con un ingreso promedio de 7.0 millones de pesos, tendría
+un consumo promedio de $17.7788031 +0.5581714 = 5.014413 $</li>
+<li>El consumo autonomo, es decir que no depende de los ingresos es de $
+<span class="math inline">\(1.1\)</span> millones</li>
+<li>Por cada millon de pesos que aumenten los ingresos, el consumo se
+incrementa en $ <span class="math inline">\(558\)</span> mil pesos</li>
+</ul>
+<p><br/><br/></p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Estadísticos del Modelo Lineal
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+R.Cuadrado
+</th>
+<th style="text-align:right;">
+R.Cuadrado.Ajustado
+</th>
+<th style="text-align:right;">
+Estadístico.F
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+value
+</td>
+<td style="text-align:right;">
+0.8447402
+</td>
+<td style="text-align:right;">
+0.8292142
+</td>
+<td style="text-align:right;">
+54.40818
+</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>El resultado indica que el modelo explica el 84.4% de la variación
+del consumo. Valor que puede ser considerado como bueno en el objetivo
+de estimar el valor del consumo a partir de conocer el valor de los
+ingresos.</p>
+<p><br/><br/></p>
+<p>Para el caso del modelo de regresión lineal múltiple el proceso es
+similar</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-1" class="section level3">
+<h3><strong>Ejemplo</strong>:</h3>
+<p>Se requiere estimar el número de dias en que se ausenta un empleado
+durante un año (ausentismo) para lo cual se cuenta con información
+sobre:</p>
+<p>ausen : número de dias de ausencia durante el año pasado sexo : 1 si
+es hombre . 0 si es mujer antg : antiguedad del empleado en la empresa
+sala : salario actual del empleado</p>
+<pre><code>
+Call:
+lm(formula = ausen ~ antg + sala + sexo, data = ausentismo)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.8757 -0.9888  0.2701  1.3332  4.0126 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 12.4172771  0.9559277  12.990  &lt; 2e-16 ***
+antg        -0.2000174  0.0314808  -6.354 1.02e-07 ***
+sala        -0.0045732  0.0007366  -6.208 1.67e-07 ***
+sexo         2.4035082  0.6618691   3.631 0.000732 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.983 on 44 degrees of freedom
+Multiple R-squared:  0.7432,    Adjusted R-squared:  0.7257 
+F-statistic: 42.44 on 3 and 44 DF,  p-value: 4.805e-13</code></pre>
+<p>El resultado nos indica :</p>
+<ul>
+<li>El modelo obtenido es : <span
+class="math inline">\(\text{ausentismo} = 12.41 - 0.2 \hspace{.2cm}
+\text{antiguedad} + -0.0045 \hspace{.2cm} \text{salario} + 2.40
+\hspace{.2cm} \text{sexo}\)</span></li>
+<li>En promedio un empleado falta al trabajo en promedio 12.4 dias al
+año</li>
+<li>La antiguedad tienen un efecto negativo y significativo sobre el
+ausentismo. A mas antiguedad menos dias de usencia</li>
+<li>El salario tiene un efecto negativo y significativo sobre el
+ausentismo. A mayor salario, mejos dias de ausencia</li>
+<li>Los hombres presentan en promedio 2.4 dias de ausencia mas que las
+mujeres</li>
+<li>El modelo tiene un ajuste del 74.3% para estimar el número de dias
+que un empleado se ausenta al año.</li>
+</ul>
+</div>
+<div id="evaluación" class="section level3">
+<h3><strong>Evaluación</strong></h3>
+<p>A partir del siguiente resultado responda los siguientes
+interrogantes :</p>
+<pre>
+lm(formula = ausen ~ antg + sala + sexo, data = ausentismo)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.8757 -0.9888  0.2701  1.3332  4.0126 
+
+Coefficients:
+              Estimate      Std. Error   t value    Pr(>|t|)    
+(Intercept)   12.4172771    0.9559277    12.990     < 2e-16 ***
+antg          -0.2000174    0.0314808    -6.354    1.02e-07 ***
+sala          -0.0045732    0.0007366    -6.208    1.67e-07 ***
+sexo           2.4035082    0.6618691     3.631    0.000732 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.983 on 44 degrees of freedom
+Multiple R-squared:  0.7432,    Adjusted R-squared:  0.7257 
+F-statistic: 42.44 on 3 and 44 DF,  p-value: 4.805e-13
+
+
+</pre>
+<p><code>lm(formula = ausentismo ~ antiguedad + salario + sexo, data = ausentismo)</code>:</p>
+</div>
+<div id="pregunta-1" class="section level3">
+<h3>Pregunta 1</h3>
+<p>La interpretación correcta para la pendiente correspondiente a la
+variable ‘antiguedad’ es:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Por cada unidad que aumenta ‘antiguedad’, el ‘ausentismo’ aumenta en
+promedio 0.2 días.<br />
+</li>
+<li>Por cada unidad que aumenta ‘antiguedad’, el ‘ausentismo’ disminuye
+en promedio 0.2 días.<br />
+</li>
+<li>Por cada unidad que aumenta ‘antiguedad’, el ‘ausentismo’ se
+mantiene constante.<br />
+</li>
+<li>La variable ‘antiguedad’ no tiene impacto significativo sobre eñ
+‘ausentismo’.</li>
+</ol>
+<p><strong>Respuesta Correcta: B</strong> (Por cada unidad que aumenta
+‘antiguedad’, el numero de dias ‘ausentes’ disminuye en promedio 0.2
+días.)</p>
+</div>
+<div id="pregunta-2" class="section level3">
+<h3>Pregunta 2</h3>
+<p>¿Qué indica el p-value asociado con la variable ‘sexo’ en el
+modelo?</p>
+<ol style="list-style-type: upper-alpha">
+<li>La variable ‘sexo’ no tiene efecto sobre ‘ausentismo’.<br />
+</li>
+<li>La variable ‘sexo’ tiene un efecto positivo significativo sobre
+‘ausentismo’ al nivel de 0.05.<br />
+</li>
+<li>La variable ‘sexo’ tiene un efecto negativo significativo sobre
+‘ausentismo’.<br />
+</li>
+<li>No se puede determinar ningún efecto basado en el p-value.</li>
+</ol>
+<p><strong>Respuesta Correcta: B</strong> (‘sexo’ tiene un efecto
+positivo significativo sobre ‘ausentismo’ al nivel de 0.05.)</p>
+</div>
+<div id="pregunta-3" class="section level3">
+<h3>Pregunta 3</h3>
+<p>Basándose en el R-cuadrado ajustado, ¿cómo evaluarías el ajuste del
+modelo?</p>
+<ol style="list-style-type: upper-alpha">
+<li>El modelo no ajusta bien los datos.<br />
+</li>
+<li>El modelo ajusta moderadamente bien los datos.<br />
+</li>
+<li>El modelo ajusta los datos excepcionalmente bien.<br />
+</li>
+<li>No se puede determinar el ajuste del modelo a partir del R-cuadrado
+ajustado.</li>
+</ol>
+<p><strong>Respuesta Correcta: B</strong> (El modelo ajusta
+moderadamente bien los datos con un R-cuadrado ajustado de 0.7257.)</p>
+</div>
+<div id="pregunta-5" class="section level3">
+<h3>Pregunta 5</h3>
+<p>Considerando el F-estadístico y su correspondiente p-value, ¿qué se
+puede inferir sobre el modelo?</p>
+<ol style="list-style-type: upper-alpha">
+<li>Las variables independientes conjuntamente no tienen un efecto
+significativo en ‘ausentismo’.<br />
+</li>
+<li>Al menos una de las variables independientes tiene un efecto
+significativo en ‘ausentismo’.<br />
+</li>
+<li>Ninguna de las variables independientes tiene un efecto
+significativo en ‘ausentismo’.<br />
+</li>
+<li>Las variables independientes son todas no significativas.</li>
+</ol>
+<p><strong>Respuesta Correcta: B</strong> (Al menos una de las variables
+independientes tiene un efecto significativo en ‘ausentismo’, como lo
+indica el F-estadístico significativo y su p-value.)</p>
+</div>
 
 
 
