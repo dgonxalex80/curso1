@@ -380,7 +380,261 @@ Principales</strong></span></h1>
 </div>
 
 
+<p><br/><br/></p>
+<p>El <strong>Análisis de Componentes Principales</strong> (PCA, por sus
+siglas en inglés) es un método estadístico que transforma un conjunto de
+variables posiblemente correlacionadas en un número menor de variables
+no correlacionadas llamadas componentes principales. Este método es
+ampliamente usado para <strong>reducción de la dimensionalidad</strong>
+en análisis de datos, visualización de datos y para identificar patrones
+en datos de alta dimensión. Su prrincipal aplicación esta relacionada
+con la reducción una base de datos con muchas variables a dos o hasta
+tres variables independientes llamadas componentes principales, las
+cuales reunen un gran porcentaje de la variación contenida en la base de
+datos.</p>
+<p>Los principales conceptos relacionados con el PCA son:</p>
+<p><br/><br/></p>
+<p><strong>Correlación entre Variables</strong>: PCA se utiliza cuando
+existe correlación entre variables en un conjunto de datos. La idea es
+reducir la redundancia en los datos, resumiendo la información con menos
+variables.</p>
+<p><br/><br/></p>
+<p><strong>Componentes Principales</strong>: Los componentes principales
+son las direcciones en los datos que maximizan la varianza (información)
+cuando se proyectan sobre ellos. El primer componente principal es la
+dirección que captura la mayor varianza, el segundo componente principal
+es la dirección que captura la segunda mayor varianza, y así
+sucesivamente, siempre ortogonales (no correlacionados) entre sí.</p>
+<p><br/><br/></p>
+<p><strong>Varianza Explicada</strong>: Cada componente principal
+explica una parte de la varianza total de los datos originales. Al sumar
+la varianza explicada por cada componente, se obtiene una medida de
+cuánta información del conjunto de datos original se ha capturado.</p>
+<p><br/><br/></p>
+<p><strong>Cálculo de Componentes</strong>: Matemáticamente, PCA implica
+el cálculo de la matriz de covarianza de los datos y luego la extracción
+de los valores propios y vectores propios de esta matriz. Los vectores
+propios que corresponden a los valores propios más grandes son los
+componentes principales.</p>
+<p><br/><br/></p>
+<p><strong>Transformación de Datos</strong>: Los datos originales se
+pueden proyectar en el espacio de los componentes principales para
+transformarlos en un nuevo sistema de coordenadas. Esto resulta en una
+nueva representación de los datos donde las correlaciones han sido
+eliminadas.</p>
+<p><br/><br/></p>
+<p><strong>Aplicaciones</strong>: PCA se usa en diversos campos como
+finanzas, genética, informática y más, donde la reducción de
+dimensionalidad es crucial para el análisis.</p>
+<p><br/><br/></p>
+<p><strong>Interpretación</strong>: Aunque PCA es poderoso para reducir
+la dimensionalidad, la interpretación de los componentes principales
+puede no ser siempre intuitiva, ya que son combinaciones lineales de
+todas las variables originales.</p>
+<p><br/><br/></p>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<p>Para una base de datos correspondiente a 780 clientes de una oficina
+bancaria se tienen las siguientes variables:</p>
+<ul>
+<li>default</li>
+<li>antiguedad</li>
+<li>edad</li>
+<li>cuota</li>
+<li>ingresos</li>
+</ul>
+<p>El Análisis de Componentes Principales tiene como objeto resumir la
+información contenida en cuatro variables a dos variables que puedan ser
+representadas en un plano carteciano</p>
+<p><br/><br/></p>
+<pre class="r"><code>library(paqueteMODELOS)
+data(&quot;creditos&quot;)                # base de datos
+creditosZ= scale(creditos[, 2:5])      # datos estandarizados
+prcomp(creditosZ)</code></pre>
+<pre><code>## Standard deviations (1, .., p=4):
+## [1] 1.4956195 0.9783699 0.7576046 0.4816118
+## 
+## Rotation (n x k) = (4 x 4):
+##                   PC1        PC2        PC3         PC4
+## antiguedad -0.5926455  0.2777622  0.1520487 -0.74060831
+## edad       -0.5454793  0.4553210  0.2485578  0.65829634
+## cuota      -0.3367282 -0.7905281  0.5057479  0.07680159
+## ingresos   -0.4876861 -0.3009920 -0.8119848  0.11066515</code></pre>
+<p><br/><br/></p>
+<p>Los dos primeros componentes explican un 79.8% de la variación total
+de la data. Este valor total corresponde a la suma de las varianzas de
+las variables.</p>
+<pre class="r"><code># Cargar las librerías necesarias
+library(factoextra)
+library(ggplot2)
 
+# Realizar el análisis PCA
+res.pca &lt;- prcomp(creditosZ, scale. = TRUE)
+
+# Crear el gráfico de valores propios (eigenvalues) mejorado
+grafico &lt;- fviz_eig(res.pca, addlabels = TRUE, ylim = c(0, 60)) +
+  geom_point(size = 2, color = &quot;blue&quot;) +  # Cambiar el tamaño y color de los puntos
+  theme_minimal() +  # Usar un tema minimalista
+  theme(text = element_text(size = 12),  # Ajustar el tamaño del texto
+        axis.title = element_text(color = &quot;red&quot;, size = 14),  # Color y tamaño de los títulos de los ejes
+        plot.title = element_text(hjust = 0.5)) +  # Centrar el título del gráfico
+  ggtitle(&quot;Gráfico de Eigenvalues de PCA&quot;) +  # Añadir un título
+  xlab(&quot;Componentes Principales&quot;) +  # Cambiar el título del eje X
+  ylab(&quot;Varianza Explicada (%)&quot;)  # Cambiar el título del eje Y
+
+# Imprimir el gráfico
+print(grafico)</code></pre>
+<p><img src="recurso209_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p>Una de las gráficas importantes correponde al gráfico de variables
+donde se puede evidenciar la relación entre variables como la
+<strong>edad</strong>, <strong>antiguedad</strong> por un lado y el
+<strong>ingreso</strong> y la <strong>cuota</strong> por otro lado.</p>
+<p><br/><br/></p>
+<pre class="r"><code># Cargar las librerías necesarias
+library(factoextra)
+library(ggplot2)
+
+# Asumiendo que res.pca ya está calculado
+# Mejorar el gráfico de contribución de variables en PCA
+grafico_vars &lt;- fviz_pca_var(res.pca,
+                             col.var = &quot;contrib&quot;,  # Color por contribuciones al componente principal
+                             gradient.cols = c(&quot;#FF7F00&quot;, &quot;#034D94&quot;),  # Gradiente de color naranja a azul
+                             repel = TRUE  # Evitar superposición de texto
+                            ) +
+  theme_minimal() +  # Usar un tema minimalista
+  theme(legend.position = &quot;right&quot;,  # Ajustar la posición de la leyenda
+        text = element_text(size = 12),  # Ajustar el tamaño del texto
+        axis.title = element_text(color = &quot;red&quot;, size = 14),  # Ajustar color y tamaño de títulos de ejes
+        plot.title = element_text(hjust = 0.5, size = 16, face = &quot;bold&quot;)) +  # Ajustar título del gráfico
+  ggtitle(&quot;Contribución de Variables en PCA&quot;) +  # Añadir un título
+  xlab(&quot;Componente Principal 1 (PC1)&quot;) +  # Título para el eje X
+  ylab(&quot;Componente Principal 2 (PC2)&quot;)  # Título para el eje Y
+
+# Imprimir el gráfico mejorado
+print(grafico_vars)</code></pre>
+<p><img src="recurso209_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p>Este análisis tambien permite la representación de los individuos en
+un solo plano</p>
+<p><br/><br/></p>
+<pre class="r"><code># Cargar las librerías necesarias
+library(factoextra)
+library(ggplot2)
+
+# Asumiendo que res.pca ya está calculado y que tienes un dataframe `creditos` con una columna `default`
+# Definir los colores basados en la columna &#39;default&#39;
+colors &lt;- ifelse(creditos$default == 0, &quot;lightgray&quot;, &quot;lightblue&quot;)
+
+# Crear el gráfico de los individuos en PCA solo con etiquetas
+grafico_individuos &lt;- fviz_pca_ind(res.pca,
+                                   geom = &quot;text&quot;,  # Usar solo texto para los puntos
+                                   col.ind = colors,  # Usar los colores definidos
+                                   label = &quot;ind&quot;,  # Mostrar etiquetas de los individuos
+                                   repel = TRUE  # Evitar la superposición de etiquetas
+                                  ) +
+  theme_minimal() +  # Usar un tema minimalista
+  theme(legend.position = &quot;none&quot;,  # Ocultar la leyenda
+        text = element_text(size = 12),  # Ajustar el tamaño del texto
+        axis.title = element_text(color = &quot;red&quot;, size = 12),  # Ajustar color y tamaño de los títulos de ejes
+        plot.title = element_text(hjust = 0.5, size = 12, face = &quot;bold&quot;)) +  # Ajustar el título del gráfico
+  ggtitle(&quot;Gráfico de Individuos PCA con Color por Default&quot;) +  # Añadir un título
+  xlab(&quot;Componente Principal 1 (PC1)&quot;) +  # Título para el eje X
+  ylab(&quot;Componente Principal 2 (PC2)&quot;) +  # Título para el eje Y
+  xlim(-6, 6) +  # Límites para el eje X
+  ylim(-3, 3)  # Límites para el eje Y
+
+# Imprimir el gráfico de los individuos
+print(grafico_individuos)</code></pre>
+<p><img src="recurso209_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Los clientes con default se visualizan con color rojo y se percibe
+que estan en los cuatro cuadrantes del gráfico</p>
+<p><br/><br/></p>
+</div>
+<div id="evaluación" class="section level3">
+<h3><strong>Evaluación</strong></h3>
+<p><br/><br/></p>
+</div>
+<div id="pregunta-1" class="section level3">
+<h3><strong>Pregunta 1:</strong></h3>
+<p>¿El objetivo principal del Análisis de Componentes Principales (PCA)
+es:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Maximizar la varianza entre grupos de datos.</li>
+<li>Minimizar la correlación entre las variables originales.</li>
+<li>Reducir la dimensionalidad del conjunto de datos preservando la
+mayor cantidad de variación posible.</li>
+<li>Aumentar el número de variables para facilitar la interpretación de
+los datos.</li>
+</ol>
+<p><strong>Respuesta Correcta:</strong> C) Reducir la dimensionalidad
+del conjunto de datos preservando la mayor cantidad de variación
+posible.</p>
+<p><br/><br/></p>
+</div>
+<div id="pregunta-2" class="section level3">
+<h3><strong>Pregunta 2:</strong></h3>
+<p>Un “componente principal” en PCA representa :</p>
+<ol style="list-style-type: upper-alpha">
+<li>Una combinación lineal de observaciones originales.</li>
+<li>Una combinación lineal de las variables originales.</li>
+<li>Un subconjunto seleccionado de variables originales.</li>
+<li>Una variable con la menor varianza del conjunto de datos.</li>
+</ol>
+<p><strong>Respuesta Correcta:</strong> B) Una combinación lineal de las
+variables originales.</p>
+<p><br/><br/></p>
+</div>
+<div id="pregunta-3" class="section level3">
+<h3><strong>Pregunta 3:</strong></h3>
+<p>En el contexto de PCA, ¿qué significa la “varianza explicada” por un
+componente principal?</p>
+<ol style="list-style-type: upper-alpha">
+<li>Es la diferencia entre la varianza total y la varianza
+residual.</li>
+<li>Es la proporción de la varianza total del conjunto de datos original
+atribuida a cada componente principal.</li>
+<li>Es la varianza máxima que puede ser atribuida a factores
+externos.</li>
+<li>Es una medida de correlación entre las variables originales y los
+componentes.</li>
+</ol>
+<p><strong>Respuesta Correcta:</strong> B) Es la proporción de la
+varianza total del conjunto de datos original atribuida a cada
+componente principal.</p>
+<p><br/><br/></p>
+<p><strong>Pregunta 4:</strong></p>
+<p>El criterio que se utiliza comúnmente para decidir cuántos
+componentes principales retener en un análisis es:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Seleccionar componentes hasta que la suma de la varianza explicada
+sea inferior al 50%.</li>
+<li>Elegir componentes cuya varianza explicada sea menor que el promedio
+de las varianzas explicadas.</li>
+<li>Retener los componentes hasta que la suma acumulada de la varianza
+explicada alcance o supere un umbral, como el 80% o 90%.</li>
+<li>Conservar sólo el primer componente principal, independientemente de
+la varianza que explique.</li>
+</ol>
+<p><strong>Respuesta Correcta:</strong> C) Retener los componentes hasta
+que la suma acumulada de la varianza explicada alcance o supere un
+umbral, como el 80% o 90%.</p>
+<p><br/><br/></p>
+</div>
+<div id="pregunta-5" class="section level3">
+<h3><strong>Pregunta 5:</strong></h3>
+<p>¿Qué herramienta gráfica se utiliza a menudo para visualizar la
+importancia de los componentes principales en términos de varianza
+explicada?</p>
+<ol style="list-style-type: upper-alpha">
+<li>Gráfico de caja.</li>
+<li>Histograma.</li>
+<li>Diagrama de dispersión.</li>
+<li>Scree plot.</li>
+</ol>
+<p><strong>Respuesta Correcta:</strong> D) Scree plot.</p>
+<p><br/><br/></p>
+</div>
 
 
 
