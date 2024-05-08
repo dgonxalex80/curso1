@@ -381,9 +381,252 @@ Corespondencia</strong></span></h1>
 
 
 <p><br/><br/></p>
+<p>El <strong>análisis de correspondencia</strong> (CA, por sus siglas
+en inglés) es una técnica estadística multivariante diseñada para
+explorar y analizar tablas de contingencia que contienen algunas medidas
+de correspondencia entre dos o más variables categóricas. Proporciona
+una forma de visualizar la estructura de las relaciones categóricas en
+un conjunto de datos de baja dimensionalidad, idealmente en dos o tres
+dimensiones.</p>
+<p><br/><br/><br/></p>
+<div id="fundamentos-del-análisis-de-correspondencia"
+class="section level2">
+<h2><strong>Fundamentos del Análisis de Correspondencia</strong>:</h2>
+<p><br/></p>
+<div id="datos" class="section level3">
+<h3>1. <strong>Datos</strong>:</h3>
+<p>CA se aplica a una tabla de contingencia, que es una matriz de
+frecuencias que cuenta cuántas veces cada combinación de categorías de
+variables ocurren juntas en un conjunto de datos.</p>
 <p><br/><br/></p>
+</div>
+<div id="objetivo" class="section level3">
+<h3>2. <strong>Objetivo</strong>:</h3>
+<p>El objetivo principal es identificar patrones y similitudes entre las
+categorías de las variables, visualizándolas en un espacio de menor
+dimensión que capture la mayor parte de la variabilidad en los
+datos.</p>
 <p><br/><br/></p>
+</div>
+<div id="descomposición" class="section level3">
+<h3>3. <strong>Descomposición</strong>:</h3>
+<p>Utiliza técnicas de descomposición, como la descomposición en valores
+singulares (SVD), para reducir la dimensionalidad y proyectar las
+categorías de las variables en un mapa que muestra las relaciones entre
+ellas.</p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="proceso-del-análisis-de-correspondencia"
+class="section level2">
+<h2><strong>Proceso del Análisis de Correspondencia</strong>:</h2>
+<p><br/></p>
+<div id="normalización" class="section level3">
+<h3>1. <strong>Normalización</strong>:</h3>
+<p>Se normalizan los datos para convertir las frecuencias en
+proporciones y ajustar por efectos de tamaño de margen.</p>
 <p><br/><br/></p>
+</div>
+<div id="cálculo" class="section level3">
+<h3>2. <strong>Cálculo</strong>:</h3>
+<p>Se calculan los perfiles de fila y columna (proporciones
+condicionales de cada categoría) y se comparan con el perfil promedio
+global.</p>
+<p><br/><br/></p>
+</div>
+<div id="mapa-biplot" class="section level3">
+<h3>3. <strong>Mapa Biplot</strong>:</h3>
+<p>El resultado se representa comúnmente en un biplot, donde las
+categorías de cada variable se plotean como puntos en un espacio
+bidimensional o tridimensional. La proximidad entre puntos indica un
+mayor grado de asociación.</p>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="aplicaciones" class="section level2">
+<h2><strong>Aplicaciones</strong>:</h2>
+<p><br/></p>
+<div id="marketing" class="section level3">
+<h3><strong>Marketing</strong>:</h3>
+<p>Para entender las preferencias del cliente y segmentación del
+mercado.</p>
+<p><br/><br/></p>
+</div>
+<div id="ecología" class="section level3">
+<h3><strong>Ecología</strong>:</h3>
+<p>Para analizar patrones de especies en diferentes hábitats.</p>
+<p><br/><br/></p>
+</div>
+<div id="investigación-en-ciencias-sociales" class="section level3">
+<h3><strong>Investigación en ciencias sociales</strong>:</h3>
+<p>Para examinar relaciones entre variables socio-demográficas.</p>
+<p><br/><br/></p>
+<p>El análisis de correspondencia es especialmente útil cuando las
+variables categóricas están relacionadas de alguna manera no trivial,
+permitiendo visualizar y entender mejor estas relaciones en un espacio
+comprensible y visualmente intuitivo.</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="ejemplo" class="section level3">
+<h3>**Ejemplo:</h3>
+<p><br/><br/></p>
+<p>Se requiere la relación entre el nivel de ingresos de los clientes y
+los tipos de productos financieros que utilizan. Este análisis puede
+ayudar a la entidad financiera a entender mejor cómo diferentes
+segmentos de clientes prefieren diferentes productos, lo cual es crucial
+para la personalización de servicios y marketing.</p>
+<p>Con este propósito se requiere analizar cómo la elección de productos
+financieros varía según diferentes rangos de ingresos de los clientes.
+Los productos incluidos son : cuentas de ahorro, tarjetas de crédito,
+pretamos para vivienda (hipotecarios) y préstamos personales. Los
+ingresos se clasifican en tres categorías: bajo, medio y alto.</p>
+</div>
+<div id="datos-1" class="section level3">
+<h3>Datos:</h3>
+<p>Supongamos que tenemos la siguiente tabla de contingencia que
+representa la distribución de 1000 clientes:</p>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="19%" />
+<col width="21%" />
+<col width="15%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ingresos/Productos</th>
+<th>Cuenta de Ahorro</th>
+<th>Tarjeta de Crédito</th>
+<th>Hipotecarios</th>
+<th>Préstamo Personal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bajo</td>
+<td>200</td>
+<td>150</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>Medio</td>
+<td>150</td>
+<td>180</td>
+<td>120</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>Alto</td>
+<td>50</td>
+<td>170</td>
+<td>180</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="análisis" class="section level3">
+<h3>Análisis:</h3>
+<pre class="r"><code># Instalar FactoMineR si aún no está instalado
+if (!require(&quot;FactoMineR&quot;)) install.packages(&quot;FactoMineR&quot;)
+
+# Cargar el paquete FactoMineR
+library(FactoMineR)
+
+# Crear la tabla de datos
+data &lt;- matrix(c(200, 150, 50, 150, 180, 170, 50, 120, 180, 100, 50, 100),
+               nrow = 3, byrow = TRUE,
+               dimnames = list(Ingresos = c(&quot;Bajo&quot;, &quot;Medio&quot;, &quot;Alto&quot;),
+                               Productos = c(&quot;Cuenta de Ahorro&quot;, &quot;Tarjeta de Crédito&quot;, &quot;Hipotecarios&quot;, &quot;Préstamo Personal&quot;)))
+
+# Ejecutar el análisis de correspondencia
+ca_results &lt;- CA(data, graph = TRUE)</code></pre>
+<p><img src="recurso211_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># Dibujar el biplot con ambas variables visibles
+# plot(ca_results, invisible = &quot;none&quot;)  # Ajuste para que ningún conjunto de etiquetas sea invisible</code></pre>
+<p>El gráfico resultante representa cada una de las categorías para el
+caso de los propoductos y los niveles de los ingresos en el plano. Se
+resalta la asoacoón existente entre:</p>
+<ul>
+<li>los ingresos bajos y los préstamos personales</li>
+<li>los ingresos medios y la tarjeta de crédito</li>
+<li>los ingresos altos con los prestamos hipotecários y las cuentas de
+ahorro</li>
+</ul>
+<p>Este análisis puede ayudar a la entidad a ajustar sus estrategias de
+marketing y desarrollo de productos para alinearlos mejor con las
+necesidades y preferencias de sus diferentes segmentos de clientes.</p>
+<p><br/><br/></p>
+</div>
+<div id="evaluación" class="section level3">
+<h3>*Evaluación**</h3>
+</div>
+<div id="pregunta-1" class="section level3">
+<h3>Pregunta 1</h3>
+<p>El tipo de datos empleados en el análisis de correspondencia son:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Datos continuos<br />
+</li>
+<li>Datos categóricos<br />
+</li>
+<li>Datos binarios<br />
+</li>
+<li>Datos de series temporales</li>
+</ol>
+<p><strong>Respuesta correcta:</strong> B) Datos categóricos</p>
+</div>
+<div id="pregunta-2" class="section level3">
+<h3>Pregunta 2</h3>
+<p>El principal objetivo del análisis de correspondencia es:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Predecir la variable dependiente a partir de variables
+independientes<br />
+</li>
+<li>Clasificar datos en categorías predefinidas<br />
+</li>
+<li>Explorar y visualizar las relaciones entre variables
+categóricas<br />
+</li>
+<li>Estimar la varianza de una población</li>
+</ol>
+<p><strong>Respuesta correcta:</strong> C) Explorar y visualizar las
+relaciones entre variables categóricas</p>
+</div>
+<div id="pregunta-3" class="section level3">
+<h3>Pregunta 3</h3>
+<p>En el resultado de un análisis de correspondencia, la proximidad
+entre dos puntos en el gráfico indica:</p>
+<ol style="list-style-type: upper-alpha">
+<li>Correlación negativa entre las categorías<br />
+</li>
+<li>Correlación positiva entre las categorías<br />
+</li>
+<li>No hay relación significativa entre las categorías<br />
+</li>
+<li>Mayor diferencia en la variabilidad explicada</li>
+</ol>
+<p><strong>Respuesta correcta:</strong> B) Correlación positiva entre
+las categorías</p>
+</div>
+<div id="pregunta-4" class="section level3">
+<h3>Pregunta 4</h3>
+<p>Cada punto en un gráfico generado por un análisis de correspondencia
+indica :</p>
+<ol style="list-style-type: upper-alpha">
+<li>Observaciones individuales en el dataset<br />
+</li>
+<li>Valores promedio de cada categoría<br />
+</li>
+<li>Categorías de las variables analizadas<br />
+</li>
+<li>Predicciones del modelo estadístico</li>
+</ol>
+<p><strong>Respuesta correcta:</strong> C) Categorías de las variables
+analizadas</p>
+</div>
+</div>
 
 
 
