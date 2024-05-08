@@ -80,7 +80,7 @@ El Análisis de Componentes Principales tiene como objeto resumir la informació
 
 <br/><br/>
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(paqueteMODELOS)
 data("creditos")                # base de datos
 creditosZ= scale(creditos[, 2:5])      # datos estandarizados
@@ -92,7 +92,7 @@ prcomp(creditosZ)
 Los dos primeros componentes explican un 79.8%  de la variación total de la data. Este valor total corresponde a la suma de las varianzas de las variables.
 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Cargar las librerías necesarias
 library(factoextra)
 library(ggplot2)
@@ -125,7 +125,7 @@ Una de las gráficas importantes correponde al gráfico de variables donde se pu
 
 <br/><br/>
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Cargar las librerías necesarias
 library(factoextra)
 library(ggplot2)
@@ -159,7 +159,7 @@ Este análisis tambien permite la representación de los individuos en un solo p
 
 <br/><br/>
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Cargar las librerías necesarias
 library(factoextra)
 library(ggplot2)

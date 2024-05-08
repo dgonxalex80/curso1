@@ -51,11 +51,9 @@ navbar:
         - text: "Análisis de componentes principales"
           href: recurso209.html  
         - text: "Análisis de conglomerados"
-          href: recurso2010.html    
+          href: recurso210.html    
         - text: "Análisis de correspondencia"
           href: recurso211.html    
-        - text: "Ejemplo"
-          href: recurso212.html  
     - text: "Introducción al análisis de datos"
       menu:
         - text: "Introducción a la Analítica de Datos"

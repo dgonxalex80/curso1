@@ -330,13 +330,10 @@ $(document).ready(function () {
       <a href="recurso209.html">Análisis de componentes principales</a>
     </li>
     <li>
-      <a href="recurso2010.html">Análisis de conglomerados</a>
+      <a href="recurso210.html">Análisis de conglomerados</a>
     </li>
     <li>
       <a href="recurso211.html">Análisis de correspondencia</a>
-    </li>
-    <li>
-      <a href="recurso212.html">Ejemplo</a>
     </li>
   </ul>
 </li>
@@ -445,92 +442,22 @@ resultados significativos y aplicables.</p>
 <p><br/><br/></p>
 <div id="ejemplo" class="section level3">
 <h3><strong>Ejemplo</strong></h3>
-<pre class="r"><code># Cargar las librerías necesarias
-library(tidyverse)  # para manipulación de datos y gráficos
-library(cluster)    # para análisis de clústeres
-library(factoextra) # para visualizaciones de clústeres
-
-# Crear un dataframe simulado de clientes de una entidad financiera
-set.seed(123)  # Para reproducibilidad
-data &lt;- data.frame(
-  edad = rnorm(100, mean = 50, sd = 10),
-  ingresos = rnorm(100, mean = 50000, sd = 15000),
-  saldo_promedio = rnorm(100, mean = 2000, sd = 800),
-  productos_contratados = sample(1:5, 100, replace = TRUE),
-  frecuencia_uso_digital = sample(1:100, 100),
-  calificacion_credito = sample(300:850, 100, replace = TRUE)
-)
-
-# Normalizar los datos
-data_scaled &lt;- scale(data)
-
-# Ejecutar k-means clustering
-set.seed(123)
-kmeans_result &lt;- kmeans(data_scaled, centers = 4, nstart = 25)
-
-# Añadir los resultados del clúster al dataframe original
-data$cluster &lt;- as.factor(kmeans_result$cluster)
-
-# # Visualización de los clústeres usando PCA
-# pca &lt;- prcomp(data_scaled)
-# fviz_pca_ind(pca,
-#              col.ind = data$cluster, # Color by cluster
-#              palette = c(&quot;#2E9FDF&quot;, &quot;#E76BF3&quot;, &quot;#FC913A&quot;, &quot;#58C9B9&quot;),
-#              addEllipses = TRUE, # Añadir elipses de confianza
-#              legend.title = &quot;Cluster&quot;)
-# 
-# # Visualizar las diferencias en las variables originales por clúster
-# data %&gt;% # # Visualización de los clústeres usando PCA
-# pca &lt;- prcomp(data_scaled)
-# fviz_pca_ind(pca,
-#              col.ind = data$cluster, # Color by cluster
-#              palette = c(&quot;#2E9FDF&quot;, &quot;#E76BF3&quot;, &quot;#FC913A&quot;, &quot;#58C9B9&quot;),
-#              addEllipses = TRUE, # Añadir elipses de confianza
-#              legend.title = &quot;Cluster&quot;)
-# 
-# # Visualizar las diferencias en las variables originales por clúster
-# data %&gt;% 
-#   gather(attribute, value, -cluster) %&gt;%
-#   ggplot(aes(x = cluster, y = value, fill = cluster)) +
-#   geom_boxplot() +
-#   facet_wrap(~attribute, scales = &#39;free&#39;) +
-#   theme_minimal() +
-#   labs(title = &quot;Distribución de Atributos por Clúster&quot;,
-#        x = &quot;Clúster&quot;,
-#        y = &quot;Valor&quot;,
-#        fill = &quot;Clúster&quot;)
-#   gather(attribute, value, -cluster) %&gt;%
-#   ggplot(aes(x = cluster, y = value, fill = cluster)) +
-#   geom_boxplot() +
-#   facet_wrap(~attribute, scales = &#39;free&#39;) +
-#   theme_minimal() +
-#   labs(title = &quot;Distribución de Atributos por Clúster&quot;,
-#        x = &quot;Clúster&quot;,
-#        y = &quot;Valor&quot;,
-#        fill = &quot;Clúster&quot;)</code></pre>
-<pre class="r"><code># Cargar las librerías necesarias
-library(tidyverse)
-library(cluster)    # para análisis de clústeres
-library(factoextra) # para visualizaciones mejoradas
-
-# Suponiendo que &#39;data_scaled&#39; ya está definido como tus datos normalizados
-
-# Ejecutar el agrupamiento jerárquico
-dist_matrix &lt;- dist(data_scaled)  # Calcular la matriz de distancias
-hc &lt;- hclust(dist_matrix, method = &quot;ward.D2&quot;)  # Realizar el agrupamiento jerárquico
-
-# Crear un dendrograma
-# plot(hc, labels = FALSE, hang = -1)  # &#39;labels = FALSE&#39; para evitar un gráfico sobrecargado
-# rect.hclust(hc, k = 4, border = 2)  # Añadir rectángulos para 4 clústeres
-
-# Usando factoextra para un mejor dendrograma
-fviz_dend(hc, k = 4, # Número de clústeres a cortar
-          cex = 0.5, # Tamaño de texto
-          k_colors = c(&quot;#2E9FDF&quot;, &quot;#E76BF3&quot;, &quot;#FC913A&quot;, &quot;#58C9B9&quot;), # Colores de clústeres
-          rect = TRUE, # Añadir rectángulos para identificar clústeres
-          main = &quot;Dendrograma del Agrupamiento Jerárquico&quot;) # Título del gráfico</code></pre>
 <p><img src="recurso210_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><br/><br/></p>
+<p>El resultado del análisis es una clasificación de los clientes en
+cuatro grupos más homogeneos o parecidos. Esta clasificación captada en
+una nueva variable, permite comparar estos grupor por las diferentes
+variables. Es así como podríamos decir :</p>
+<ul>
+<li>El grupo 4 presenta la menor calificación de crédito, menor edad
+promedio y el mayor saldo promedio</li>
+<li>El Grupo 2 presenta la menor frecuencia de uso digital</li>
+<li>El grupo 3 presenta el menor número de productos contratados y menor
+saldo promedio</li>
+<li>El grupo 1 presenta el mayor número de productos contratados, la
+mayor frecuencia de uso digital</li>
+</ul>
+<p><img src="recurso210_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 
 

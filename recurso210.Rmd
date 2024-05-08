@@ -76,7 +76,7 @@ El éxito del análisis de conglomerados depende en gran medida de la elección 
 ### **Ejemplo**
 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Cargar las librerías necesarias
 library(tidyverse)  # para manipulación de datos y gráficos
 library(cluster)    # para análisis de clústeres
@@ -142,7 +142,8 @@ data$cluster <- as.factor(kmeans_result$cluster)
 #        fill = "Clúster")
 
 ```
-```{r, message=FALSE, warning=FALSE}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Cargar las librerías necesarias
 library(tidyverse)
 library(cluster)    # para análisis de clústeres
@@ -168,4 +169,49 @@ fviz_dend(hc, k = 4, # Número de clústeres a cortar
 ```
 
 <br/><br/>
+
+
+El resultado del análisis es una clasificación de los clientes en cuatro grupos más homogeneos o parecidos. Esta clasificación captada en una nueva variable, permite comparar estos grupor por las diferentes variables. Es así como podríamos decir :
+
+* El grupo 4 presenta la menor calificación de crédito, menor edad promedio y el mayor saldo promedio
+* El Grupo 2 presenta la menor frecuencia de uso digital
+* El grupo 3 presenta el menor número de productos contratados y menor saldo promedio
+* El grupo 1 presenta el mayor número de productos contratados, la mayor frecuencia de uso digital
+
+
+
+
+
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+# Añadir los resultados del clúster al dataframe original
+data$cluster <- as.factor(kmeans_result$cluster)
+
+# Visualización de los clústeres usando PCA
+pca <- prcomp(data_scaled)
+# fviz_pca_ind(pca,
+#              col.ind = data$cluster, # Color by cluster
+#              palette = c("#2E9FDF", "#E76BF3", "#FC913A", "#58C9B9"),
+#              addEllipses = TRUE, # Añadir elipses de confianza
+#              legend.title = "Cluster")
+
+# Visualizar las diferencias en las variables originales por clúster
+data %>% 
+  gather(attribute, value, -cluster) %>%
+  ggplot(aes(x = cluster, y = value, fill = cluster)) +
+  geom_boxplot() +
+  facet_wrap(~attribute, scales = 'free') +
+  theme_minimal() +
+  labs(title = "Distribuciones por Clúster",
+       x = "Clúster",
+       y = "Valor",
+       fill = "Clúster")
+
+
+```
+
+
 

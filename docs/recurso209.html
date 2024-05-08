@@ -330,13 +330,10 @@ $(document).ready(function () {
       <a href="recurso209.html">Análisis de componentes principales</a>
     </li>
     <li>
-      <a href="recurso2010.html">Análisis de conglomerados</a>
+      <a href="recurso210.html">Análisis de conglomerados</a>
     </li>
     <li>
       <a href="recurso211.html">Análisis de correspondencia</a>
-    </li>
-    <li>
-      <a href="recurso212.html">Ejemplo</a>
     </li>
   </ul>
 </li>
@@ -447,10 +444,6 @@ bancaria se tienen las siguientes variables:</p>
 información contenida en cuatro variables a dos variables que puedan ser
 representadas en un plano carteciano</p>
 <p><br/><br/></p>
-<pre class="r"><code>library(paqueteMODELOS)
-data(&quot;creditos&quot;)                # base de datos
-creditosZ= scale(creditos[, 2:5])      # datos estandarizados
-prcomp(creditosZ)</code></pre>
 <pre><code>## Standard deviations (1, .., p=4):
 ## [1] 1.4956195 0.9783699 0.7576046 0.4816118
 ## 
@@ -464,26 +457,6 @@ prcomp(creditosZ)</code></pre>
 <p>Los dos primeros componentes explican un 79.8% de la variación total
 de la data. Este valor total corresponde a la suma de las varianzas de
 las variables.</p>
-<pre class="r"><code># Cargar las librerías necesarias
-library(factoextra)
-library(ggplot2)
-
-# Realizar el análisis PCA
-res.pca &lt;- prcomp(creditosZ, scale. = TRUE)
-
-# Crear el gráfico de valores propios (eigenvalues) mejorado
-grafico &lt;- fviz_eig(res.pca, addlabels = TRUE, ylim = c(0, 60)) +
-  geom_point(size = 2, color = &quot;blue&quot;) +  # Cambiar el tamaño y color de los puntos
-  theme_minimal() +  # Usar un tema minimalista
-  theme(text = element_text(size = 12),  # Ajustar el tamaño del texto
-        axis.title = element_text(color = &quot;red&quot;, size = 14),  # Color y tamaño de los títulos de los ejes
-        plot.title = element_text(hjust = 0.5)) +  # Centrar el título del gráfico
-  ggtitle(&quot;Gráfico de Eigenvalues de PCA&quot;) +  # Añadir un título
-  xlab(&quot;Componentes Principales&quot;) +  # Cambiar el título del eje X
-  ylab(&quot;Varianza Explicada (%)&quot;)  # Cambiar el título del eje Y
-
-# Imprimir el gráfico
-print(grafico)</code></pre>
 <p><img src="recurso209_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><br/><br/></p>
 <p>Una de las gráficas importantes correponde al gráfico de variables
@@ -491,61 +464,11 @@ donde se puede evidenciar la relación entre variables como la
 <strong>edad</strong>, <strong>antiguedad</strong> por un lado y el
 <strong>ingreso</strong> y la <strong>cuota</strong> por otro lado.</p>
 <p><br/><br/></p>
-<pre class="r"><code># Cargar las librerías necesarias
-library(factoextra)
-library(ggplot2)
-
-# Asumiendo que res.pca ya está calculado
-# Mejorar el gráfico de contribución de variables en PCA
-grafico_vars &lt;- fviz_pca_var(res.pca,
-                             col.var = &quot;contrib&quot;,  # Color por contribuciones al componente principal
-                             gradient.cols = c(&quot;#FF7F00&quot;, &quot;#034D94&quot;),  # Gradiente de color naranja a azul
-                             repel = TRUE  # Evitar superposición de texto
-                            ) +
-  theme_minimal() +  # Usar un tema minimalista
-  theme(legend.position = &quot;right&quot;,  # Ajustar la posición de la leyenda
-        text = element_text(size = 12),  # Ajustar el tamaño del texto
-        axis.title = element_text(color = &quot;red&quot;, size = 14),  # Ajustar color y tamaño de títulos de ejes
-        plot.title = element_text(hjust = 0.5, size = 16, face = &quot;bold&quot;)) +  # Ajustar título del gráfico
-  ggtitle(&quot;Contribución de Variables en PCA&quot;) +  # Añadir un título
-  xlab(&quot;Componente Principal 1 (PC1)&quot;) +  # Título para el eje X
-  ylab(&quot;Componente Principal 2 (PC2)&quot;)  # Título para el eje Y
-
-# Imprimir el gráfico mejorado
-print(grafico_vars)</code></pre>
 <p><img src="recurso209_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/><br/></p>
 <p>Este análisis tambien permite la representación de los individuos en
 un solo plano</p>
 <p><br/><br/></p>
-<pre class="r"><code># Cargar las librerías necesarias
-library(factoextra)
-library(ggplot2)
-
-# Asumiendo que res.pca ya está calculado y que tienes un dataframe `creditos` con una columna `default`
-# Definir los colores basados en la columna &#39;default&#39;
-colors &lt;- ifelse(creditos$default == 0, &quot;lightgray&quot;, &quot;lightblue&quot;)
-
-# Crear el gráfico de los individuos en PCA solo con etiquetas
-grafico_individuos &lt;- fviz_pca_ind(res.pca,
-                                   geom = &quot;text&quot;,  # Usar solo texto para los puntos
-                                   col.ind = colors,  # Usar los colores definidos
-                                   label = &quot;ind&quot;,  # Mostrar etiquetas de los individuos
-                                   repel = TRUE  # Evitar la superposición de etiquetas
-                                  ) +
-  theme_minimal() +  # Usar un tema minimalista
-  theme(legend.position = &quot;none&quot;,  # Ocultar la leyenda
-        text = element_text(size = 12),  # Ajustar el tamaño del texto
-        axis.title = element_text(color = &quot;red&quot;, size = 12),  # Ajustar color y tamaño de los títulos de ejes
-        plot.title = element_text(hjust = 0.5, size = 12, face = &quot;bold&quot;)) +  # Ajustar el título del gráfico
-  ggtitle(&quot;Gráfico de Individuos PCA con Color por Default&quot;) +  # Añadir un título
-  xlab(&quot;Componente Principal 1 (PC1)&quot;) +  # Título para el eje X
-  ylab(&quot;Componente Principal 2 (PC2)&quot;) +  # Título para el eje Y
-  xlim(-6, 6) +  # Límites para el eje X
-  ylim(-3, 3)  # Límites para el eje Y
-
-# Imprimir el gráfico de los individuos
-print(grafico_individuos)</code></pre>
 <p><img src="recurso209_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Los clientes con default se visualizan con color rojo y se percibe
 que estan en los cuatro cuadrantes del gráfico</p>

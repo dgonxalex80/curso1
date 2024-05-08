@@ -29,6 +29,49 @@ c7="#B3D9FF"
 
 ```
 
+<br/><br/>
+
+El análisis de datos multivariante abarca un conjunto de técnicas estadísticas utilizadas para entender las relaciones y dinámicas entre múltiples variables en un conjunto de datos. Estas técnicas son cruciales para explorar datos complejos y encontrar patrones o correlaciones que no serían aparentes con métodos univariados o bivariados.
+
+<br/>
+
+A medida que el volumen y la variedad de datos aumentan, el análisis multivariante se vuelve indispensable en campos como la biología, las finanzas, la sociología y más allá. Estos métodos nos permiten simplificar la complejidad de los datos a través de la reducción de la dimensionalidad, la clasificación y la modelización de relaciones entre variables. Entre sus principales objetivos se tiene :
+
+<br/><br/>
+
+### **1. La  Reducción de Dimensionalidad**
+
+<br/>
+
+Estos métodos se utilizan para simplificar la complejidad de los conjuntos de datos con muchas variables, preservando la mayor parte de la información en un espacio de menor dimensión. (Análisis de Componentes Principales)
+
+<br/><br/>
+
+### **2. La Clasificación y Agrupamiento**
+
+<br/>
+
+Estos métodos buscan identificar estructuras en los datos agrupando objetos en conjuntos que comparten características similares, sin necesidad de etiquetas predefinidas.(Análisis de Conglomerados o Cluster)
+
+<br/><br/>
+
+### **3. La Inferencia y Predicción**
+
+<br/>
+
+Estos métodos se enfocan en modelar las relaciones entre una o más variables independientes y dependientes, principalmente para hacer inferencias o predicciones. (Regresión Linal)
+
+<br/><br/>
+
+### **4. La Exploración de Relaciones Entre Variables**
+
+<br/>
+
+Estos métodos analizan las interacciones o asociaciones entre variables categóricas en conjuntos de datos. (Análisis de Correspondencia)
+
+
+<br/><br/>
+
 
 
 

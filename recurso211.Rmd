@@ -114,7 +114,7 @@ El análisis de correspondencia es especialmente útil cuando las variables cate
 
 <br/><br/><br/>
 
-### **Ejemplo:
+### **Ejemplo:**
 
 <br/><br/>
 
