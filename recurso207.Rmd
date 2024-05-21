@@ -32,6 +32,8 @@ c7="#B3D9FF"
 
 El modelo de regresión lineal es una herramienta estadística que permite modelar la relación que puede exitir entre una variables dependiente (Y)  y una o varias variables independientes ($X_1, X_2, X_3, \dots, X_k$). Pero tambien  el de estimar el valor de variable dependiente a partir de los valores de las variables independientes.
 
+La siguiente función representa la estructura del modelo de regresión lineal múltiple, en el que hay una variable dependiente ($Y$) y $k$ variables independiente ($X_i$), mas una variable aleatoria $u$
+
 $$ Y = \beta_{0} + \beta_{1} X_{1} + \beta_{2} X_2 + \dots + \beta_{k} X_{k} + u 
 $$
 
@@ -52,6 +54,8 @@ Objetivos:
 
 * Estimar mediante una función lineal de variables independientes el valor medio de una variable dependiente (estimación, pronostico)
 • Estimar los efectos producidos por el cambio en una variable independiente sobre el valor medio la variable dependiente (efecto del cambio)
+
+<br/><br/>
 
 ### Modelo de Regresión Lineal Simple
 
@@ -186,6 +190,8 @@ kable(estadisticos_modelo, caption = "Estadísticos del Modelo Lineal", format =
 El resultado indica que el modelo explica el 84.4% de la variación del consumo. Valor que puede ser considerado como bueno en el objetivo de estimar el valor del consumo a partir de conocer el valor de los ingresos.
 
 <br/><br/>
+
+### **Modelo de regresión lineal múltiple**
 
 Para el caso del modelo de regresión lineal múltiple el proceso es similar
 
